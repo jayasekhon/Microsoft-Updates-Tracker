@@ -35,22 +35,22 @@ export const ART = {
   <svg class="art art-chat" viewBox="0 0 240 180" aria-hidden="true">
     <defs><linearGradient id="a-c-b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dc2b1"/><stop offset="1" stop-color="#0f8a7e"/></linearGradient></defs>
     <g class="bubble b1">
-      <rect x="104" y="18" width="116" height="38" rx="14" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-opacity=".25"/>
-      <rect x="118" y="31" width="70" height="5" rx="2.5" fill="#fff" fill-opacity=".8"/>
-      <rect x="118" y="41" width="44" height="5" rx="2.5" fill="#fff" fill-opacity=".5"/>
+      <rect x="104" y="8" width="116" height="36" rx="14" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-opacity=".25"/>
+      <rect x="118" y="20" width="70" height="5" rx="2.5" fill="#fff" fill-opacity=".8"/>
+      <rect x="118" y="30" width="44" height="5" rx="2.5" fill="#fff" fill-opacity=".5"/>
     </g>
     <g class="bubble b2">
-      <rect x="20" y="68" width="62" height="30" rx="14" fill="url(#a-c-b)"/>
-      <circle class="dot d1" cx="38" cy="83" r="4" fill="#fff"/><circle class="dot d2" cx="51" cy="83" r="4" fill="#fff"/><circle class="dot d3" cx="64" cy="83" r="4" fill="#fff"/>
+      <rect x="20" y="52" width="62" height="28" rx="14" fill="url(#a-c-b)"/>
+      <circle class="dot d1" cx="38" cy="66" r="4" fill="#fff"/><circle class="dot d2" cx="51" cy="66" r="4" fill="#fff"/><circle class="dot d3" cx="64" cy="66" r="4" fill="#fff"/>
     </g>
     <g class="bubble b3">
-      <rect x="20" y="108" width="150" height="56" rx="14" fill="url(#a-c-b)"/>
-      <rect x="34" y="121" width="108" height="5" rx="2.5" fill="#fff" fill-opacity=".95"/>
-      <rect x="34" y="131" width="92" height="5" rx="2.5" fill="#fff" fill-opacity=".75"/>
-      <rect x="34" y="144" width="42" height="11" rx="5.5" fill="#fff" fill-opacity=".25"/>
-      <rect x="80" y="144" width="34" height="11" rx="5.5" fill="#fff" fill-opacity=".25"/>
+      <rect x="20" y="88" width="150" height="52" rx="14" fill="url(#a-c-b)"/>
+      <rect x="34" y="100" width="108" height="5" rx="2.5" fill="#fff" fill-opacity=".95"/>
+      <rect x="34" y="110" width="92" height="5" rx="2.5" fill="#fff" fill-opacity=".75"/>
+      <rect x="34" y="122" width="42" height="11" rx="5.5" fill="#fff" fill-opacity=".25"/>
+      <rect x="80" y="122" width="34" height="11" rx="5.5" fill="#fff" fill-opacity=".25"/>
     </g>
-    <g fill="#9ff5e7">${sparkle(196, 112, .9, "twinkle")}${sparkle(214, 140, .5, "twinkle t2")}</g>
+    <g fill="#9ff5e7">${sparkle(196, 96, .9, "twinkle")}${sparkle(214, 122, .5, "twinkle t2")}</g>
   </svg>`,
 
   // An agent flow: trigger → knowledge → action, with data travelling along the wires.
@@ -64,7 +64,7 @@ export const ART = {
     </g>
     <g class="node n1"><rect x="18" y="38" width="44" height="40" rx="12" fill="url(#a-s-n)"/><path d="M33 58h14M40 51v14" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
     <g class="node n2"><circle cx="120" cy="90" r="26" fill="#ffffff" fill-opacity=".12" stroke="#ffb07a" stroke-width="2"/>
-      <g transform="translate(120 90)"><g class="gear"><path fill="#ffd2b3" d="M-3-14h6l1 4 4 2 4-2 4 4-2 4 2 4 4 1v6l-4 1-2 4 2 4-4 4-4-2-4 2-1 4h-6l-1-4-4-2-4 2-4-4 2-4-2-4-4-1v-6l4-1 2-4-2-4 4-4 4 2 4-2z"/><circle r="5" fill="#2a1450"/></g></g></g>
+      <g transform="translate(120 90)"><g class="gear" fill="#ffd2b3"><circle r="12.5"/>${[0, 45, 90, 135, 180, 225, 270, 315].map((a) => `<rect x="-3.5" y="-19" width="7" height="9" rx="1.5" transform="rotate(${a})"/>`).join("")}<circle r="5" fill="#2a1450"/></g></g></g>
     <g class="node n3"><rect x="178" y="38" width="44" height="40" rx="12" fill="#ffffff" fill-opacity=".14" stroke="#ffb07a" stroke-opacity=".6"/><path d="M190 52h20M190 59h14M190 66h18" stroke="#ffd2b3" stroke-width="3" stroke-linecap="round"/></g>
     <g class="node n4"><rect x="178" y="102" width="44" height="40" rx="12" fill="url(#a-s-n)"/><path d="M189 122l7 7 14-14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g>
     <g fill="#fff">${sparkle(120, 34, .55, "twinkle")}${sparkle(40, 140, .7, "twinkle t2")}</g>

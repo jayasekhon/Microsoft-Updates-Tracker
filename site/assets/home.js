@@ -4,17 +4,44 @@ import { ART } from "./art.js";
 import { mountBrowser } from "./browser.js";
 import { $, $$, DATA, PRODUCT_HEX, daysAgo, esc, initPage, live, loadData, openItemFromHash, reduceMotion, stats, updatedText } from "./core.js";
 
+// The sweep's bright leading edge points at -45° (SVG angles: 0° = east, clockwise) when its
+// CSS rotation is 0, and turns once every SWEEP_SECONDS (keep in sync with .radar .sweep).
+const SWEEP_SECONDS = 5;
+const LEAD_OFFSET = -45;
+// Seconds after the leading edge passes: pop in, hold, then fade out.
+const POP = 0.18, HOLD = 1.6, FADE = 1.6;
+
 function renderRadar() {
   // The 16 most recent changes. Angle = product quadrant, distance from centre = age.
   const recent = [...live()].sort((a, b) => (b.la || "").localeCompare(a.la || "")).slice(0, 16);
   const quad = Object.fromEntries(DATA.products.map((p, i) => [p.id, i]));
   $("#blips").innerHTML = recent.map((it, i) => {
-    const angle = (((quad[it.p] ?? 0) * 90 + 15 + ((i * 37) % 60)) - 90) * Math.PI / 180;
+    const deg = (quad[it.p] ?? 0) * 90 + 15 + ((i * 37) % 60) - 90;
     const r = 40 + Math.min(140, daysAgo(it.la) * 9) + ((i * 13) % 20);
-    const x = (200 + r * Math.cos(angle)).toFixed(1), y = (200 + r * Math.sin(angle)).toFixed(1);
-    const delay = ((((angle * 180) / Math.PI + 90 + 360) % 360) / 360) * 5;
-    return `<g class="blip" data-id="${esc(it.id)}" style="animation-delay:${delay}s"><title>${esc(it.t)}</title><circle cx="${x}" cy="${y}" r="9" fill="${PRODUCT_HEX[it.p]}" opacity=".25"/><circle cx="${x}" cy="${y}" r="4.5" fill="${PRODUCT_HEX[it.p]}"/></g>`;
+    const x = (200 + r * Math.cos((deg * Math.PI) / 180)).toFixed(1);
+    const y = (200 + r * Math.sin((deg * Math.PI) / 180)).toFixed(1);
+    return `<g class="blip" data-id="${esc(it.id)}" data-deg="${deg}" style="transform-origin:${x}px ${y}px"><title>${esc(it.t)}</title><circle cx="${x}" cy="${y}" r="9" fill="${PRODUCT_HEX[it.p]}" opacity=".25"/><circle cx="${x}" cy="${y}" r="4.5" fill="${PRODUCT_HEX[it.p]}"/></g>`;
   }).join("");
+  if (reduceMotion) return;  // CSS shows the blips statically
+
+  const sweep = $(".radar .sweep").getAnimations()[0];
+  const blips = $$("#blips .blip").map((el) => ({ el, deg: Number(el.dataset.deg) }));
+  const frame = () => {
+    const turn = ((sweep?.currentTime ?? performance.now()) / 1000 / SWEEP_SECONDS) % 1;
+    const lead = LEAD_OFFSET + turn * 360;
+    for (const b of blips) {
+      // Seconds since the leading edge last crossed this blip.
+      const since = ((((lead - b.deg) % 360) + 360) % 360) / 360 * SWEEP_SECONDS;
+      let opacity = 0, scale = 1;
+      if (since < POP) { opacity = since / POP; scale = 1.6 - 0.6 * (since / POP); }
+      else if (since < POP + HOLD) opacity = 1;
+      else if (since < POP + HOLD + FADE) opacity = 1 - (since - POP - HOLD) / FADE;
+      b.el.style.opacity = opacity.toFixed(3);
+      b.el.style.transform = scale === 1 ? "" : `scale(${scale.toFixed(3)})`;
+    }
+    requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
 }
 
 function renderSummary(browser) {
