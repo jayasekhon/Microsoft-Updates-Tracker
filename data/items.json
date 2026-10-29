@@ -18,7 +18,7 @@
    "description": "Every team has repeatable work they want done the right way, not just once, but every time. Copilot can learn the way your team already works, follow the processes you trust, and help people repeat high-quality outcomes without starting from scratch every time.\n\nThat is the idea behind skills in Copilot in SharePoint. Skills are reusable instructions that teach Copilot how to perform a specific task, whether that is summarizing meetings, analyzing a SharePoint site, generating reports, reviewing documents, or preparing project briefs. Once saved to a SharePoint site, skills become a shared team asset that anyone with access to the site can invoke from chat.\n\nFor organizations, that means less repetitive prompting, more consistent results, and a growing library of expertise that can be reused across projects and teams. If you are new to skills, learn more at Teaching AI in SharePoint What to Know and How to Act and the Copilot in SharePoint adoption page. To help you get started, here are ten skills that show what is possible today and can help you turn proven processes into reusable capabilities for your team.\n\n10 custom AI skills to try\n\nHere are ten examples that show how skills ",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-07-28",
      "type": "new"
     }
    ],
@@ -109,9 +109,9 @@
     ],
     "date": "2026-10-29",
     "hash": "5c2bf2f74ed4",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Find your path to Copilot Studio skills with guided learning, hands-on training, community events, and resources for your role and your goals."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft has shared four learning paths, including hands-on training and community events, to build skills in Copilot Studio. This helps staff learn how to create and manage custom agents."
    },
    "categories": [],
    "created": "2026-10-01",
@@ -143,8 +143,8 @@
     "date": "2026-10-29",
     "hash": "30783337b7bc",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Build customer-facing agents in Copilot Studio with a new conversation harness that connects voice, chat, business knowledge, and contact data."
+    "model": "gemini-flash-latest",
+    "summary": "Makers can use a new conversation harness in Copilot Studio to build customer-facing agents combining voice, chat, business knowledge, and contact data. This simplifies connecting multichannel customer interactions."
    },
    "categories": [],
    "created": "2026-10-21",
@@ -217,7 +217,7 @@
    "description": "Your monthly roundup of what's new in Copilot in SharePoint.\n\nCopilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. This month, reusable skills can follow you across SharePoint and OneDrive, Copilot can measure and improve those skills with evaluations, and new guidance helps AI agents build live, SharePoint-safe experiences. Here's everything that's new.\n\nBuild better skills and use them anywhere\n\nPersonal skills that follow you\n\nWhat's new: Create a personal skill once and use it across all your SharePoint sites\n\nWhy it matters: Your preferred formats, standards, and repeatable ways of working can travel with you instead of being tied to one site.\n\nSample use cases:\n\nSave your executive-update structure as a personal skill, then use it with project content wherever it lives.\n\nAn executive can ask Copilot to create a personal document briefing skill that turns lengthy SharePoint documents into concise summaries. The skill highlights proposals, expected value, decisions needed, key risks, open questions, and next steps\n\nTry these prompts:\n\n“Create a personal sk",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-09-02",
      "type": "new"
     }
    ],
@@ -250,7 +250,7 @@
    "description": "Today we announced the new Copilot app, bringing together how people assist, delegate, build, and automate work in one experience powered by Work IQ.\n\nBecause Work IQ grounds these experiences in your work and organizational context, the quality and structure of knowledge behind them matters more than ever. The better that content gets, the better Copilot gets: in Microsoft evaluations, responses in the Copilot app improved by an average of 17 percentage points when the underlying content had been enriched and structured by Copilot.\n\nThat’s why over the past year we’ve invested in Copilot’s content experiences and tools – both in the Copilot app and inside the content repository itself with the Copilot in SharePoint preview. In just the past month, millions of users have tried this preview, applying it to real-world challenges to translate complex content into tangible business value and accelerate their organization’s AI transformation.\n\nSee Copilot in SharePoint in action, from asking questions of your content to building reusable skills your teams can share.\n\nAnd now, we’re taking that further by building these AI-native SharePoint tools and enriched data into the Copilot app an",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-09-25",
      "type": "new"
     }
    ],
@@ -270,13 +270,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "1b7748e11576",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Collaboration is changing as teams of humans and agents now work together to get more done."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot and agents across Teams, SharePoint, and the Copilot app can now create, curate, and reference a unified team knowledge base in SharePoint. This helps keep team information updated and gives agents necessary context."
    },
    "categories": [],
    "created": "2026-10-15",
@@ -316,7 +318,7 @@
    "description": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. Here's everything that's new in the last month:\n\n📊 Create live SharePoint dashboards\n\nCopilot can now generate a SharePoint dashboard directly from a list as an interactive HTML report that stays connected to the underlying list. Instead of exporting data and rebuilding a report every time something changes, your SharePoint dashboard refreshes from the list whenever it's opened. Dashboards can also be created from Excel and CSV files.\n\nWhy it matters: Most AI-generated dashboards go stale the moment they're created. You export data, generate a report, update the list, then rebuild the whole thing. No more. Now SharePoint can generate HTML dashboards and apps that stay connected to the underlying list data -- unlocking all types of new List-driven experiences!\n\nIf the player doesn’t load, open the video in a new window: Open video\n\nSample use cases:\n\nProject status dashboard — turn a list of projects into a live executive view showing what's on track, at risk, or blocked, with filters for owner, priority, due",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-08-06",
      "type": "new"
     }
    ],
@@ -333,16 +335,17 @@
   },
   "post-3b66ec46524b": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify content creators and developers about the availability of AI-generated and uploaded HTML pages.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "bed9cb1b9f37",
     "impact": "medium",
-    "model": "rules",
-    "summary": "We're excited to share that you can now create HTML pages in SharePoint. Describe what you want and let Copilot build it for you, or upload an HTML file you've already crafted. HTML pages live in the Site Pages library, right alongside your existing modern pages."
+    "model": "gemini-flash-latest",
+    "summary": "Users can create HTML pages in SharePoint using Copilot prompts or by uploading existing HTML files into the Site Pages library. This allows teams to publish richer, interactive web content with standard editing and sharing workflows."
    },
    "categories": [],
    "created": "2026-10-22",
@@ -435,20 +438,20 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "29ae45611bdb",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "The traditional boundaries of business applications are disappearing. For decades, people went to their customer relationship management (CRM) to find customer context, take action, and move work forward. AI is inverting that model."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "AI agents and CRM capabilities are moving directly into everyday workflows. This shift brings customer context and actions straight to sales and service teams to streamline common business processes."
    },
    "categories": [],
    "created": "2026-10-08",
    "description": "The traditional boundaries of business applications are disappearing. For decades, people went to their customer relationship management (CRM) to find customer context, take action, and move work forward. AI is inverting that model. This shift creates two complementary opportunities: greater individual productivity and organization-wide process transformation.",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-10-08",
      "type": "new"
     }
    ],
@@ -481,7 +484,7 @@
    "description": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. June was a big month: starting June 16 Copilot in SharePoint began rolling out as on by default for everyone with a Microsoft 365 Copilot license, and we shipped a wave of new capabilities for creating content, automating work, and getting trustworthy answers. Here’s everything that’s new.\n\n🛠️ Create content with natural language\n\nCreate Word, Excel, and PowerPoint files\n\nWhat’s new: Ask Copilot to create a Word document, Excel workbook, or PowerPoint deck directly from your content in SharePoint — no blank-page start required.\n\nWhy it matters: Turn the knowledge already living in your sites into finished, shareable deliverables in minutes, without copy-pasting across apps.\n\nSample use case: A program manager turns a project site’s notes into a first-draft status deck before a leadership review.\n\nTry this prompt “Create a press release as a Word doc based on the sales performance dashboard [doc link]. Summarize key results, highlight top growth areas, call out trends, and frame it for an internal leadership ",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-07-16",
      "type": "new"
     }
    ],
@@ -514,7 +517,7 @@
    "description": "Creating and refining SharePoint pages is becoming more intuitive. Instead of describing where content lives on the page, authors can now simply select a section or web part and tell Copilot what they want to change.\n\nWatch the demo\n\nFeatured speakers\n\nSara Cummings, Product Manager for AI authoring, Microsoft\n\nVesa Juvonen, Principal Product Manager, Microsoft\n\nFrom describing a location to selecting it\n\nPreviously, authors described both the content they wanted to change and where it was located on the page. With on-canvas selection, location becomes part of the context automatically. Simply select a web part or section and describe the outcome you want. The selected item appears in the Copilot experience, giving the request clear context.\n\nWhat you can do\n\nMake focused edits. Select an image or another page element and ask Copilot to move or update it.\n\nRestructure a section. Select the section and ask for a different column layout; Copilot can work across the components inside it.\n\nApply broader updates. Ask Copilot to update repeated content across a page, for example, changing a product or brand name in text and supported web-part content.\n\nReview the result. Updated areas ar",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-09-10",
      "type": "new"
     }
    ],
@@ -531,16 +534,17 @@
   },
   "post-4eae81567e5c": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform corporate communication teams about the new unified Publish hub and Site campaigns features.",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "bc0145178f66",
     "impact": "medium",
-    "model": "rules",
-    "summary": "By: Sarah Mathurin and Kripal Kavi Corporate communicators need more than a place to publish updates. They need a connected workspace to create compelling content, plan campaigns, reach employees across channels, and measure impact."
+    "model": "gemini-flash-latest",
+    "summary": "SharePoint is introducing a unified Publish experience powered by AI, combining pages, news, campaigns, analytics, and Viva Amplify workflows in one central hub. It helps corporate communicators manage and measure communications without leaving SharePoint."
    },
    "categories": [],
    "created": "2026-10-26",
@@ -581,7 +585,7 @@
    "description": "For the latest details, timelines, FAQs, and implementation guidance, read the full Microsoft Learn article.\n\nIn 2016, we introduced modern SharePoint and the SharePoint Framework to our online service – a cloud-born user experience & developer extensibility framework. Ten years later, we continue to invest in this stable platform to provide reliable, well-governed, AI-ready, mobile-friendly, and secure-by-default foundations for customers’ publishing and content management needs.\n\nAlso in 2016, we renamed our previous publishing and UX extensibility system to “classic”. These features were designed to ease our customers’ transition from on premises environment to the cloud service. Now, ten years later, these classic features are used by fewer than 5% of our monthly active tenant base, and the classic SharePoint page content is not participating in the latest ways content should be secured, managed, and shared. Classic pages are also not fully represented in the content formats that power Microsoft 365 Copilot, which can reduce the coverage and accuracy of Copilot responses that draw on classic content. As such, over the next two years, we will take steps to retire classic SharePo",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-08-31",
      "type": "new"
     }
    ],
@@ -614,7 +618,7 @@
    "description": "By Sujay Kumar Jauhar, Spriha Chandrayan, Natasha Gaitonde, Zhen Lei, Reed Pankhurst, Anush Sankaran, Amrit Shandilya, Ryen W. White\n\nOrganizations put their most important content in OneDrive and SharePoint, trusting us to deliver AI experiences they can depend on. That trust runs across everything Copilot does with their content — surfacing the right information through retrieval, and, increasingly, driving agentic workflows that reason over documents and take action on their behalf. Living up to that trust is what we care about most, and it's why we put the quality of these experiences — and consequently the ways we measure that quality — at the center of how we build.\n\nIt turns out that this is a non-trivial problem, because quality in AI is rarely binary. An agent can call exactly the right tools and still produce an answer that's subtly, confidently wrong. A search result can be technically relevant and still miss what the user was really after. An AI-generated page can be well-structured and fluent and still omit the one detail that mattered. Quality here is continuous, context-dependent, and multidimensional — and when these experiences are serving hundreds of millions of e",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-07-21",
      "type": "new"
     }
    ],
@@ -647,7 +651,7 @@
    "description": "Organizations continue to look for faster ways to modernize intranets, improve internal communications, and increase employee engagement. Partners in the Microsoft ecosystem are helping customers accelerate that journey by extending SharePoint and Microsoft 365 with ready-to-deploy solutions that deliver immediate business value.\n\nAs organizations increasingly adopt Microsoft 365 Copilot, a well-structured and engaging intranet becomes even more important. High-quality content, clear information architecture, and effective content management help employees get greater value from AI-powered experiences.\n\nThis partner showcase highlights ACP, one of the leading IT service providers in Austria, Germany, and Switzerland.\n\nAbout ACP\n\nACP is one of the leading IT service providers in Austria, Germany, and Switzerland. As a leading technology and digital transformation partner, ACP delivers modern IT solutions, cloud services, digital workplaces, cybersecurity, and managed services to businesses and public sector organizations. With more than 2,600 specialists and a strong local presence, ACP helps customers unlock innovation and turn technology into measurable business value.\n\nWithin ACP",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-08-26",
      "type": "new"
     }
    ],
@@ -667,13 +671,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
+     "Leaders",
      "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "30472af5e39e",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Delegate shared business processes to persistent agents that work across your organization, carry context forward, and improve over time."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio enables organizations to delegate shared business processes to persistent, proactive agents. These agents carry context forward across tasks and continuously improve over time."
    },
    "categories": [],
    "created": "2026-10-15",
@@ -857,7 +862,7 @@
    "description": "Microsoft 365 G7 brings AI, Copilot, agent governance, security, and compliance together to help government agencies modernize securely.",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-09-15",
      "type": "new"
     }
    ],
@@ -964,7 +969,7 @@
    "description": "For this month's SharePoint showcase, we're zooming in on AI skills in SharePoint and real Microsoft use cases for Copilot in SharePoint. We're also introducing a new \"Product Drops\" standing section to recap all the new GA functionality across the platform each month.\n\nAs always, would love to hear from you in the comments. Let's get into it!\n\nStart with the playbook: building AI skills that actually work\n\nBefore the new capabilities below, start with the thinking behind them. In a new companion post, our team distills what we've learned working with customers building real skills in Copilot in SharePoint — why some AI workflows take off and others stall after the demo. Three lessons stand out:\n\nPick the right workflow. Most efforts succeed or fail here. A quick filter: is it worth building, is it content-centric, and is there a repeatable path to a known-good outcome? Proposal drafting, compliance checks, and vendor evaluation pass; one-off creative work doesn't.\n\nBuild it the way work actually happens. Skills beat ad-hoc prompts the moment judgment needs to be consistent. Design around the handoff to the next person, set the human checkpoint first, and let site memory carry less",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-07-09",
      "type": "new"
     }
    ],
@@ -1033,7 +1038,7 @@
    "description": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition.",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-09-25",
      "type": "new"
     }
    ],
@@ -1067,7 +1072,7 @@
    "description": "Your monthly roundup of what's new in Copilot in SharePoint.\n\nCopilot in SharePoint general availability rollout started on September 30 — read the announcement blog for the full story.\n\nBut general availability isn't the finish line, and this month's release makes that clear. October is about what happens after Copilot creates something — reviewing it, restructuring it, publishing it, and getting it to the people who need to act on it. You'll find new ways to reshape documents and images, review and publish generated HTML, and send the result on without ever leaving the site. Round it out with plugins that reach your other business systems, workflows you can describe in a sentence, and analytics you can simply ask for, and the pattern this month is a simple one: fewer trips out of SharePoint to finish the job.\n\nMost of these capabilities are included with your Microsoft 365 Copilot license. Image generation and editing, advanced autofill, and site analytics use Copilot Credits, which have started rolling out as part of general availability.\n\nCreate and refine content\n\nSplit, merge, and reorder PDFs without leaving SharePoint\n\nWhat’s new: Copilot in SharePoint can now work with PDF",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-10-01",
      "type": "new"
     }
    ],
@@ -1102,7 +1107,7 @@
    "description": "Matt Wolodarsky, a principal program manager at Microsoft, has led an early access program, testing out how skills in SharePoint can drive value for customers.\n\nYou can roll AI out and still have nothing to show for it. We've all seen the headlines about companies spending big on AI and getting little back. But it doesn't have to go that way. Over the past few months, I've worked alongside teams doing the opposite - one got a usable proposal draft in a fraction of the time it used to take; another got a clear read on where a project actually stood, when the information they needed was scattered across documents and hard to surface. What ultimately set these teams apart was how intentionally they applied Copilot to real work.\n\nThis is where skills matter. In SharePoint, skills transform Copilot from a general-purpose assistant into a specialist grounded in your content, policies, and business logic - enabling it to perform meaningful work on your behalf. They capture the repeatable judgment your teams already use to make decisions and move work forward. The rules your legal team applies when reviewing marketing content before it goes live? That’s a skill. The rules that determine wh",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-06-30",
      "type": "new"
     }
    ],
@@ -1163,9 +1168,9 @@
     ],
     "date": "2026-10-29",
     "hash": "460d0489b978",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Discover what's new in Copilot Studio, September 2026: new capabilities that bring apps, workflows, and agents together to transform business processes."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio adds capabilities connecting applications, workflows, and agents. This allows creators to build and streamline automated business processes across their organization."
    },
    "categories": [],
    "created": "2026-10-07",
@@ -1206,7 +1211,7 @@
    "description": "AI becomes most impactful when it helps with the work teams already do every day. The challenge is rarely a lack of information. It is turning trusted information into a clear, repeatable process without starting from scratch each time.\n\nThat is where Copilot in SharePoint can help. It works with the content and structure already in SharePoint, including sites, pages, lists, libraries, and files. Teams can ask questions, compare and summarize content, organize information, create outputs, and turn repeatable multi-step processes into reusable skills.\n\nThe examples below are based on real customer scenarios from organizations exploring Copilot in SharePoint. To protect customer confidentiality, organization names and identifying details have been generalized. What matters is the pattern: start with trusted SharePoint content, define the work that needs to happen, keep people in control, and make the process easier to repeat.\n\n1. Turn fragmented project updates into a usable project history\n\nIndustry Scenario: A life sciences organization needed a better way to understand how complex projects changed over time. Important decisions and updates were spread across email exports, present",
    "events": [
     {
-     "date": "2026-10-29",
+     "date": "2026-08-27",
      "type": "new"
     }
    ],
@@ -24764,17 +24769,16 @@
   },
   "rm-561040": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Brief licensed users on the proactive task cards and guided workflows appearing in Microsoft Edge.",
     "audience": [
-     "End users",
-     "IT admins"
+     "End users"
     ],
     "date": "2026-10-29",
     "hash": "7b7cfd69e902",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Commercial Journeys helps information workers stay on top of their most important work when browsing in Microsoft Edge."
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft Edge will display proactive task cards on the Copilot new tab page for licensed premium users. Selecting a card launches guided flows to help employees quickly complete documents, emails, and presentations."
    },
    "apps": [
     "Microsoft Edge"
@@ -26203,16 +26207,16 @@
   },
   "rm-565216": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify users about AI call answering and Bookings integration capabilities.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "74d743aa8696",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Incoming Teams calls don't wait for a break in your day. Intelligent call delegation provides AI-powered calling assistance so you can focus on the conversations that matter most. It answers calls and gathers context, helping you decide whether to pick up and engage the caller."
+    "model": "gemini-flash-latest",
+    "summary": "AI-powered call delegation answers incoming Teams calls, gathers context, and schedules follow-ups using Microsoft Bookings. This helps employees filter interruptions and decide when to engage or reconnect with callers."
    },
    "apps": [
     "Microsoft Teams"
@@ -29544,16 +29548,17 @@
   "rm-570430": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and configure governance policies for persistent agent accounts.",
     "audience": [
      "IT admins",
-     "Makers & developers"
+     "Makers & developers",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "810b6cacd7bd",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Makers can now give their Copilot Studio agents their own accounts, making it a governed Microsoft 365 identity for shared, collaborative business processes that spans across teams."
+    "impact": "high",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio agents can now receive persistent Microsoft 365 accounts with their own mailbox, Teams presence, and Office access. This enables bots to collaborate as standalone entities while admins maintain standard governance and security policies."
    },
    "apps": [],
    "clouds": [
@@ -29603,8 +29608,8 @@
     "date": "2026-10-29",
     "hash": "32c121de1d5b",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Soon agents can help makers improve agents using lessons from completed runs. It will identify repeated tool sequences that can be handled by workflows to standardize agent behavior, minimize errors, and most importantly control costs."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio agents will analyze completed runs to suggest converting repeated tool sequences into workflows. This provides makers with actionable recommendations to standardize behavior, reduce errors, and control operational costs."
    },
    "apps": [],
    "clouds": [
@@ -29901,13 +29906,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "IT admins",
+     "Makers & developers",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "3f8b0000e08d",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Enable applications and agents to access Microsoft Teams meeting transcripts in real time for assistance and insights."
+    "model": "gemini-flash-latest",
+    "summary": "Applications and agents can now access Microsoft Teams meeting transcripts in real time. This allows automated tools to deliver live assistance, immediate insights, and contextual support during active calls."
    },
    "apps": [
     "Microsoft Teams",
@@ -29955,16 +29962,16 @@
   "rm-570652": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and define governance policies to control agent capabilities.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "4fc7fc454fd5",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Provide administrators with policy-based controls for governing agents and their capabilities at scale."
+    "impact": "high",
+    "model": "gemini-flash-latest",
+    "summary": "Administrators receive policy-based controls to govern agents and their capabilities at scale. This allows centralized management of agent permissions, compliance, and features across the organization."
    },
    "apps": [
     "Work IQ"
@@ -30017,8 +30024,8 @@
     "date": "2026-10-29",
     "hash": "28ddb9ca5465",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot Studio now connects to Microsoft's shared plugin registry, making it easier for makers to discover and use plugins, connectors, and other available capabilities."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio now connects to Microsoft's shared plugin registry. This allows makers to more easily discover and use plugins, connectors, and shared capabilities when building and extending AI agents."
    },
    "apps": [],
    "clouds": [
@@ -30060,16 +30067,17 @@
   },
   "rm-570672": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Review agent workflows to identify steps requiring human approval and train users on how to provide input.",
     "audience": [
+     "Makers & developers",
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "90b99216d050",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Allow agents and agent flows to pause for human input or approval before continuing."
+    "model": "gemini-flash-latest",
+    "summary": "Agents and agent flows can now pause to request human input or approval before proceeding. This gives teams better control and oversight over automated agent workflows."
    },
    "apps": [
     "Work IQ"
@@ -30117,13 +30125,13 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "0482172f02b9",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Enable agents to retrieve relevant Microsoft 365 content and context through Work IQ."
+    "model": "gemini-flash-latest",
+    "summary": "Agents can retrieve relevant Microsoft 365 content and context using Work IQ. This allows custom agents to leverage organizational data for more accurate and context-aware responses."
    },
    "apps": [
     "Work IQ"
@@ -30171,14 +30179,13 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
      "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "3f27f489f71b",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Enable durable long-running A2A and MCP tasks with progress tracking, later result retrieval, and cancellation."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft 365 Copilot is introducing support for durable, long-running A2A and MCP tasks featuring progress tracking, cancellation, and later result retrieval. This allows developers to build more reliable and flexible agent workflows."
    },
    "apps": [
     "Work IQ"
@@ -30226,14 +30233,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
-     "Makers & developers"
+     "Makers & developers",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "57399288a9bf",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Enable A2A and MCP tasks to request missing information or authorization and then resume."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "A2A and MCP tasks can now pause to request required information or authorization and then resume. This allows automated workflows to safely solicit needed inputs and approvals before continuing."
    },
    "apps": [
     "Work IQ"
@@ -30281,13 +30288,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "030e968516c8",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Enable Work IQ to invoke custom agents and agents that call supported third-party tools."
+    "model": "gemini-flash-latest",
+    "summary": "Work IQ can now invoke custom agents as well as agents that connect to supported third-party tools. This broadens the capabilities of Microsoft 365 Copilot across external and specialized business systems."
    },
    "apps": [
     "Work IQ"
@@ -30389,13 +30397,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "Makers & developers",
+     "IT admins",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "27be2f0b3f83",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Enable agents to use supported REST endpoints as tools through governed Work IQ integrations."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot agents can now connect to supported REST endpoints as tools via governed Work IQ integrations. This allows makers to link agents directly with external services and enterprise APIs."
    },
    "apps": [
     "Work IQ"
@@ -30443,13 +30453,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "d3fcadf6d957",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Provide a unified intelligence layer that helps agents discover, reason over, and use organizational knowledge."
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft IQ introduces a unified intelligence layer enabling agents to discover, reason over, and apply organizational knowledge. This helps agents deliver more relevant, context-aware responses across company data."
    },
    "apps": [
     "Work IQ"
@@ -30494,16 +30506,16 @@
   },
   "rm-570871": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform staff how to use agents to generate and edit Office documents.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "3ddc397bf02c",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Work IQ enables agents to create and edit Microsoft Office documents using organizational context, helping users produce and update content more efficiently."
+    "impact": "high",
+    "model": "gemini-flash-latest",
+    "summary": "Work IQ now allows Copilot agents to create and edit Microsoft Office documents using organizational context. This helps staff draft and update office content faster with automated assistance."
    },
    "apps": [
     "Work IQ"
@@ -30664,8 +30676,8 @@
     "date": "2026-10-29",
     "hash": "1b8431c1541b",
     "impact": "medium",
-    "model": "rules",
-    "summary": "We're rolling out new capabilities for Copilot Notebook audio overview that make it easier to navigate longer content with topic-based episodes, new audio formats such as Critique and Debate, support enterprise information protection with sensitivity labels, and expand audio…"
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Notebook audio overviews add topic-based episodes, new formats like Critique and Debate, and support for sensitivity labels. These improvements make reviewing long content easier while respecting enterprise information protection rules."
    },
    "apps": [
     "Microsoft 365",
@@ -30866,15 +30878,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "IT admins",
-     "Makers & developers",
-     "Security & compliance"
+     "Security & compliance",
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "ca72f706db4d",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Unblock users from upload files with Microsoft Purview Information Protection (MPIP) sensitivity labels to Copilot Studio agents deployed on the M365 channel."
+    "model": "gemini-flash-latest",
+    "summary": "Users can now upload files with Microsoft Purview Information Protection sensitivity labels to Copilot Studio agents in M365 channels. Label protections remain enforced end-to-end based on user and agent permissions."
    },
    "apps": [],
    "clouds": [
@@ -30970,16 +30982,16 @@
   "rm-571394": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Enable Dataverse capabilities and author Business Skills to guide Sales Agent responses.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "End users"
     ],
     "date": "2026-10-29",
     "hash": "9681a5974872",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Business Skills are natural language instructions authored and stored in Microsoft Dataverse that teach Sales Agent how work gets done within a specific organization."
+    "model": "gemini-flash-latest",
+    "summary": "Sales Agent can now follow custom Dataverse Business Skills defined through natural language instructions. This ensures agent responses automatically follow company-specific sales methodologies, processes, and guidance."
    },
    "apps": [],
    "clouds": [
@@ -31023,16 +31035,16 @@
   "rm-571400": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Allocate model credits to eligible users and establish a process to manage incoming credit requests.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "End users"
     ],
     "date": "2026-10-29",
     "hash": "b55caadca1ba",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Users will be able to access models that require usage-based billing (UBB) from the model selector in Chat. Tenant admins will need to allocate credits so that users can interact with these models."
+    "model": "gemini-flash-latest",
+    "summary": "Chat users can now select usage-based billing models directly from the model selector. Administrators must provision credits for users to access these models and can receive user requests for additional credits."
    },
    "apps": [],
    "clouds": [
@@ -31288,16 +31300,16 @@
   },
   "rm-573220": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify users that they can now schedule meetings and book rooms directly within Copilot chat.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "dcec9ce02309",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Users can now schedule appointments and meetings directly from chat. Simply ask Copilot to create an appointment or schedule a meeting with colleagues, and it will find available times, book rooms, draft agendas, and send invites—all within the chat experience."
+    "model": "gemini-flash-latest",
+    "summary": "Users can now schedule meetings directly from Copilot chat. Copilot finds open times, books rooms, drafts agendas, and sends calendar invites without requiring users to switch to their calendar app."
    },
    "apps": [],
    "clouds": [
@@ -31345,17 +31357,15 @@
   "rm-573294": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Configure and turn on the semantic model and data signals in the Power Apps Maker Portal.",
     "audience": [
-     "End users",
-     "IT admins",
-     "Makers & developers"
+     "IT admins"
     ],
     "date": "2026-10-29",
     "hash": "eb70d1aacfd9",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Semantic model helps Sales Agent understand the structure and meaning of an organization’s CRM data. It creates a connected representation of CRM metadata, including tables or objects, fields, descriptions, data types, relationships, views, pick-list values, and glossary terms."
+    "model": "gemini-flash-latest",
+    "summary": "Administrators can enable and configure a semantic model for the Sales agent across Dynamics 365 and Salesforce data. This helps the agent better understand CRM metadata and answer complex queries across related records."
    },
    "apps": [],
    "clouds": [
@@ -31400,16 +31410,16 @@
   },
   "rm-573446": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform users of new Copilot capabilities for editing and managing OneNote notebooks and pages directly.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "83c8e518541e",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot in OneNote can generate new content and directly edit when in edit mode. In this mode you can create, rename, and delete pages, sections, or notebooks as well as add or edit content in pages."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in OneNote can now directly create, edit, rename, and delete pages or notebooks while pulling organizational context. This allows users to manage notebook structure and trigger document creation across Office apps."
    },
    "apps": [
     "OneNote"
@@ -31453,16 +31463,16 @@
   },
   "rm-573696": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform staff about the new AI search experience coming to SharePoint and OneDrive.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "224ef442d253",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot Search brings AI-powered, natural-language search to SharePoint and OneDrive, combining relevant results, AI-generated summaries with source references, intuitive filters, and a seamless handoff to Copilot."
+    "model": "gemini-flash-latest",
+    "summary": "SharePoint and OneDrive are adding natural-language search with AI-generated summaries, source citations, filters, and direct handoffs to Copilot. This makes finding and synthesizing internal files faster and more conversational."
    },
    "apps": [
     "OneDrive"
@@ -31510,13 +31520,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "f0d6db714002",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Autonomous agent that researches, qualifies, engages with leads, scaling sales capacity 24/7."
+    "model": "gemini-flash-latest",
+    "summary": "The Sales Development Agent autonomously researches, qualifies, and engages leads around the clock. This expands sales capacity and automates initial prospect outreach without requiring manual rep effort."
    },
    "apps": [],
    "clouds": [
@@ -31558,17 +31569,18 @@
   },
   "rm-574105": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "admin",
+    "action_note": "Configure Microsoft's Salesforce Model Context Protocol server to connect SDA to Salesforce.",
     "audience": [
      "End users",
+     "IT admins",
      "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "0af34d2fe1b6",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Sales Development Agent now integrates with Salesforce, enabling organizations to use SDA with their existing Salesforce CRM."
+    "model": "gemini-flash-latest",
+    "summary": "The Sales Development Agent now integrates with Salesforce using Microsoft's MCP server. Sales teams can manage leads, log activities, and update prospect records in Salesforce directly through the agent."
    },
    "apps": [],
    "clouds": [
@@ -31609,16 +31621,16 @@
   },
   "rm-574106": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Advise SharePoint Copilot users on how to use the side-by-side preview and HTML form interactions.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "1818552976b7",
     "impact": "medium",
-    "model": "rules",
-    "summary": "With this new capability, users of Copilot in SharePoint will be able to view saved and unsaved preview content side by side with chat. Users will also be able to interact with created HTML forms and confirm responses to send to chat."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint now displays saved and unsaved preview content side by side with the chat interface. Users can also interact with generated HTML forms and confirm responses directly before submitting them."
    },
    "apps": [],
    "clouds": [
@@ -31666,9 +31678,9 @@
     ],
     "date": "2026-10-29",
     "hash": "cdafa2596916",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "When Copilot Chat uses memory to personalize a response, users can now see what informed the answer."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Chat now displays memory citations under a Personalization tab beneath responses when memory is active. Users can see what past chats or instructions informed the answer, resume prior conversations, and manage or delete saved memories."
    },
    "apps": [],
    "clouds": [
@@ -31709,16 +31721,17 @@
   },
   "rm-575289": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Brief sales representatives on how the agent coordinates calendar bookings and handoffs.",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "87ce179ae236",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Sales Development Agent can turn a prospect’s interest in meeting into a booked seller meeting."
+    "model": "gemini-flash-latest",
+    "summary": "Sales Development Agent can now automatically coordinate and book meetings with prospects using sellers' calendars. This saves sellers time by handling scheduling and passing conversation context directly to the team."
    },
    "apps": [],
    "clouds": [
@@ -31760,16 +31773,17 @@
   },
   "rm-575298": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Guide modern page authors on configuring and embedding Copilot agents into SharePoint sites.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "f4f7d05eafd4",
     "impact": "medium",
-    "model": "rules",
-    "summary": "This is a new web part available for modern page editors in SharePoint. The web part can be configured to use any M365 Copilot agent."
+    "model": "gemini-flash-latest",
+    "summary": "Modern SharePoint page editors can now add an Agent chat web part configured with any M365 Copilot agent. This lets site visitors interact directly with specialized agents on SharePoint pages."
    },
    "apps": [],
    "clouds": [
@@ -31817,13 +31831,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "Makers & developers"
+     "Makers & developers",
+     "Security & compliance"
     ],
     "date": "2026-10-29",
     "hash": "308427588184",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Enable Microsoft Copilot Studio agents to browse and interact with websites as a native capability powered by the Microsoft Copilot harness. Using natural-language instructions, agents can navigate web pages, extract information, and download files."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio agents can now natively browse websites, interact with web pages, extract details, and download files using natural-language instructions. This enables agents to perform end-to-end workflows beyond static knowledge bases and APIs."
    },
    "apps": [],
    "clouds": [
@@ -31868,13 +31883,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "c2846702e758",
     "impact": "medium",
-    "model": "rules",
-    "summary": "This feature enables users to easily create new SharePoint sites with Copilot. Users can review and confirm a clear site plan before Copilot builds the site."
+    "model": "gemini-flash-latest",
+    "summary": "Users can create new SharePoint sites using Copilot, reviewing and confirming a generated site plan before creation begins. This simplifies site setup and speeds up project kickoff."
    },
    "apps": [],
    "clouds": [
@@ -31917,16 +31933,16 @@
   },
   "rm-577743": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Provide guidance to users on how to interact with and use embedded interactive tools in chat.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "52bc1c6839d7",
     "impact": "medium",
-    "model": "rules",
-    "summary": "App Blocks enables M365 Copilot Chat users to turn their requests and data into rich, interactive experiences directly within the conversation, including calculators, dashboards, forms, planners, visualizations, simulations, comparison tools, and other interactive apps."
+    "model": "gemini-flash-latest",
+    "summary": "M365 Copilot Chat will generate interactive App Blocks, such as calculators, dashboards, and planners, directly within conversations. This enables users to explore data, adjust inputs, and run simulations rather than relying on static text responses."
    },
    "apps": [],
    "clouds": [
@@ -32080,7 +32096,7 @@
    "new": 0,
    "removed": 0
   },
-  "updated_at": "2026-10-29T22:50:44+00:00",
+  "updated_at": "2026-10-29T23:25:52+00:00",
   "warnings": []
  },
  "schema": 1
