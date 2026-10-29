@@ -83,7 +83,16 @@
       "id": "sharepoint-blog",
       "name": "SharePoint blog",
       "url": "https://www.microsoft.com/en-us/microsoft-365/blog/product/sharepoint/feed/",
-      "default_product": "sharepoint"
+      "default_product": "sharepoint",
+      "relevance_keywords": [
+        "copilot",
+        "\\bagents?\\b",
+        "\\bai\\b",
+        "syntex",
+        "sharepoint premium",
+        "autofill",
+        "knowledge agent"
+      ]
     },
     {
       "id": "tc-copilot",
@@ -103,7 +112,16 @@
       "name": "SharePoint blog (Tech Community)",
       "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=SPblog",
       "default_product": "sharepoint",
-      "optional": true
+      "optional": true,
+      "relevance_keywords": [
+        "copilot",
+        "\\bagents?\\b",
+        "\\bai\\b",
+        "syntex",
+        "sharepoint premium",
+        "autofill",
+        "knowledge agent"
+      ]
     }
   ],
   "feed_relevance_keywords": [
@@ -119,5 +137,6 @@
     "Power Pages",
     "Microsoft Power Platform governance"
   ],
-  "_exclude_note": "Roadmap items carrying any tag that starts with one of these are dropped unless they are also tagged Copilot Studio (Microsoft tags many Dynamics 365 Copilot features as Microsoft 365 Copilot)."
+  "_exclude_note": "Roadmap items carrying any tag that starts with one of these are dropped unless they are also tagged Copilot Studio (Microsoft tags many Dynamics 365 Copilot features as Microsoft 365 Copilot).",
+  "_feed_note": "feed_relevance_keywords decides which blog posts are kept; a feed's own relevance_keywords overrides it (SharePoint feeds keep only Copilot/AI posts)."
 }

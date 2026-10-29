@@ -123,10 +123,27 @@ class RssTests(unittest.TestCase):
         self.assertEqual(items[0]["product"], "studio")
         self.assertIsNone(items[1])
 
+    def test_feed_relevance_override(self):
+        entry = {"title": "SharePoint site templates", "summary": "New layouts.", "link": "https://example.com/d", "date": "2026-10-28", "categories": []}
+        self.assertIsNotNone(rss.normalize(entry, {"name": "Blog"}, CONFIG))
+        feed = {"name": "SP", "default_product": "sharepoint", "relevance_keywords": ["copilot"]}
+        self.assertIsNone(rss.normalize(entry, feed, CONFIG))
+        entry["summary"] = "Copilot builds them for you."
+        self.assertEqual(rss.normalize(entry, feed, CONFIG)["product"], "sharepoint")
+
     def test_parse_atom(self):
         entries = rss.parse_feed(ATOM)
         self.assertEqual(entries[0]["link"], "https://example.com/c")
         self.assertEqual(entries[0]["date"], "2026-10-27")
+
+
+class EnvTests(unittest.TestCase):
+    def test_empty_github_variables_mean_defaults(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(), CONFIG)], kinds_fetched={"feature"}, today="2026-10-29")
+        with mock.patch.dict(os.environ, {"AI_PROVIDER": "", "AI_MAX_ITEMS": "", "GEMINI_API_KEY": "", "SITE_URL": ""}):
+            self.assertEqual(summarize.summarize(s, CONFIG)["rules"], 1)
+            self.assertEqual(digest.site_url(), digest.DEFAULT_SITE_URL)
 
 
 class SummarizeTests(unittest.TestCase):

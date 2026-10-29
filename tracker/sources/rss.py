@@ -60,7 +60,7 @@ def parse_feed(xml_bytes: bytes) -> list[dict]:
 
 def normalize(entry: dict, feed: dict, config: dict) -> dict | None:
     text = f"{entry['title']}\n{entry['summary']}\n{' '.join(entry['categories'])}"
-    if not keyword_match(config.get("feed_relevance_keywords", []), text):
+    if not keyword_match(feed.get("relevance_keywords") or config.get("feed_relevance_keywords", []), text):
         return None
     product = classify_text(entry["title"], entry["summary"], config) or feed.get("default_product") or "m365"
     return {

@@ -22,8 +22,10 @@ def _split(value: str | None) -> list[str]:
 
 
 def send(subject: str, html: str, text: str, *, to: list[str] | None = None) -> list[str]:
-    sender = os.environ["GMAIL_ADDRESS"]
-    password = os.environ["GMAIL_APP_PASSWORD"].replace(" ", "")
+    sender = os.environ.get("GMAIL_ADDRESS", "").strip()
+    password = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "")
+    if not sender or not password:
+        raise SystemExit("Email not configured: add the GMAIL_ADDRESS and GMAIL_APP_PASSWORD repository secrets")
     to_list = to if to is not None else _split(os.environ.get("DIGEST_TO"))
     bcc_list = [] if to is not None else _split(os.environ.get("DIGEST_BCC"))
     if not to_list and not bcc_list:

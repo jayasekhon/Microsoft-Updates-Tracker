@@ -118,7 +118,7 @@ class GeminiProvider:
     def __init__(self) -> None:
         self.key = os.environ["GEMINI_API_KEY"]
         self.model = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
-        self.pause = float(os.environ.get("AI_PAUSE_SECONDS", "6"))  # free tier is ~10 requests/min
+        self.pause = float(os.environ.get("AI_PAUSE_SECONDS") or 6)  # free tier is ~10 requests/min
 
     def complete(self, prompt: str) -> list:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent"
@@ -150,7 +150,7 @@ class BedrockProvider:
         import boto3  # optional dependency, only needed for this provider
 
         self.model = os.environ["BEDROCK_MODEL_ID"]
-        self.client = boto3.client("bedrock-runtime", region_name=os.environ.get("AWS_REGION"))
+        self.client = boto3.client("bedrock-runtime", region_name=os.environ.get("AWS_REGION") or None)
 
     def complete(self, prompt: str) -> list:
         resp = self.client.converse(
@@ -207,7 +207,8 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
         pending += [i for i in items if not i.get("removed") and (i.get("ai") or {}).get("model") == "rules" and i["id"] not in pending_ids]
     # Newest activity first so a capped run spends its budget where readers will look.
     pending.sort(key=lambda i: max((e["date"] for e in i.get("events", [])), default=""), reverse=True)
-    max_items = max_items if max_items is not None else int(os.environ.get("AI_MAX_ITEMS", "200"))
+    # GitHub Actions passes unset repository variables as empty strings, hence `or`.
+    max_items = max_items if max_items is not None else int(os.environ.get("AI_MAX_ITEMS") or 200)
 
     counts = {"ai": 0, "rules": 0, "errors": 0}
     names = product_names(config)

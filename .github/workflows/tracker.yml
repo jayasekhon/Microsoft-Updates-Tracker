@@ -47,9 +47,9 @@ jobs:
       SITE_URL: ${{ vars.SITE_URL }}
       BRIEFING: ${{ github.event.schedule == '43 6 * * 1' || inputs.send_digest || inputs.test_to != '' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
