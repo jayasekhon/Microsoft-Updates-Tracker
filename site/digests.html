@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly briefings — Copilot Radar</title>
+  <meta name="theme-color" content="#120a2e">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>try { const t = localStorage.getItem("radar-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <style>
+    .hero { padding-bottom: 46px; }
+    .hero h1 { font-size: clamp(32px, 4.5vw, 52px); }
+    .briefs { display: grid; gap: 14px; margin-top: 8px; }
+    .brief { display: grid; grid-template-columns: 150px 1fr auto; gap: 18px; align-items: center; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; text-decoration: none; color: inherit; box-shadow: var(--shadow-sm); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+    .brief:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .brief .when { font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+    .brief .when small { display: block; font: 600 12px var(--font); color: var(--ink-3); margin-top: 2px; }
+    .brief .nums { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
+    .brief .nums b { font-family: var(--font-display); font-size: 20px; display: block; color: var(--ink); }
+    .brief .go { color: var(--accent-ink); font-weight: 700; font-size: 14px; white-space: nowrap; }
+    @media (max-width: 640px) { .brief { grid-template-columns: 1fr; gap: 10px; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Copilot Radar</span></a>
+    <nav class="topnav" aria-label="Main">
+      <a href="../">Updates</a>
+      <a href="./" aria-current="page">Weekly briefings</a>
+      <a href="../feed.xml">RSS</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="hero-inner" style="grid-template-columns:1fr">
+      <div>
+        <p class="eyebrow"><span class="live-dot"></span> Sent every Monday</p>
+        <h1>Weekly <span class="grad">briefings</span></h1>
+        <p class="lede">Each Monday's email to the department, archived. Every briefing lists what launched, what's newly announced, timeline changes and anything that needs action.</p>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="briefs" id="briefs"><div class="skeleton" style="height:84px"></div><div class="skeleton" style="height:84px"></div></div>
+  </main>
+  <footer class="footer"><p>Sourced from the Microsoft 365 Roadmap and official Microsoft blogs.</p></footer>
+  <script type="module">
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const el = document.getElementById("briefs");
+    try {
+      const list = await (await fetch("index.json", { cache: "no-cache" })).json();
+      el.innerHTML = list.length ? list.map((d, i) => `
+        <a class="brief reveal in" href="${esc(d.start)}.html" style="--d:${i * 40}ms">
+          <div class="when">${esc(d.label.split(",")[0])}<small>${esc(d.label.split(",")[1] || "")} · ${d.total} updates</small></div>
+          <div class="nums">
+            <span><b>${d.stats.available}</b>now available</span>
+            <span><b>${d.stats.new}</b>newly announced</span>
+            <span><b>${d.stats.timeline}</b>date changes</span>
+            <span><b style="color:var(--act-ink)">${d.stats.actions}</b>need action</span>
+          </div>
+          <span class="go">Read briefing →</span>
+        </a>`).join("") : `<div class="empty"><div class="big">📬</div><p>The first briefing goes out next Monday.</p></div>`;
+    } catch (e) {
+      el.innerHTML = `<div class="empty"><div class="big">📬</div><p>The first briefing goes out next Monday.</p></div>`;
+    }
+  </script>
+</body>
+</html>

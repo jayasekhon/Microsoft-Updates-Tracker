@@ -1,0 +1,123 @@
+{
+  "_comment": "What the tracker collects. Products are matched in order: the first rule that matches an item wins.",
+  "roadmap": {
+    "url": "https://www.microsoft.com/releasecommunications/api/v1/m365",
+    "item_url": "https://www.microsoft.com/microsoft-365/roadmap?featureid={id}"
+  },
+  "products": [
+    {
+      "id": "studio",
+      "name": "Copilot Studio",
+      "roadmap_tags": [
+        "Microsoft Copilot Studio"
+      ],
+      "keywords": [
+        "copilot studio"
+      ]
+    },
+    {
+      "id": "sharepoint",
+      "name": "SharePoint AI",
+      "roadmap_tags": [
+        "SharePoint",
+        "SharePoint Syntex",
+        "SharePoint Premium"
+      ],
+      "title_keywords": [
+        "copilot",
+        "agent",
+        "\\bai\\b",
+        "autofill",
+        "syntex",
+        "premium",
+        "knowledge",
+        "skills",
+        "site builder",
+        "intelligen",
+        "summar",
+        "translat"
+      ],
+      "description_keywords": [
+        "copilot",
+        "\\bagents?\\b",
+        "\\bai\\b",
+        "syntex",
+        "sharepoint premium"
+      ],
+      "_note": "SharePoint items are only kept when they are about Copilot or AI. Copilot items that mention SharePoint in their title are also filed here.",
+      "keywords": [
+        "sharepoint"
+      ]
+    },
+    {
+      "id": "chat",
+      "name": "Copilot Chat",
+      "roadmap_tags": [
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "require_keywords": [
+        "copilot chat"
+      ]
+    },
+    {
+      "id": "m365",
+      "name": "Microsoft 365 Copilot",
+      "roadmap_tags": [
+        "Microsoft Copilot (Microsoft 365)"
+      ]
+    }
+  ],
+  "feeds": [
+    {
+      "id": "m365-blog",
+      "name": "Microsoft 365 / Copilot blog",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/"
+    },
+    {
+      "id": "studio-blog",
+      "name": "Copilot Studio blog",
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/feed/",
+      "default_product": "studio"
+    },
+    {
+      "id": "sharepoint-blog",
+      "name": "SharePoint blog",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/product/sharepoint/feed/",
+      "default_product": "sharepoint"
+    },
+    {
+      "id": "tc-copilot",
+      "name": "Microsoft 365 Copilot blog (Tech Community)",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=Microsoft365CopilotBlog",
+      "optional": true
+    },
+    {
+      "id": "tc-studio",
+      "name": "Copilot Studio blog (Tech Community)",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=CopilotStudioBlog",
+      "default_product": "studio",
+      "optional": true
+    },
+    {
+      "id": "tc-sharepoint",
+      "name": "SharePoint blog (Tech Community)",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=SPblog",
+      "default_product": "sharepoint",
+      "optional": true
+    }
+  ],
+  "feed_relevance_keywords": [
+    "copilot",
+    "agent",
+    "sharepoint",
+    "\\bai\\b"
+  ],
+  "feed_max_age_days": 180,
+  "exclude_tag_prefixes": [
+    "Dynamics 365",
+    "Microsoft Dataverse",
+    "Power Pages",
+    "Microsoft Power Platform governance"
+  ],
+  "_exclude_note": "Roadmap items carrying any tag that starts with one of these are dropped unless they are also tagged Copilot Studio (Microsoft tags many Dynamics 365 Copilot features as Microsoft 365 Copilot)."
+}

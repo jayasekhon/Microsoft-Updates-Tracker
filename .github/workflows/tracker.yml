@@ -1,0 +1,117 @@
+name: Tracker
+
+# Daily: fetch Microsoft sources, detect changes, summarise, publish the site.
+# Mondays: also archive last week's briefing and email it.
+on:
+  schedule:
+    - cron: "17 5 * * *"   # daily refresh, 05:17 UTC
+    - cron: "43 6 * * 1"   # Monday briefing, 06:43 UTC
+  workflow_dispatch:
+    inputs:
+      send_digest:
+        description: "Archive and email last week's briefing"
+        type: boolean
+        default: false
+      test_to:
+        description: "Send a [TEST] briefing only to these addresses (comma-separated) instead"
+        type: string
+        default: ""
+      force:
+        description: "Resend even if this week's briefing already went out"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tracker
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      BEDROCK_MODEL_ID: ${{ vars.BEDROCK_MODEL_ID }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      AI_MAX_ITEMS: ${{ vars.AI_MAX_ITEMS }}
+      SITE_URL: ${{ vars.SITE_URL }}
+      BRIEFING: ${{ github.event.schedule == '43 6 * * 1' || inputs.send_digest || inputs.test_to != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Bedrock support
+        if: vars.AI_PROVIDER == 'bedrock'
+        run: pip install boto3
+
+      - name: Configure AWS credentials (Bedrock)
+        if: vars.AI_PROVIDER == 'bedrock'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Fetch Microsoft sources and detect changes
+        run: python -m tracker update
+
+      - name: Archive weekly briefing
+        if: env.BRIEFING == 'true'
+        run: python -m tracker digest --archive
+
+      - name: Build site
+        run: python -m tracker build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      # Sent after deploying so the email's "View in browser" link already works.
+      - name: Email briefing
+        if: env.BRIEFING == 'true'
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+          DIGEST_BCC: ${{ secrets.DIGEST_BCC }}
+          DIGEST_FROM_NAME: ${{ vars.DIGEST_FROM_NAME }}
+          TEST_TO: ${{ inputs.test_to }}
+        run: |
+          if [ -n "$TEST_TO" ]; then
+            python -m tracker digest --test-to "$TEST_TO"
+          else
+            python -m tracker digest --send ${{ inputs.force && '--force' || '' }}
+          fi
+
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data digests
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "Update tracker data $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
