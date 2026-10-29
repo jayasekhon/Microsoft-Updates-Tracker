@@ -97,7 +97,7 @@ def write_site_data(store: dict, config: dict) -> None:
     payload = {
         "updated_at": store.get("meta", {}).get("updated_at"),
         "warnings": store.get("meta", {}).get("warnings", []),
-        "products": [{"id": r["id"], "name": r["name"]} for r in config["products"]],
+        "products": [{"id": r["id"], "name": r["name"], "tagline": r.get("tagline", "")} for r in config["products"]],
         "items": items,
     }
     save_json(DATA_DIR / "site.json", payload, compact=True)

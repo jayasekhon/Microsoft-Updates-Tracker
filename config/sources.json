@@ -8,6 +8,7 @@
     {
       "id": "studio",
       "name": "Copilot Studio",
+      "tagline": "Build, publish and govern your own agents and agent flows.",
       "roadmap_tags": [
         "Microsoft Copilot Studio"
       ],
@@ -18,6 +19,7 @@
     {
       "id": "sharepoint",
       "name": "SharePoint AI",
+      "tagline": "Copilot and AI in SharePoint: agents, site building, autofill and knowledge.",
       "roadmap_tags": [
         "SharePoint",
         "SharePoint Syntex",
@@ -52,6 +54,7 @@
     {
       "id": "chat",
       "name": "Copilot Chat",
+      "tagline": "The secure AI chat included with Microsoft 365, plus its agents.",
       "roadmap_tags": [
         "Microsoft Copilot (Microsoft 365)"
       ],
@@ -62,6 +65,7 @@
     {
       "id": "m365",
       "name": "Microsoft 365 Copilot",
+      "tagline": "Copilot inside Word, Excel, PowerPoint, Outlook, Teams and the Microsoft 365 app.",
       "roadmap_tags": [
         "Microsoft Copilot (Microsoft 365)"
       ]

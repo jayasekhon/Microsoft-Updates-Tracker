@@ -18,7 +18,7 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="#results">Skip to updates</a>
+  <a class="skip" href="#browse">Skip to all updates</a>
 
   <header class="topbar">
     <a class="brand" href="./" aria-label="Copilot Radar home">
@@ -35,19 +35,14 @@
     </nav>
   </header>
 
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero home-hero" aria-labelledby="heroTitle">
     <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="hero-inner">
       <div class="hero-copy">
         <p class="eyebrow"><span class="live-dot"></span> <span id="updatedAt">Loading…</span></p>
         <h1 id="heroTitle">Every Copilot change,<br><span class="grad">on your radar.</span></h1>
-        <p class="lede">Microsoft 365 Copilot, Copilot Chat, Copilot Studio and SharePoint AI — tracked daily from the Microsoft 365 Roadmap and official Microsoft blogs, with plain-English summaries and what your team needs to do.</p>
-        <div class="stats" id="stats">
-          <button class="stat" data-quick="week" type="button"><span class="stat-num" data-count="0">0</span><span class="stat-label">changes in the last 7 days</span></button>
-          <button class="stat" data-quick="rolling" type="button"><span class="stat-num" data-count="0">0</span><span class="stat-label">rolling out now</span></button>
-          <button class="stat" data-quick="action" type="button"><span class="stat-num" data-count="0">0</span><span class="stat-label">need action (30 days)</span></button>
-          <button class="stat" data-quick="all" type="button"><span class="stat-num" data-count="0">0</span><span class="stat-label">items tracked</span></button>
-        </div>
+        <p class="lede">Pick a product to see what's new, what's rolling out and what needs action. Tracked daily from Microsoft's own sources.</p>
+        <p class="week-line" id="weekLine"></p>
       </div>
       <div class="radar" aria-hidden="true">
         <svg viewBox="0 0 400 400">
@@ -72,73 +67,26 @@
         </svg>
       </div>
     </div>
-    <div class="product-bars" id="productBars" role="group" aria-label="Filter by product"></div>
+
+    <div class="carousel-wrap" aria-roledescription="carousel" aria-label="Products">
+      <div class="carousel" id="carousel"></div>
+      <div class="car-tabs" id="carouselTabs" role="tablist" aria-label="Choose a product"></div>
+    </div>
   </section>
 
-  <section class="spotlight" aria-labelledby="spotTitle" id="spotlightSection" hidden>
-    <div class="section-head">
-      <h2 id="spotTitle">Latest moves</h2>
-      <p>Most recent status changes and new arrivals</p>
+  <main>
+    <div class="section-head browse-head">
+      <h2>All updates</h2>
+      <p>Search and filter everything across all four products.</p>
     </div>
-    <div class="spot-track" id="spotlight" tabindex="0"></div>
-  </section>
-
-  <main id="results">
-    <div class="controls" id="controls">
-      <div class="controls-row">
-        <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>
-          <input id="search" type="search" placeholder="Search updates, e.g. Teams agents, Purview, Excel…" autocomplete="off" aria-label="Search updates">
-          <kbd>/</kbd>
-        </label>
-        <div class="views" role="tablist" aria-label="View">
-          <button role="tab" data-view="feed" aria-selected="true">Feed</button>
-          <button role="tab" data-view="board" aria-selected="false">Board</button>
-          <button role="tab" data-view="timeline" aria-selected="false">Release timeline</button>
-        </div>
-      </div>
-      <div class="controls-row filters">
-        <div class="chips" id="statusChips" role="group" aria-label="Status"></div>
-        <div class="selects">
-          <select id="appFilter" aria-label="App"><option value="">All apps</option></select>
-          <select id="audienceFilter" aria-label="Audience"><option value="">Everyone</option></select>
-          <select id="rangeFilter" aria-label="Time range">
-            <option value="">Any time</option>
-            <option value="7">Last 7 days</option>
-            <option value="30">Last 30 days</option>
-            <option value="90">Last 90 days</option>
-          </select>
-          <select id="sortBy" aria-label="Sort">
-            <option value="activity">Latest activity</option>
-            <option value="impact">Highest impact</option>
-            <option value="ga">Release date</option>
-          </select>
-          <label class="toggle"><input type="checkbox" id="actionOnly"><span></span>Needs action</label>
-        </div>
-      </div>
-      <div class="result-line"><span id="resultCount" aria-live="polite"></span><button id="clearFilters" type="button" hidden>Clear filters</button></div>
-    </div>
-
-    <div id="view" class="view"></div>
-    <div id="sentinel" aria-hidden="true"></div>
+    <div id="browse"></div>
   </main>
 
-  <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle" role="dialog" aria-modal="true">
-    <div class="drawer-scrim" data-close></div>
-    <div class="drawer-panel" tabindex="-1">
-      <button class="icon-btn drawer-close" type="button" data-close aria-label="Close details">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-      <div id="drawerBody"></div>
-    </div>
-  </aside>
-
   <footer class="footer">
-    <p>Data straight from the <a href="https://www.microsoft.com/microsoft-365/roadmap">Microsoft 365 Roadmap</a> and official Microsoft blogs, refreshed daily. Summaries are AI-assisted — always check the Microsoft source before acting.</p>
+    <p>Data straight from the <a href="https://www.microsoft.com/microsoft-365/roadmap">Microsoft 365 Roadmap</a> and official Microsoft blogs, refreshed daily. Summaries are AI-assisted. Always check the Microsoft source before acting.</p>
     <p class="warn" id="warnings"></p>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="assets/app.js" type="module"></script>
+  <script src="assets/home.js" type="module"></script>
 </body>
 </html>

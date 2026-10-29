@@ -2,7 +2,10 @@
 
 Tracks every change to **Microsoft 365 Copilot, Copilot Chat, Copilot Studio and SharePoint AI** from Microsoft's own sources, then publishes:
 
-- **A GitHub Pages site**: search, filters, a feed grouped by week, a status board (In development → Rolling out → Launched), a release timeline by GA month, and a full history for every item.
+- **A GitHub Pages site**:
+  - The homepage has a 3D carousel with one animated card per product, showing three numbers only: changes this week, rolling out now, needs action.
+  - Each card opens a **topic page** listing that product's updates in priority order: needs action, this week, rolling out now, coming soon, recently launched, blog posts.
+  - Both pages end with the full searchable list: a feed grouped by week, a status board (In development → Rolling out → Launched), a release timeline by GA month, and a full history for every item.
 - **A weekly email briefing** every Monday covering the previous Monday–Sunday: what needs action, what's now available, what's newly announced, date changes, Microsoft blog posts, and what's targeted for next month. Every item links back to Microsoft.
 - **An RSS feed** (`feed.xml`) for anyone who wants updates in Outlook, Teams or a feed reader.
 
@@ -85,7 +88,8 @@ python -m unittest discover -s tests -t .
 ```
 config/sources.json     products, scope rules, feeds
 tracker/                Python pipeline (sources, change detection, AI, digest, mailer)
-site/                   static website (no build step)
+site/                   static website (no build step): index.html (home), topic.html?p=<product>,
+                        assets/core.js (shared), browser.js (full list), home.js, topic.js, art.js (illustrations)
 data/items.json         full store with every item's event history (committed daily)
 data/site.json          compact payload the website loads
 digests/                archived weekly briefings

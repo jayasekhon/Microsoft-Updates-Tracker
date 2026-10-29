@@ -81,6 +81,14 @@ class StoreTests(unittest.TestCase):
         store.merge(s, [self._item(rid=2), self._item(rid=3, created="2024-01-01T00:00:00")], kinds_fetched={"feature"}, today="2026-10-29")
         self.assertEqual(s["items"]["rm-3"]["events"][0]["date"], "2026-10-29")
 
+    def test_late_seen_post_keeps_publish_date(self):
+        s = {"items": {}}
+        store.merge(s, [self._item()], kinds_fetched={"feature"}, today="2026-10-01")
+        post = {"id": "post-x", "kind": "post", "source": "Blog", "product": "studio", "title": "Old post",
+                "description": "", "url": "https://example.com/x", "created": "2026-06-25", "modified": "2026-06-25"}
+        store.merge(s, [self._item(), post], kinds_fetched={"feature", "post"}, today="2026-10-29")
+        self.assertEqual(s["items"]["post-x"]["events"], [{"type": "new", "date": "2026-06-25"}])
+
     def test_status_and_date_changes(self):
         s = {"items": {}}
         store.merge(s, [self._item()], kinds_fetched={"feature"}, today="2026-10-20")

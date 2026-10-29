@@ -13,4 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m unittest discover -s tests -t . -v
-      - run: node --check site/assets/app.js
+      # .mjs copies so any Node version parses the browser ES modules as modules
+      - run: for f in site/assets/*.js; do cp "$f" "$RUNNER_TEMP/check.mjs" && node --check "$RUNNER_TEMP/check.mjs" || exit 1; done

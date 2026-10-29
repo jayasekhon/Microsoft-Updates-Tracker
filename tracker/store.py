@@ -44,6 +44,9 @@ def save(store: dict) -> None:
 def _new_event_date(item: dict, today: str, bootstrap: bool) -> str:
     created = parse_date(item.get("created"))
     today_d = date.fromisoformat(today)
+    # A blog post's date is its publish date, however late we first see it (e.g. a newly added feed).
+    if item.get("kind") == "post" and created and created <= today_d:
+        return created.isoformat()
     if created and created <= today_d and (bootstrap or created >= today_d - timedelta(days=_RECENT_DAYS)):
         return created.isoformat()
     return today
