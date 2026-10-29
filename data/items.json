@@ -775,9 +775,9 @@
     ],
     "date": "2026-10-29",
     "hash": "df225ff49397",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "See how the Microsoft Copilot harness is helping Copilot Studio makers build more capable, reliable agents for complex business challenges."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "The GitHub Copilot harness in Copilot Studio has been rebranded to the Microsoft Copilot harness. It continues to help makers build reliable agents for business scenarios."
    },
    "categories": [],
    "created": "2026-10-28",
@@ -841,13 +841,14 @@
     "action_note": "",
     "audience": [
      "IT admins",
-     "Security & compliance"
+     "Security & compliance",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "ccb28ca3cba0",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Microsoft 365 G7 brings AI, Copilot, agent governance, security, and compliance together to help government agencies modernize securely."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft 365 G7 introduces AI, Copilot, agent governance, and security capabilities tailored for government agencies. It helps public sector organizations adopt modernized AI workloads securely."
    },
    "categories": [
     "AI"
@@ -948,14 +949,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "IT admins",
-     "Security & compliance"
+     "End users",
+     "Makers & developers",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "535be36bda12",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "For this month's SharePoint showcase, we're zooming in on AI skills in SharePoint and real Microsoft use cases for Copilot in SharePoint. We're also introducing a new \"Product Drops\" standing section to recap all the new GA functionality across the platform each month."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft shared practical guidance and best practices on building effective AI skills in SharePoint. It helps teams select content-centric, repeatable workflows and design AI interactions that align with real business processes."
    },
    "categories": [],
    "created": "2026-07-09",
@@ -1017,13 +1019,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "79e872983a31",
     "impact": "medium",
-    "model": "rules",
-    "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition."
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft is redesigning Copilot with new Home, Code, and Autopilot experiences. This broadens Copilot's capabilities across individual and organizational work streams."
    },
    "categories": [],
    "created": "2026-09-25",
@@ -1047,16 +1050,17 @@
   },
   "post-c8238975c850": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform users about native PDF editing in SharePoint and monitor Copilot Credit consumption.",
     "audience": [
+     "End users",
      "IT admins"
     ],
     "date": "2026-10-29",
     "hash": "259bc1500444",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Your monthly roundup of what's new in Copilot in SharePoint. Copilot in SharePoint general availability rollout started on September 30 — read the announcement blog for the full story. But general availability isn't the finish line, and this month's release makes that clear."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint adds post-creation tools to split, merge, and reorder PDFs, manage HTML, use plugins, and run analytics directly within sites. Some advanced features consume Copilot Credits."
    },
    "categories": [],
    "created": "2026-10-01",
@@ -1083,13 +1087,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "IT admins"
+     "End users",
+     "Makers & developers",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "810508ef4f5a",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Matt Wolodarsky, a principal program manager at Microsoft, has led an early access program, testing out how skills in SharePoint can drive value for customers. You can roll AI out and still have nothing to show for it."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "SharePoint skills allow Copilot to act as a specialist grounded in organizational policies, content, and business logic. This helps teams capture repeatable judgment and automate specialized review processes."
    },
    "categories": [],
    "created": "2026-06-30",
@@ -1186,13 +1192,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
     "date": "2026-10-29",
     "hash": "9788b72f2e9c",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "AI becomes most impactful when it helps with the work teams already do every day. The challenge is rarely a lack of information. It is turning trusted information into a clear, repeatable process without starting from scratch each time."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint enables teams to turn existing SharePoint content into repeatable skills and structured workflows. This helps users summarize information, track project history, and standardize business operations."
    },
    "categories": [],
    "created": "2026-08-27",
@@ -1219,13 +1226,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "Leaders",
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "75c0895a2dd0",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "New research across more than 200 enterprises looks at how shared knowledge can help companies coordinate their agents—and turn lessons from their work into an operational edge."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Enterprise research highlights how shared organizational knowledge helps coordinate AI agents. Leveraging internal knowledge bases enables companies to turn agent workflows into an operational advantage."
    },
    "categories": [],
    "created": "2026-10-27",
@@ -31963,16 +31971,16 @@
   },
   "rm-577841": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify users that Copilot Chat will display suggestion cards recommending alternate working modes.",
     "audience": [
      "End users"
     ],
     "date": "2026-10-29",
     "hash": "372863604a43",
     "impact": "medium",
-    "model": "rules",
-    "summary": "The Chat experience in the Copilot app will suggest a better-fit mode based on the user's prompt, if applicable. For example, it will suggest Cowork or other supported modes as they become available."
+    "model": "gemini-flash-latest",
+    "summary": "The Copilot app chat will suggest better-fit modes like Cowork based on your prompt. Users can switch modes with a single click while preserving full conversation context."
    },
    "apps": [],
    "clouds": [
@@ -32016,13 +32024,13 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "Makers & developers"
     ],
     "date": "2026-10-29",
     "hash": "ccf282135dfa",
     "impact": "medium",
-    "model": "rules",
-    "summary": "A new agentic debug run feature will be available in the flow designer. The UI automation repair interface launches while the flow is running, validating each selector used in the flow."
+    "model": "gemini-flash-latest",
+    "summary": "Flow designer is gaining an agentic debug run feature that automatically validates UI automation selectors during execution. It proposes replacement selectors when existing ones fail, simplifying flow maintenance."
    },
    "apps": [
     "Power Automate"
@@ -32069,10 +32077,10 @@
  "meta": {
   "last_counts": {
    "changed": 0,
-   "new": 20,
+   "new": 0,
    "removed": 0
   },
-  "updated_at": "2026-10-29T22:20:59+00:00",
+  "updated_at": "2026-10-29T22:50:44+00:00",
   "warnings": []
  },
  "schema": 1
