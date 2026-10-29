@@ -31,7 +31,9 @@ ACTIONS = {
     "admin": "Admin action",
 }
 IMPACTS = ["low", "medium", "high"]
-BATCH_SIZE = 10
+BATCH_SIZE = 5  # small batches keep each response well inside the request timeout
+REQUEST_TIMEOUT = 300  # seconds; Gemini's free tier can take minutes when busy
+TIME_BUDGET = 20 * 60  # seconds of AI work per run, so the daily job always finishes
 
 PROMPT = """You help a corporate department keep up with Microsoft Copilot and SharePoint AI changes.
 For each update below write:
@@ -132,7 +134,7 @@ class GeminiProvider:
         }
         for attempt in range(4):
             try:
-                resp = http_post_json(url, payload, headers={"x-goog-api-key": self.key})
+                resp = http_post_json(url, payload, headers={"x-goog-api-key": self.key}, timeout=REQUEST_TIMEOUT)
                 time.sleep(self.pause)
                 parts = resp["candidates"][0]["content"]["parts"]
                 return _extract_json_array("".join(p.get("text", "") for p in parts))
@@ -142,6 +144,11 @@ class GeminiProvider:
                     continue
                 body = err.read().decode(errors="replace")[:500]
                 raise RuntimeError(f"Gemini HTTP {err.code}: {body}") from err
+            except (TimeoutError, urllib.error.URLError) as err:
+                if attempt < 1:
+                    time.sleep(15)
+                    continue
+                raise RuntimeError(f"Gemini request failed: {err}") from err
         raise RuntimeError("Gemini: retries exhausted")
 
 
@@ -214,8 +221,13 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
     names = product_names(config)
     ai_budget = pending[:max_items] if provider else []
     model = getattr(provider, "model", None)
+    deadline = time.monotonic() + TIME_BUDGET
+    failures_in_a_row = 0
 
     for start in range(0, len(ai_budget), BATCH_SIZE):
+        if time.monotonic() > deadline:
+            print("[ai] time budget used; the rest will be summarised on the next run", file=sys.stderr)
+            break
         batch = ai_budget[start : start + BATCH_SIZE]
         prompt = PROMPT.format(
             audiences=json.dumps(AUDIENCES),
@@ -226,10 +238,12 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
         except Exception as err:  # noqa: BLE001 - keep going; these fall back to rules below
             print(f"[ai] batch failed: {err}", file=sys.stderr)
             counts["errors"] += 1
-            if counts["errors"] >= 3:
-                print("[ai] too many failures, falling back to rules for the rest", file=sys.stderr)
+            failures_in_a_row += 1
+            if failures_in_a_row >= 3:
+                print("[ai] 3 failures in a row, falling back to rules for the rest", file=sys.stderr)
                 break
             continue
+        failures_in_a_row = 0
         for item in batch:
             if item["id"] in results:
                 item["ai"] = {**_clean(results[item["id"]]), "model": model, "hash": item["text_hash"], "date": today_iso()}

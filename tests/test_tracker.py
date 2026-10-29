@@ -1,4 +1,5 @@
 import os
+import re
 import unittest
 from datetime import date
 from unittest import mock
@@ -88,6 +89,12 @@ class StoreTests(unittest.TestCase):
                 "description": "", "url": "https://example.com/x", "created": "2026-06-25", "modified": "2026-06-25"}
         store.merge(s, [self._item(), post], kinds_fetched={"feature", "post"}, today="2026-10-29")
         self.assertEqual(s["items"]["post-x"]["events"], [{"type": "new", "date": "2026-06-25"}])
+
+    def test_repairs_posts_stored_with_found_date(self):
+        s = {"items": {"post-y": {"id": "post-y", "kind": "post", "created": "2026-07-28", "first_seen": "2026-10-29",
+                                  "events": [{"type": "new", "date": "2026-10-29"}]}}}
+        store.merge(s, [], kinds_fetched=set(), today="2026-10-30")
+        self.assertEqual(s["items"]["post-y"]["events"], [{"type": "new", "date": "2026-07-28"}])
 
     def test_status_and_date_changes(self):
         s = {"items": {}}
@@ -188,6 +195,29 @@ class SummarizeTests(unittest.TestCase):
             summarize.summarize(s, CONFIG)
         # rm-1 is cached; only the rule-based rm-2 is retried.
         self.assertEqual(Fake.calls, 2)
+
+
+class AiResilienceTests(unittest.TestCase):
+    def test_isolated_failures_do_not_stop_later_batches(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=i), CONFIG) for i in range(1, 21)], kinds_fetched={"feature"}, today="2026-10-29")
+
+        class Flaky:
+            model = "flaky"
+            calls = 0
+
+            def complete(self, prompt):
+                Flaky.calls += 1
+                if Flaky.calls % 2:  # every other batch times out
+                    raise RuntimeError("The read operation timed out")
+                ids = re.findall(r'"id": "(rm-\d+)"', prompt)
+                return [{"id": i, "summary": "S", "audience": [], "action": "none", "action_note": "", "impact": "low"} for i in ids]
+
+        with mock.patch.object(summarize, "get_provider", return_value=Flaky()):
+            counts = summarize.summarize(s, CONFIG)
+        self.assertEqual(Flaky.calls, 4)  # 20 items in batches of 5: all four attempted
+        self.assertEqual(counts["ai"], 10)
+        self.assertEqual(counts["errors"], 2)
 
 
 class DigestTests(unittest.TestCase):

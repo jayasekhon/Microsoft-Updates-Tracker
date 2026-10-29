@@ -144,6 +144,9 @@ async function boot() {
   mountCarousel();
   const browser = mountBrowser($("#browse"));
   renderSummary(browser);
+  // Arriving with filters in the link (e.g. "Search all Copilot Studio updates" on a topic page): go straight to the list.
+  const params = new URLSearchParams(location.hash.slice(1));
+  if ([...params.keys()].some((k) => k !== "item")) $("#browse").scrollIntoView();
   openItemFromHash();
 }
 

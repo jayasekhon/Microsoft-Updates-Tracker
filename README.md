@@ -5,7 +5,7 @@ Tracks every change to **Microsoft 365 Copilot, Copilot Chat, Copilot Studio and
 - **A GitHub Pages site**:
   - The homepage has a 3D carousel with one animated card per product, showing three numbers only: changes this week, rolling out now, needs action.
   - Each card opens a **topic page** listing that product's updates in priority order: needs action, this week, rolling out now, coming soon, recently launched, blog posts.
-  - Both pages end with the full searchable list: a feed grouped by week, a status board (In development → Rolling out → Launched), a release timeline by GA month, and a full history for every item.
+  - The homepage ends with the full searchable list: a feed grouped by week, a status board (In development → Rolling out → Launched), a release timeline by GA month, and a full history for every item. Topic pages link to it, filtered to their product.
 - **A weekly email briefing** every Monday covering the previous Monday–Sunday: what needs action, what's now available, what's newly announced, date changes, Microsoft blog posts, and what's targeted for next month. Every item links back to Microsoft.
 - **An RSS feed** (`feed.xml`) for anyone who wants updates in Outlook, Teams or a feed reader.
 
@@ -55,7 +55,7 @@ Without a key, the tracker uses Microsoft's own wording and rule-based tags. To 
 - Secret `GEMINI_API_KEY`: get one at <https://aistudio.google.com/apikey>
 - *(optional)* Variable `GEMINI_MODEL`, default `gemini-flash-latest`
 
-Each item is summarised once. It's summarised again only if Microsoft changes its text. The first run handles the 200 most recent items (`AI_MAX_ITEMS`); later runs work through the rest.
+Each item is summarised once. It's summarised again only if Microsoft changes its text. Each run summarises up to 200 items (`AI_MAX_ITEMS`), newest first, and stops after 20 minutes. The free tier is slow, so the first few days' runs work through the backlog.
 
 **Switching to AWS Bedrock later**: set variables `AI_PROVIDER=bedrock`, `BEDROCK_MODEL_ID` (any model with Bedrock's Converse API), `AWS_REGION`, and `AWS_ROLE_ARN`, an IAM role trusted for GitHub OIDC with `bedrock:InvokeModel`. No code changes are needed. Items summarised by Gemini keep their summaries.
 

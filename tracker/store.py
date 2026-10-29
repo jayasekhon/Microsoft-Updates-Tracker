@@ -117,8 +117,24 @@ def merge(store: dict, fetched: list[dict], *, kinds_fetched: set[str], today: s
         item.setdefault("events", []).append({"type": "removed", "date": today})
         counts["removed"] += 1
 
+    _repair_post_dates(items, today)
     store["schema"] = SCHEMA_VERSION
     return counts
+
+
+def _repair_post_dates(items: dict, today: str) -> None:
+    """Re-date posts whose "new" event was stamped with the day we found them.
+
+    Before posts were dated by their publish date, a newly added feed made old posts look
+    new. Running this on every merge heals stores written by that version.
+    """
+    for item in items.values():
+        published = item.get("created")
+        if item.get("kind") != "post" or not published or published > today:
+            continue
+        for event in item.get("events", []):
+            if event["type"] == "new":
+                event["date"] = published
 
 
 def last_activity(item: dict) -> str:

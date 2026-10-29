@@ -1,7 +1,6 @@
 // Topic page (topic.html?p=<product>): one product's updates, most important first.
 
 import { ART } from "./art.js";
-import { mountBrowser } from "./browser.js";
 import {
   $, DATA, MONTHS, PRODUCT_HEX, daysAgo, esc, initPage, live, loadData, monthKey, needsAction,
   nowMonthKey, observeReveals, openItemFromHash, row, stats, updatedText,
@@ -10,9 +9,7 @@ import {
 const byActivity = (a, b) => (b.la || "").localeCompare(a.la || "") || a.t.localeCompare(b.t);
 const LIMIT = 6;
 
-/**
- * Each section answers one question. `filter` is what "See all" opens in the full list below.
- */
+/** Each section answers one question about this product. */
 function sections(items) {
   const nowKey = nowMonthKey();
   const features = items.filter((i) => i.k === "feature");
@@ -22,37 +19,34 @@ function sections(items) {
       id: "action", icon: "⚠️", title: "Needs action",
       blurb: "Changes in the last 30 days that need an admin or a heads-up for users.",
       items: items.filter((i) => daysAgo(i.la) <= 30 && needsAction(i)).sort(byActivity),
-      mode: "action", filter: { action: true, range: "30" }, tone: "alert",
+      mode: "action", tone: "alert",
     },
     {
       id: "week", icon: "✦", title: "This week",
       blurb: "Everything that changed in the last 7 days.",
       items: items.filter((i) => daysAgo(i.la) <= 7).sort(byActivity),
-      mode: "change", filter: { range: "7" }, empty: "Nothing changed in the last 7 days.",
+      mode: "change", empty: "Nothing changed in the last 7 days.",
     },
     {
       id: "rolling", icon: "🚀", title: "Rolling out now",
       blurb: "Arriving in tenants over the coming weeks.",
       items: features.filter((i) => i.s === "Rolling out").sort(byActivity),
-      filter: { status: "roll" },
     },
     {
       id: "soon", icon: "🗓️", title: "Coming soon",
       blurb: "Still in development, with general availability due in the next three months.",
       items: soon.sort((a, b) => monthKey(a.ga) - monthKey(b.ga) || a.t.localeCompare(b.t)),
-      groupByMonth: true, filter: { status: "dev", sort: "ga" },
+      groupByMonth: true,
     },
     {
       id: "launched", icon: "✅", title: "Recently launched",
       blurb: "Generally available, with activity in the last 45 days.",
       items: features.filter((i) => i.s === "Launched" && daysAgo(i.la) <= 45).sort(byActivity),
-      filter: { status: "live", range: "90" },
     },
     {
       id: "posts", icon: "📰", title: "From Microsoft's blogs",
       blurb: "Announcements and deep dives from the last 60 days.",
       items: items.filter((i) => i.k === "post" && daysAgo(i.c) <= 60).sort(byActivity),
-      filter: { status: "post" },
     },
   ];
 }
@@ -75,14 +69,14 @@ function renderSection(sec, expanded) {
   } else {
     body = `<div class="rows">${list.map((it, i) => row(it, { mode: sec.mode, i })).join("")}</div>`;
   }
-  const more = sec.items.length > list.length
-    ? `<button class="sec-more" type="button" data-expand="${sec.id}">Show all ${sec.items.length}</button>`
-    : "";
+  const limit = sec.groupByMonth ? LIMIT * 2 : LIMIT;
+  const more = sec.items.length <= limit ? ""
+    : expanded ? `<button class="sec-more" type="button" data-collapse="${sec.id}">Show fewer</button>`
+    : `<button class="sec-more" type="button" data-expand="${sec.id}">Show all ${sec.items.length}</button>`;
   return `<section class="sec ${sec.tone ? `is-${sec.tone}` : ""}" id="sec-${sec.id}" aria-labelledby="h-${sec.id}">
     <header class="sec-head">
       <span class="sec-icon" aria-hidden="true">${sec.icon}</span>
       <div><h2 id="h-${sec.id}">${esc(sec.title)} <span class="sec-n">${sec.items.length}</span></h2><p>${esc(sec.blurb)}</p></div>
-      ${sec.items.length ? `<button class="sec-all" type="button" data-browse="${sec.id}">See in full list →</button>` : ""}
     </header>
     ${body}
     ${more}
@@ -129,15 +123,18 @@ async function boot() {
     observeReveals();
   };
   draw();
-
-  const browser = mountBrowser($("#browse"), { product: p.id });
-  $("#browseTitle").textContent = `All ${p.name} updates`;
+  $("#searchLink").href = `./#p=${p.id}`;
+  $("#searchLink").textContent = `Search all ${p.name} updates →`;
 
   $("#sections").addEventListener("click", (e) => {
     const exp = e.target.closest("[data-expand]");
     if (exp) { expanded.add(exp.dataset.expand); draw(); return; }
-    const b = e.target.closest("[data-browse]");
-    if (b) browser.show(secs.find((x) => x.id === b.dataset.browse).filter);
+    const col = e.target.closest("[data-collapse]");
+    if (col) {
+      expanded.delete(col.dataset.collapse);
+      draw();
+      $(`#sec-${col.dataset.collapse}`).scrollIntoView({ block: "nearest" });
+    }
   });
   openItemFromHash();
 }
