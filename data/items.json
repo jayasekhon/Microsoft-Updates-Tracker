@@ -1,5 +1,38 @@
 {
  "items": {
+  "post-042c621a182d": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "07d5a4c96f59",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Every team has repeatable work they want done the right way, not just once, but every time. Copilot can learn the way your team already works, follow the processes you trust, and help people repeat high-quality outcomes without starting from scratch every time."
+   },
+   "categories": [],
+   "created": "2026-07-28",
+   "description": "Every team has repeatable work they want done the right way, not just once, but every time. Copilot can learn the way your team already works, follow the processes you trust, and help people repeat high-quality outcomes without starting from scratch every time.\n\nThat is the idea behind skills in Copilot in SharePoint. Skills are reusable instructions that teach Copilot how to perform a specific task, whether that is summarizing meetings, analyzing a SharePoint site, generating reports, reviewing documents, or preparing project briefs. Once saved to a SharePoint site, skills become a shared team asset that anyone with access to the site can invoke from chat.\n\nFor organizations, that means less repetitive prompting, more consistent results, and a growing library of expertise that can be reused across projects and teams. If you are new to skills, learn more at Teaching AI in SharePoint What to Know and How to Act and the Copilot in SharePoint adoption page. To help you get started, here are ten skills that show what is possible today and can help you turn proven processes into reusable capabilities for your team.\n\n10 custom AI skills to try\n\nHere are ten examples that show how skills ",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-042c621a182d",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-07-28",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "07d5a4c96f59",
+   "title": "SharePoint Showcase: 10 Custom AI Skills Every SharePoint Site Owner Should Build",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-showcase-10-custom-ai-skills-every-sharepoint-site/ba-p/4535414"
+  },
   "post-13903156e865": {
    "ai": {
     "action": "awareness",
@@ -166,6 +199,171 @@
    "title": "Build apps in Copilot Cowork and Copilot Studio",
    "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/build-apps-in-copilot-cowork-and-copilot-studio/"
   },
+  "post-3114f128a9ed": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "7c168e5d5da4",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Your monthly roundup of what's new in Copilot in SharePoint. Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language."
+   },
+   "categories": [],
+   "created": "2026-09-02",
+   "description": "Your monthly roundup of what's new in Copilot in SharePoint.\n\nCopilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. This month, reusable skills can follow you across SharePoint and OneDrive, Copilot can measure and improve those skills with evaluations, and new guidance helps AI agents build live, SharePoint-safe experiences. Here's everything that's new.\n\nBuild better skills and use them anywhere\n\nPersonal skills that follow you\n\nWhat's new: Create a personal skill once and use it across all your SharePoint sites\n\nWhy it matters: Your preferred formats, standards, and repeatable ways of working can travel with you instead of being tied to one site.\n\nSample use cases:\n\nSave your executive-update structure as a personal skill, then use it with project content wherever it lives.\n\nAn executive can ask Copilot to create a personal document briefing skill that turns lengthy SharePoint documents into concise summaries. The skill highlights proposals, expected value, decisions needed, key risks, open questions, and next steps\n\nTry these prompts:\n\n“Create a personal sk",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-3114f128a9ed",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-09-02",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "7c168e5d5da4",
+   "title": "What's New in Copilot in SharePoint: September 2026",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/what-s-new-in-copilot-in-sharepoint-september-2026/ba-p/4535422"
+  },
+  "post-36d008087851": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "147488683d1f",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Today we announced the new Copilot app, bringing together how people assist, delegate, build, and automate work in one experience powered by Work IQ."
+   },
+   "categories": [],
+   "created": "2026-09-25",
+   "description": "Today we announced the new Copilot app, bringing together how people assist, delegate, build, and automate work in one experience powered by Work IQ.\n\nBecause Work IQ grounds these experiences in your work and organizational context, the quality and structure of knowledge behind them matters more than ever. The better that content gets, the better Copilot gets: in Microsoft evaluations, responses in the Copilot app improved by an average of 17 percentage points when the underlying content had been enriched and structured by Copilot.\n\nThat’s why over the past year we’ve invested in Copilot’s content experiences and tools – both in the Copilot app and inside the content repository itself with the Copilot in SharePoint preview. In just the past month, millions of users have tried this preview, applying it to real-world challenges to translate complex content into tangible business value and accelerate their organization’s AI transformation.\n\nSee Copilot in SharePoint in action, from asking questions of your content to building reusable skills your teams can share.\n\nAnd now, we’re taking that further by building these AI-native SharePoint tools and enriched data into the Copilot app an",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-36d008087851",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-09-25",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "147488683d1f",
+   "title": "SharePoint AI innovations hit GA, powering new Copilot app and agents",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-ai-innovations-hit-ga-powering-new-copilot-app-and/ba-p/4555724"
+  },
+  "post-37a63d2d4aa4": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "1b7748e11576",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Collaboration is changing as teams of humans and agents now work together to get more done."
+   },
+   "categories": [],
+   "created": "2026-10-15",
+   "description": "Collaboration is changing as teams of humans and agents now work together to get more done. That’s why we’ve evolved Copilot to empower these human-agent teams: just last month, we announced copilot​ in Teams, Autopilot as your digital teammate, and new tools in Copilot for managing a team’s content workflows.\n\nToday, we are taking the next step in human-agent team collaboration, designed to help address the problem of fragmented and outdated information and enable agent teammates to have the required team context they need to perform tasks and answer questions. In Frontier Preview, Copilot and agents in the newly announced Copilot app, Teams, and SharePoint will be able to create, contribute to, curate, and reference a team’s knowledge base in SharePoint.\n\nIf the player doesn’t load, open the video in a new window: Open video\n\nKnowledge bases can support a range of team needs by bringing together the context people and agents need to do their best work. Here are some examples of how we are working with frontier teams to leverage a knowledge base:\n\nLegal: Collecting isolated knowledge from emails, files, and personal notes to help agents reference relevant context when creating agr",
+   "events": [
+    {
+     "date": "2026-10-15",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-37a63d2d4aa4",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-15",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "1b7748e11576",
+   "title": "Introducing a team knowledge base, curated by Copilot and agents",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/introducing-a-team-knowledge-base-curated-by-copilot-and-agents/ba-p/4564203"
+  },
+  "post-382e207e575d": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "a13244a76095",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language."
+   },
+   "categories": [],
+   "created": "2026-08-06",
+   "description": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. Here's everything that's new in the last month:\n\n📊 Create live SharePoint dashboards\n\nCopilot can now generate a SharePoint dashboard directly from a list as an interactive HTML report that stays connected to the underlying list. Instead of exporting data and rebuilding a report every time something changes, your SharePoint dashboard refreshes from the list whenever it's opened. Dashboards can also be created from Excel and CSV files.\n\nWhy it matters: Most AI-generated dashboards go stale the moment they're created. You export data, generate a report, update the list, then rebuild the whole thing. No more. Now SharePoint can generate HTML dashboards and apps that stay connected to the underlying list data -- unlocking all types of new List-driven experiences!\n\nIf the player doesn’t load, open the video in a new window: Open video\n\nSample use cases:\n\nProject status dashboard — turn a list of projects into a live executive view showing what's on track, at risk, or blocked, with filters for owner, priority, due",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-382e207e575d",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-08-06",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "a13244a76095",
+   "title": "What's New in Copilot in SharePoint: August 2026",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/what-s-new-in-copilot-in-sharepoint-august-2026/ba-p/4535421"
+  },
+  "post-3b66ec46524b": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "bed9cb1b9f37",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "We're excited to share that you can now create HTML pages in SharePoint. Describe what you want and let Copilot build it for you, or upload an HTML file you've already crafted. HTML pages live in the Site Pages library, right alongside your existing modern pages."
+   },
+   "categories": [],
+   "created": "2026-10-22",
+   "description": "We're excited to share that you can now create HTML pages in SharePoint. Describe what you want and let Copilot build it for you, or upload an HTML file you've already crafted. HTML pages live in the Site Pages library, right alongside your existing modern pages. That means you can edit, publish, and share them using the same familiar flow you already know.\n\nThe sky is the limit in terms of what you can build, from a project status page connected to live data; an onboarding page with the latest guidance for new hires and a timeline of key milestones; or a visual identity guide with recommended colors, voice, and imagery.\n\nYou might not see this feature yet. Some functionality is introduced gradually to organizations that have opted in to the Frontier public program in Microsoft 365.\n\nSee this video with Nicole Woon and Vesa Juvonen for the live demo of new features.\n\nWhat's available\n\nHere's a quick look at everything you can do with HTML pages today. To learn more, visit the support documentation for HTML pages.\n\nCreating and uploading\n\nCreate with Copilot in SharePoint. Type a prompt, attach files for extra context, and Copilot in SharePoint drafts a brand-aligned page in moments",
+   "events": [
+    {
+     "date": "2026-10-22",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-3b66ec46524b",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-22",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "bed9cb1b9f37",
+   "title": "Publish rich and interactive content with HTML pages in SharePoint",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/publish-rich-and-interactive-content-with-html-pages-in/ba-p/4565918"
+  },
   "post-43df15fa33f4": {
    "ai": {
     "action": "awareness",
@@ -231,6 +429,238 @@
    "text_hash": "dd070fd4e620",
    "title": "Building the system for AI at work",
    "url": "https://www.microsoft.com/en-us/copilot/blog/2026/09/23/building-the-system-for-ai-at-work/"
+  },
+  "post-492dfcdce8e7": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "29ae45611bdb",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "The traditional boundaries of business applications are disappearing. For decades, people went to their customer relationship management (CRM) to find customer context, take action, and move work forward. AI is inverting that model."
+   },
+   "categories": [],
+   "created": "2026-10-08",
+   "description": "The traditional boundaries of business applications are disappearing. For decades, people went to their customer relationship management (CRM) to find customer context, take action, and move work forward. AI is inverting that model. This shift creates two complementary opportunities: greater individual productivity and organization-wide process transformation.",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-492dfcdce8e7",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-08",
+   "product": "m365",
+   "source": "Microsoft 365 / Copilot blog",
+   "text_hash": "29ae45611bdb",
+   "title": "Bringing CRM into the flow of work and agents into business process for sales and service teams",
+   "url": "https://www.microsoft.com/en-us/copilot/blog/2026/10/08/bringing-crm-into-the-flow-of-work-and-agents-into-business-process-for-sales-and-service-teams/"
+  },
+  "post-4d7ce08d9c2e": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins"
+    ],
+    "date": "2026-10-29",
+    "hash": "ffde75f85be1",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language."
+   },
+   "categories": [],
+   "created": "2026-07-16",
+   "description": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language. June was a big month: starting June 16 Copilot in SharePoint began rolling out as on by default for everyone with a Microsoft 365 Copilot license, and we shipped a wave of new capabilities for creating content, automating work, and getting trustworthy answers. Here’s everything that’s new.\n\n🛠️ Create content with natural language\n\nCreate Word, Excel, and PowerPoint files\n\nWhat’s new: Ask Copilot to create a Word document, Excel workbook, or PowerPoint deck directly from your content in SharePoint — no blank-page start required.\n\nWhy it matters: Turn the knowledge already living in your sites into finished, shareable deliverables in minutes, without copy-pasting across apps.\n\nSample use case: A program manager turns a project site’s notes into a first-draft status deck before a leadership review.\n\nTry this prompt “Create a press release as a Word doc based on the sales performance dashboard [doc link]. Summarize key results, highlight top growth areas, call out trends, and frame it for an internal leadership ",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-4d7ce08d9c2e",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-07-16",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "ffde75f85be1",
+   "title": "What’s New in Copilot in SharePoint: July 2026",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/what-s-new-in-copilot-in-sharepoint-july-2026/ba-p/4535420"
+  },
+  "post-4ea819380f5b": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "84b8a95f0ba4",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Creating and refining SharePoint pages is becoming more intuitive. Instead of describing where content lives on the page, authors can now simply select a section or web part and tell Copilot what they want to change."
+   },
+   "categories": [],
+   "created": "2026-09-10",
+   "description": "Creating and refining SharePoint pages is becoming more intuitive. Instead of describing where content lives on the page, authors can now simply select a section or web part and tell Copilot what they want to change.\n\nWatch the demo\n\nFeatured speakers\n\nSara Cummings, Product Manager for AI authoring, Microsoft\n\nVesa Juvonen, Principal Product Manager, Microsoft\n\nFrom describing a location to selecting it\n\nPreviously, authors described both the content they wanted to change and where it was located on the page. With on-canvas selection, location becomes part of the context automatically. Simply select a web part or section and describe the outcome you want. The selected item appears in the Copilot experience, giving the request clear context.\n\nWhat you can do\n\nMake focused edits. Select an image or another page element and ask Copilot to move or update it.\n\nRestructure a section. Select the section and ask for a different column layout; Copilot can work across the components inside it.\n\nApply broader updates. Ask Copilot to update repeated content across a page, for example, changing a product or brand name in text and supported web-part content.\n\nReview the result. Updated areas ar",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-4ea819380f5b",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-09-10",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "84b8a95f0ba4",
+   "title": "SharePoint AI page authoring: Select, describe, and refine",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-ai-page-authoring-select-describe-and-refine/ba-p/4553193"
+  },
+  "post-4eae81567e5c": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "bc0145178f66",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "By: Sarah Mathurin and Kripal Kavi Corporate communicators need more than a place to publish updates. They need a connected workspace to create compelling content, plan campaigns, reach employees across channels, and measure impact."
+   },
+   "categories": [],
+   "created": "2026-10-26",
+   "description": "By: Sarah Mathurin and Kripal Kavi\n\nCorporate communicators need more than a place to publish updates. They need a connected workspace to create compelling content, plan campaigns, reach employees across channels, and measure impact.\n\nThat is the foundation of the new Publish experience in SharePoint. With Publish, communicators don’t have to remember another destination, they get a unified place to create, distribute, and measure communications without leaving the platform where their organizational news already lives.\n\nPublish serves as the primary hub for communicators and content creators in SharePoint, bringing pages, news, Amplify content, campaigns, templates, analytics, and publishing workflows into a single modern interface, all powered by AI. Our goal is to help communicators deliver the right message to the right audience at the right time. Site campaigns are one way we’re bringing that vision into the everyday SharePoint publishing workflow.\n\nLearn more about Publish Getting started with Publish in SharePoint | Microsoft Support\n\nWhat's new: Site Campaigns\n\nToday we’re introducing Site campaigns in SharePoint, a new capability that brings campaign management closer to w",
+   "events": [
+    {
+     "date": "2026-10-26",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-4eae81567e5c",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-26",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "bc0145178f66",
+   "title": "SharePoint Publish: The next steps for Viva Amplify and centralized corporate communications",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-publish-the-next-steps-for-viva-amplify-and/ba-p/4564204"
+  },
+  "post-51d39dd74fac": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins",
+     "Makers & developers"
+    ],
+    "date": "2026-10-29",
+    "hash": "6b724d046e7e",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "For the latest details, timelines, FAQs, and implementation guidance, read the full Microsoft Learn article. In 2016, we introduced modern SharePoint and the SharePoint Framework to our online service – a cloud-born user experience & developer extensibility framework."
+   },
+   "categories": [],
+   "created": "2026-08-31",
+   "description": "For the latest details, timelines, FAQs, and implementation guidance, read the full Microsoft Learn article.\n\nIn 2016, we introduced modern SharePoint and the SharePoint Framework to our online service – a cloud-born user experience & developer extensibility framework. Ten years later, we continue to invest in this stable platform to provide reliable, well-governed, AI-ready, mobile-friendly, and secure-by-default foundations for customers’ publishing and content management needs.\n\nAlso in 2016, we renamed our previous publishing and UX extensibility system to “classic”. These features were designed to ease our customers’ transition from on premises environment to the cloud service. Now, ten years later, these classic features are used by fewer than 5% of our monthly active tenant base, and the classic SharePoint page content is not participating in the latest ways content should be secured, managed, and shared. Classic pages are also not fully represented in the content formats that power Microsoft 365 Copilot, which can reduce the coverage and accuracy of Copilot responses that draw on classic content. As such, over the next two years, we will take steps to retire classic SharePo",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-51d39dd74fac",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-08-31",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "6b724d046e7e",
+   "title": "Upcoming changes to classic experiences in SharePoint Online",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/upcoming-changes-to-classic-experiences-in-sharepoint-online/ba-p/4549091"
+  },
+  "post-57ecbc5ace4f": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "767375e99c65",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "By Sujay Kumar Jauhar, Spriha Chandrayan, Natasha Gaitonde, Zhen Lei, Reed Pankhurst, Anush Sankaran, Amrit Shandilya, Ryen W. White Organizations put their most important content in OneDrive and SharePoint, trusting us to deliver AI experiences they can depend on."
+   },
+   "categories": [],
+   "created": "2026-07-21",
+   "description": "By Sujay Kumar Jauhar, Spriha Chandrayan, Natasha Gaitonde, Zhen Lei, Reed Pankhurst, Anush Sankaran, Amrit Shandilya, Ryen W. White\n\nOrganizations put their most important content in OneDrive and SharePoint, trusting us to deliver AI experiences they can depend on. That trust runs across everything Copilot does with their content — surfacing the right information through retrieval, and, increasingly, driving agentic workflows that reason over documents and take action on their behalf. Living up to that trust is what we care about most, and it's why we put the quality of these experiences — and consequently the ways we measure that quality — at the center of how we build.\n\nIt turns out that this is a non-trivial problem, because quality in AI is rarely binary. An agent can call exactly the right tools and still produce an answer that's subtly, confidently wrong. A search result can be technically relevant and still miss what the user was really after. An AI-generated page can be well-structured and fluent and still omit the one detail that mattered. Quality here is continuous, context-dependent, and multidimensional — and when these experiences are serving hundreds of millions of e",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-57ecbc5ace4f",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-07-21",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "767375e99c65",
+   "title": "Beyond Benchmarks: The Lifecycle of Measuring Agentic Quality in AI Content Management",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/beyond-benchmarks-the-lifecycle-of-measuring-agentic-quality-in/ba-p/4538319"
+  },
+  "post-626a2a436777": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "Security & compliance"
+    ],
+    "date": "2026-10-29",
+    "hash": "79d363a61bf6",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Organizations continue to look for faster ways to modernize intranets, improve internal communications, and increase employee engagement."
+   },
+   "categories": [],
+   "created": "2026-08-26",
+   "description": "Organizations continue to look for faster ways to modernize intranets, improve internal communications, and increase employee engagement. Partners in the Microsoft ecosystem are helping customers accelerate that journey by extending SharePoint and Microsoft 365 with ready-to-deploy solutions that deliver immediate business value.\n\nAs organizations increasingly adopt Microsoft 365 Copilot, a well-structured and engaging intranet becomes even more important. High-quality content, clear information architecture, and effective content management help employees get greater value from AI-powered experiences.\n\nThis partner showcase highlights ACP, one of the leading IT service providers in Austria, Germany, and Switzerland.\n\nAbout ACP\n\nACP is one of the leading IT service providers in Austria, Germany, and Switzerland. As a leading technology and digital transformation partner, ACP delivers modern IT solutions, cloud services, digital workplaces, cybersecurity, and managed services to businesses and public sector organizations. With more than 2,600 specialists and a strong local presence, ACP helps customers unlock innovation and turn technology into measurable business value.\n\nWithin ACP",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-626a2a436777",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-08-26",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "79d363a61bf6",
+   "title": "Streamlining Enterprise Collaboration - ACP - SharePoint Partner Spotlight",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/streamlining-enterprise-collaboration-acp-sharepoint-partner/ba-p/4550384"
   },
   "post-67722ad4002b": {
    "ai": {
@@ -405,6 +835,42 @@
    "title": "Build apps in Copilot Cowork and Copilot Studio",
    "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/build-apps-in-copilot-cowork-and-copilot-studio/"
   },
+  "post-a26fa705b971": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins",
+     "Security & compliance"
+    ],
+    "date": "2026-10-29",
+    "hash": "ccb28ca3cba0",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Microsoft 365 G7 brings AI, Copilot, agent governance, security, and compliance together to help government agencies modernize securely."
+   },
+   "categories": [
+    "AI"
+   ],
+   "created": "2026-09-15",
+   "description": "Microsoft 365 G7 brings AI, Copilot, agent governance, security, and compliance together to help government agencies modernize securely.",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-a26fa705b971",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-09-15",
+   "product": "m365",
+   "source": "Microsoft 365 / Copilot blog",
+   "text_hash": "ccb28ca3cba0",
+   "title": "Introducing Microsoft 365 G7: Intelligence + Trust for the mission ahead",
+   "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/us-government/2026/09/15/introducing-microsoft-365-g7-intelligence-trust-for-the-mission-ahead/"
+  },
   "post-a27861e281d3": {
    "ai": {
     "action": "awareness",
@@ -477,6 +943,40 @@
    "title": "Introducing Microsoft Scout: Your always-on personal agent",
    "url": "https://www.microsoft.com/en-us/copilot/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/"
   },
+  "post-a54c359924ff": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins",
+     "Security & compliance"
+    ],
+    "date": "2026-10-29",
+    "hash": "535be36bda12",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "For this month's SharePoint showcase, we're zooming in on AI skills in SharePoint and real Microsoft use cases for Copilot in SharePoint. We're also introducing a new \"Product Drops\" standing section to recap all the new GA functionality across the platform each month."
+   },
+   "categories": [],
+   "created": "2026-07-09",
+   "description": "For this month's SharePoint showcase, we're zooming in on AI skills in SharePoint and real Microsoft use cases for Copilot in SharePoint. We're also introducing a new \"Product Drops\" standing section to recap all the new GA functionality across the platform each month.\n\nAs always, would love to hear from you in the comments. Let's get into it!\n\nStart with the playbook: building AI skills that actually work\n\nBefore the new capabilities below, start with the thinking behind them. In a new companion post, our team distills what we've learned working with customers building real skills in Copilot in SharePoint — why some AI workflows take off and others stall after the demo. Three lessons stand out:\n\nPick the right workflow. Most efforts succeed or fail here. A quick filter: is it worth building, is it content-centric, and is there a repeatable path to a known-good outcome? Proposal drafting, compliance checks, and vendor evaluation pass; one-off creative work doesn't.\n\nBuild it the way work actually happens. Skills beat ad-hoc prompts the moment judgment needs to be consistent. Design around the handoff to the next person, set the human checkpoint first, and let site memory carry less",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-a54c359924ff",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-07-09",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "535be36bda12",
+   "title": "SharePoint Showcase: How Microsoft uses Copilot in SharePoint, and how you can get started",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-showcase-how-microsoft-uses-copilot-in-sharepoint-and/ba-p/4533156"
+  },
   "post-b0f3cb78862e": {
    "ai": {
     "action": "awareness",
@@ -511,6 +1011,105 @@
    "text_hash": "be343030b261",
    "title": "Copilot Cowork is now generally available",
    "url": "https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+  },
+  "post-c75a43ae6d3d": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "79e872983a31",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition."
+   },
+   "categories": [],
+   "created": "2026-09-25",
+   "description": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition.",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-c75a43ae6d3d",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-09-25",
+   "product": "m365",
+   "source": "Microsoft 365 / Copilot blog",
+   "text_hash": "79e872983a31",
+   "title": "Introducing the new Copilot with Home, Code and Autopilot",
+   "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
+  },
+  "post-c8238975c850": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins"
+    ],
+    "date": "2026-10-29",
+    "hash": "259bc1500444",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Your monthly roundup of what's new in Copilot in SharePoint. Copilot in SharePoint general availability rollout started on September 30 — read the announcement blog for the full story. But general availability isn't the finish line, and this month's release makes that clear."
+   },
+   "categories": [],
+   "created": "2026-10-01",
+   "description": "Your monthly roundup of what's new in Copilot in SharePoint.\n\nCopilot in SharePoint general availability rollout started on September 30 — read the announcement blog for the full story.\n\nBut general availability isn't the finish line, and this month's release makes that clear. October is about what happens after Copilot creates something — reviewing it, restructuring it, publishing it, and getting it to the people who need to act on it. You'll find new ways to reshape documents and images, review and publish generated HTML, and send the result on without ever leaving the site. Round it out with plugins that reach your other business systems, workflows you can describe in a sentence, and analytics you can simply ask for, and the pattern this month is a simple one: fewer trips out of SharePoint to finish the job.\n\nMost of these capabilities are included with your Microsoft 365 Copilot license. Image generation and editing, advanced autofill, and site analytics use Copilot Credits, which have started rolling out as part of general availability.\n\nCreate and refine content\n\nSplit, merge, and reorder PDFs without leaving SharePoint\n\nWhat’s new: Copilot in SharePoint can now work with PDF",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-c8238975c850",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-01",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "259bc1500444",
+   "title": "What’s new in Copilot in SharePoint: October 2026",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/what-s-new-in-copilot-in-sharepoint-october-2026/ba-p/4535423"
+  },
+  "post-dcd601368fe0": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "IT admins"
+    ],
+    "date": "2026-10-29",
+    "hash": "810508ef4f5a",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Matt Wolodarsky, a principal program manager at Microsoft, has led an early access program, testing out how skills in SharePoint can drive value for customers. You can roll AI out and still have nothing to show for it."
+   },
+   "categories": [],
+   "created": "2026-06-30",
+   "description": "Matt Wolodarsky, a principal program manager at Microsoft, has led an early access program, testing out how skills in SharePoint can drive value for customers.\n\nYou can roll AI out and still have nothing to show for it. We've all seen the headlines about companies spending big on AI and getting little back. But it doesn't have to go that way. Over the past few months, I've worked alongside teams doing the opposite - one got a usable proposal draft in a fraction of the time it used to take; another got a clear read on where a project actually stood, when the information they needed was scattered across documents and hard to surface. What ultimately set these teams apart was how intentionally they applied Copilot to real work.\n\nThis is where skills matter. In SharePoint, skills transform Copilot from a general-purpose assistant into a specialist grounded in your content, policies, and business logic - enabling it to perform meaningful work on your behalf. They capture the repeatable judgment your teams already use to make decisions and move work forward. The rules your legal team applies when reviewing marketing content before it goes live? That’s a skill. The rules that determine wh",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-dcd601368fe0",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-06-30",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "810508ef4f5a",
+   "title": "Lessons From Building AI Skills in the Real World with Copilot in SharePoint",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/lessons-from-building-ai-skills-in-the-real-world-with-copilot/ba-p/4529563"
   },
   "post-e42016017989": {
    "ai": {
@@ -581,6 +1180,72 @@
    "text_hash": "460d0489b978",
    "title": "New and improved: Build apps, extend agents, and transform business processes in Microsoft Copilot Studio",
    "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-build-apps-extend-agents-and-transform-business-processes-in-microsoft-copilot-studio/"
+  },
+  "post-fbcf160ba8cb": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "9788b72f2e9c",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "AI becomes most impactful when it helps with the work teams already do every day. The challenge is rarely a lack of information. It is turning trusted information into a clear, repeatable process without starting from scratch each time."
+   },
+   "categories": [],
+   "created": "2026-08-27",
+   "description": "AI becomes most impactful when it helps with the work teams already do every day. The challenge is rarely a lack of information. It is turning trusted information into a clear, repeatable process without starting from scratch each time.\n\nThat is where Copilot in SharePoint can help. It works with the content and structure already in SharePoint, including sites, pages, lists, libraries, and files. Teams can ask questions, compare and summarize content, organize information, create outputs, and turn repeatable multi-step processes into reusable skills.\n\nThe examples below are based on real customer scenarios from organizations exploring Copilot in SharePoint. To protect customer confidentiality, organization names and identifying details have been generalized. What matters is the pattern: start with trusted SharePoint content, define the work that needs to happen, keep people in control, and make the process easier to repeat.\n\n1. Turn fragmented project updates into a usable project history\n\nIndustry Scenario: A life sciences organization needed a better way to understand how complex projects changed over time. Important decisions and updates were spread across email exports, present",
+   "events": [
+    {
+     "date": "2026-10-29",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-fbcf160ba8cb",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-08-27",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "9788b72f2e9c",
+   "title": "SharePoint Showcase: 5 Ways Organizations Improve Business Processes with Copilot in SharePoint",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-showcase-5-ways-organizations-improve-business/ba-p/4549704"
+  },
+  "post-fe3141148cc5": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-29",
+    "hash": "75c0895a2dd0",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "New research across more than 200 enterprises looks at how shared knowledge can help companies coordinate their agents—and turn lessons from their work into an operational edge."
+   },
+   "categories": [],
+   "created": "2026-10-27",
+   "description": "New research across more than 200 enterprises looks at how shared knowledge can help companies coordinate their agents—and turn lessons from their work into an operational edge.",
+   "events": [
+    {
+     "date": "2026-10-27",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-29",
+   "id": "post-fe3141148cc5",
+   "kind": "post",
+   "last_seen": "2026-10-29",
+   "modified": "2026-10-27",
+   "product": "m365",
+   "source": "Microsoft 365 / Copilot blog",
+   "text_hash": "75c0895a2dd0",
+   "title": "The AI advantage your company can keep",
+   "url": "https://www.microsoft.com/en-us/copilot/blog/2026/10/27/the-ai-advantage-your-company-can-keep/"
   },
   "post-ff3efcc7b41e": {
    "ai": {
@@ -31404,15 +32069,11 @@
  "meta": {
   "last_counts": {
    "changed": 0,
-   "new": 593,
+   "new": 20,
    "removed": 0
   },
-  "updated_at": "2026-10-29T21:45:33+00:00",
-  "warnings": [
-   "note: feed 'Microsoft 365 Copilot blog (Tech Community)' unavailable: GET https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=Microsoft365CopilotBlog failed after 2 attempts: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "note: feed 'Copilot Studio blog (Tech Community)' unavailable: GET https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=CopilotStudioBlog failed after 2 attempts: <urlopen error Tunnel connection failed: 403 Forbidden>",
-   "note: feed 'SharePoint blog (Tech Community)' unavailable: GET https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=SPblog failed after 2 attempts: <urlopen error Tunnel connection failed: 403 Forbidden>"
-  ]
+  "updated_at": "2026-10-29T22:20:59+00:00",
+  "warnings": []
  },
  "schema": 1
 }
