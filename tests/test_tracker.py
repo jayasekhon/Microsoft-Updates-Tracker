@@ -238,6 +238,21 @@ class DigestTests(unittest.TestCase):
         self.assertIn("Oct 19 – Oct 25, 2026", digest.subject(d))
         self.assertIn("NOW AVAILABLE (1)", digest.render_text(d))
 
+    def test_horizon_is_next_30_days_by_month(self):
+        # Nov 2: window ends Dec 1, one day into December -> November only.
+        self.assertEqual(digest._horizon_months(date(2026, 11, 2)), [date(2026, 11, 1)])
+        # Nov 23: window covers Dec 1-22, more than half of December -> both.
+        self.assertEqual(digest._horizon_months(date(2026, 11, 23)), [date(2026, 11, 1), date(2026, 12, 1)])
+        # Year boundary.
+        self.assertEqual(digest._horizon_months(date(2026, 12, 28)), [date(2026, 12, 1), date(2027, 1, 1)])
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="November CY2026"), CONFIG),
+                        roadmap.normalize(raw_roadmap(rid=2, ga="December CY2026"), CONFIG),
+                        roadmap.normalize(raw_roadmap(rid=3, ga="November CY2026", status="Rolling out"), CONFIG)],
+                    kinds_fetched={"feature"}, today="2026-11-01")
+        groups = digest._horizon(s, date(2026, 11, 2))
+        self.assertEqual([(g["label"], [i["id"] for i in g["items"]]) for g in groups], [("November 2026", ["rm-1"])])
+
     def test_default_window_is_previous_week(self):
         self.assertEqual(digest.default_window(date(2026, 11, 2)), (date(2026, 10, 26), date(2026, 11, 2)))
         self.assertEqual(digest.default_window(date(2026, 11, 4)), (date(2026, 10, 26), date(2026, 11, 2)))

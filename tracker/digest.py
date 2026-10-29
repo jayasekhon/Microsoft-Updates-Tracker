@@ -114,17 +114,38 @@ def build(store: dict, config: dict, start: date, end: date) -> dict:
     }
 
 
+HORIZON_DAYS = 30
+
+
+def _horizon_months(end: date) -> list[date]:
+    """First days of the months that count as "the next 30 days" from the send date.
+
+    Roadmap GA targets are whole months, so the current month always counts and the next
+    month counts once the window covers at least half of it.
+    """
+    window_end = end + timedelta(days=HORIZON_DAYS - 1)
+    this_month = end.replace(day=1)
+    next_month = (this_month + timedelta(days=32)).replace(day=1)
+    month_after = (next_month + timedelta(days=32)).replace(day=1)
+    covered = (min(window_end, month_after - timedelta(days=1)) - next_month).days + 1
+    return [this_month, next_month] if covered * 2 >= (month_after - next_month).days else [this_month]
+
+
 def _horizon(store: dict, end: date) -> list[dict]:
-    """Features still in development that target general availability next month."""
-    nxt = (end.replace(day=1) + timedelta(days=32)).replace(day=1)
-    label = f"{nxt.strftime('%B')} CY{nxt.year}"
-    items = [
-        i for i in store.get("items", {}).values()
-        if i.get("kind") == "feature" and not i.get("removed")
-        and i.get("status") == "In development" and i.get("ga_date") == label
-    ]
-    items.sort(key=lambda i: ({"high": 0, "medium": 1, "low": 2}.get((i.get("ai") or {}).get("impact"), 1), i["title"]))
-    return [{"label": label.replace(" CY", " "), "items": items}] if items else []
+    """Features still in development that target general availability in the next 30 days."""
+    impact = {"high": 0, "medium": 1, "low": 2}
+    groups = []
+    for month in _horizon_months(end):
+        label = f"{month.strftime('%B')} CY{month.year}"
+        items = [
+            i for i in store.get("items", {}).values()
+            if i.get("kind") == "feature" and not i.get("removed")
+            and i.get("status") == "In development" and i.get("ga_date") == label
+        ]
+        items.sort(key=lambda i: (impact.get((i.get("ai") or {}).get("impact"), 1), i["title"]))
+        if items:
+            groups.append({"label": label.replace(" CY", " "), "items": items})
+    return groups
 
 
 # ---------------------------------------------------------------- formatting helpers
@@ -266,21 +287,26 @@ def render_html(digest: dict, *, web: bool = False) -> str:
 </td></tr>""")
         body.extend(_item_html(e, names) for e in entries)
 
-    for group in digest["horizon"]:
-        rows = "".join(
-            f'<tr><td style="{_FONT}padding:4px 0;font-size:13px;line-height:19px;color:#3b3650;">'
-            f'<span style="color:{PRODUCT_COLORS.get(i["product"], "#555")};">&#9632;</span>&nbsp; '
-            f'<a href="{escape(i["url"])}" style="color:#3b3650;text-decoration:none;">{escape(i["title"])}</a></td></tr>'
-            for i in group["items"][:12]
-        )
-        extra = len(group["items"]) - 12
-        more = (f'<tr><td style="{_FONT}padding:6px 0 0 0;font-size:13px;"><a href="{site_url()}" style="color:#4f2fd6;text-decoration:none;">+ {extra} more in the tracker &rarr;</a></td></tr>'
-                if extra > 0 else "")
+    if digest["horizon"]:
+        limit, shown, rows = 15, 0, []
+        for group in digest["horizon"]:
+            if shown >= limit:
+                break
+            rows.append(f'<tr><td style="{_FONT}padding:10px 0 2px 0;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#7b7591;">Due {escape(group["label"])}</td></tr>')
+            for i in group["items"][: limit - shown]:
+                rows.append(f'<tr><td style="{_FONT}padding:4px 0;font-size:13px;line-height:19px;color:#3b3650;">'
+                            f'<span style="color:{PRODUCT_COLORS.get(i["product"], "#555")};">&#9632;</span>&nbsp; '
+                            f'<a href="{escape(i["url"])}" style="color:#3b3650;text-decoration:none;">{escape(i["title"])}</a></td></tr>')
+                shown += 1
+        total = sum(len(g["items"]) for g in digest["horizon"])
+        if total > shown:
+            rows.append(f'<tr><td style="{_FONT}padding:8px 0 0 0;font-size:13px;"><a href="{site_url()}#view=timeline" style="color:#4f2fd6;text-decoration:none;">+ {total - shown} more in the tracker &rarr;</a></td></tr>')
         body.append(f"""
 <tr><td style="padding:8px 0 18px 0;">
  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f6f4ff;border-radius:10px;">
-  <tr><td style="{_FONT}padding:14px 18px 2px 18px;font-size:15px;font-weight:800;color:#1b1530;">&#128301; On the horizon: targeted for {escape(group['label'])} ({len(group['items'])})</td></tr>
-  <tr><td style="padding:4px 18px 14px 18px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}{more}</table></td></tr>
+  <tr><td style="{_FONT}padding:14px 18px 0 18px;font-size:15px;font-weight:800;color:#1b1530;">&#128301; Coming in the next {HORIZON_DAYS} days ({total})</td></tr>
+  <tr><td style="{_FONT}padding:2px 18px 0 18px;font-size:12px;line-height:17px;color:#6b7280;">Still in development, with general availability targeted for this window.</td></tr>
+  <tr><td style="padding:2px 18px 14px 18px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{''.join(rows)}</table></td></tr>
  </table>
 </td></tr>""")
 
@@ -360,9 +386,12 @@ def render_text(digest: dict) -> str:
                 lines.append(f"  What to do: {ai['action_note']}")
             lines.append(f"  {item['url']}")
             lines.append("")
-    for group in digest["horizon"]:
-        lines.append(f"ON THE HORIZON — targeted for {group['label']}: {len(group['items'])} features")
-        lines += [f"* {i['title']}" for i in group["items"][:12]]
+    if digest["horizon"]:
+        total = sum(len(g["items"]) for g in digest["horizon"])
+        lines.append(f"COMING IN THE NEXT {HORIZON_DAYS} DAYS ({total})")
+        for group in digest["horizon"]:
+            lines.append(f"Due {group['label']}:")
+            lines += [f"* {i['title']}" for i in group["items"]]
         lines.append("")
     lines.append("Sourced from the Microsoft 365 Roadmap and official Microsoft blogs. Summaries are AI-assisted; check the source before acting.")
     return "\n".join(lines)
