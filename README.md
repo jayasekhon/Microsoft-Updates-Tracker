@@ -23,6 +23,11 @@ Scope rules live in [`config/sources.json`](config/sources.json):
 
 Message Center is not used. It needs tenant admin credentials and holds tenant-internal content, so it doesn't belong on a public site.
 
+## Rules worth knowing
+
+- **Needs action**: a Roadmap feature that the AI labels *Admin action* (an admin must configure, license or review something, or a default changes) or *Prepare users* (it changes how people already work, or switches on by default). It's listed while the feature is landing: rolling out, due within 3 months, or launched in the last 30 days. The weekly email lists it once, in the week it starts landing. Blog posts can suggest a next step but never count, and neither do keyword-fallback labels made before an item has an AI summary.
+- **Rolling out**: Microsoft often leaves finished features as "Rolling out" for months. More than 2 months after the GA target month, an item is shown as *Likely rolled out*, alongside Launched.
+
 ## How it runs
 
 One GitHub Actions workflow, [`.github/workflows/tracker.yml`](.github/workflows/tracker.yml):

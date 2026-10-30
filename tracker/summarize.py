@@ -31,6 +31,8 @@ ACTIONS = {
     "admin": "Admin action",
 }
 IMPACTS = ["low", "medium", "high"]
+# Bump when PROMPT's meaning changes: items labelled under an older version are relabelled.
+PROMPT_VERSION = 2
 BATCH_SIZE = 5  # small batches keep each response well inside the request timeout
 REQUEST_TIMEOUT = 300  # seconds; Gemini's free tier can take minutes when busy
 TIME_BUDGET = 20 * 60  # seconds of AI work per run, so the daily job always finishes
@@ -39,8 +41,13 @@ PROMPT = """You help a corporate department keep up with Microsoft Copilot and S
 For each update below write:
 - "summary": 1-2 plain-English sentences (max 45 words) saying what changes and why it matters to people at work. No marketing language. Do not start with "This update".
 - "audience": who is affected, a subset of {audiences}.
-- "action": one of "admin" (an IT admin must configure, enable, disable or review something, or a default setting changes), "prepare" (users will notice a visible change and may need a heads-up or training), "awareness" (useful to know, nothing to do), "none".
-- "action_note": if action is admin or prepare, one short imperative sentence saying what to do; otherwise "".
+- "action": exactly one of:
+  - "admin": an IT admin must configure, enable, disable, license, or review a setting or policy for this, or an existing default or policy changes.
+  - "prepare": ONLY when the change alters how people already work: an existing feature is removed, replaced, moved, renamed or behaves differently, or something new switches on by default for everyone in a way they will notice. A new optional capability that people can discover for themselves is NOT "prepare".
+  - "awareness": a useful new or improved capability with nothing anyone needs to do.
+  - "none": minor, niche or fix-only changes.
+  Most updates are "awareness". For blog posts, use only "awareness" or "none".
+- "action_note": for "admin" or "prepare", one short imperative sentence saying what to do. For a blog post, optionally one suggested next step. Otherwise "".
 - "impact": "low", "medium" or "high" for a typical organisation.
 Return a JSON array with one object per update, each including its "id". Base everything only on the text given.
 
@@ -180,13 +187,17 @@ def get_provider():
 
 # ---------------------------------------------------------------- orchestration
 
-def _clean(result: dict) -> dict:
+def _clean(result: dict, kind: str) -> dict:
     action = result.get("action") if result.get("action") in ACTIONS else "awareness"
+    if kind == "post" and action in ("admin", "prepare"):
+        action = "awareness"  # posts may suggest a next step but are never action items
+    if kind == "feature" and action not in ("admin", "prepare"):
+        result = {**result, "action_note": ""}
     return {
         "summary": " ".join(str(result.get("summary", "")).split())[:500],
         "audience": [a for a in result.get("audience", []) if a in AUDIENCES] or ["End users"],
         "action": action,
-        "action_note": str(result.get("action_note", "")).strip() if action in ("admin", "prepare") else "",
+        "action_note": str(result.get("action_note", "")).strip(),
         "impact": result.get("impact") if result.get("impact") in IMPACTS else "medium",
     }
 
@@ -211,7 +222,9 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
     provider = get_provider()
     if provider:
         pending_ids = {i["id"] for i in pending}
-        pending += [i for i in items if not i.get("removed") and (i.get("ai") or {}).get("model") == "rules" and i["id"] not in pending_ids]
+        # Rule-based results, and AI results written under an older prompt, are redone too.
+        pending += [i for i in items if not i.get("removed") and i["id"] not in pending_ids
+                    and ((i.get("ai") or {}).get("model") == "rules" or (i.get("ai") or {}).get("v", 1) < PROMPT_VERSION)]
     # Newest activity first so a capped run spends its budget where readers will look.
     pending.sort(key=lambda i: max((e["date"] for e in i.get("events", [])), default=""), reverse=True)
     # GitHub Actions passes unset repository variables as empty strings, hence `or`.
@@ -246,7 +259,8 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
         failures_in_a_row = 0
         for item in batch:
             if item["id"] in results:
-                item["ai"] = {**_clean(results[item["id"]]), "model": model, "hash": item["text_hash"], "date": today_iso()}
+                item["ai"] = {**_clean(results[item["id"]], item["kind"]), "model": model, "v": PROMPT_VERSION,
+                              "hash": item["text_hash"], "date": today_iso()}
                 counts["ai"] += 1
 
     for item in pending:

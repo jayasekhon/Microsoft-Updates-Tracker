@@ -56,7 +56,7 @@ function renderSummary(browser) {
     const b = e.target.closest("[data-quick]");
     if (!b) return;
     const q = b.dataset.quick;
-    browser.show(q === "week" ? { range: "7" } : q === "action" ? { action: true, range: "30" } : { status: "roll" });
+    browser.show(q === "week" ? { range: "7" } : q === "action" ? { action: true } : { status: "roll" });
   });
 }
 
@@ -129,20 +129,47 @@ function mountCarousel() {
     if (e.key === "ArrowLeft") { prev(); autoplay(false); $$(".world")[active].focus(); }
   });
 
-  // Swipe on touch screens.
-  let startX = null;
-  let swiped = false;
-  stage.addEventListener("pointerdown", (e) => { startX = e.clientX; });
-  stage.addEventListener("pointerup", (e) => {
-    if (startX === null) return;
-    const dx = e.clientX - startX;
-    startX = null;
-    if (Math.abs(dx) > 40) { swiped = true; dx < 0 ? next() : prev(); autoplay(false); }
+  // Click-and-drag (mouse) or swipe (touch): the ring turns one card per DRAG_STEP pixels
+  // while dragging, so a long drag spins through several products.
+  const DRAG_STEP = 90;
+  let drag = null;
+  let dragged = false;
+  stage.addEventListener("dragstart", (e) => e.preventDefault());  // links would otherwise start a native drag
+  stage.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0 || e.target.closest(".car-btn")) return;
+    drag = { id: e.pointerId, lastX: e.clientX, moved: 0 };
+    dragged = false;
   });
-  // Stop a swipe from also counting as a click on the card under the finger.
+  stage.addEventListener("pointermove", (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.lastX;
+    drag.moved += Math.abs(dx);
+    if (drag.moved > 6 && !stage.hasPointerCapture(e.pointerId)) {
+      stage.setPointerCapture(e.pointerId);
+      stage.classList.add("dragging");
+      autoplay(false);
+    }
+    if (Math.abs(dx) >= DRAG_STEP) {
+      dx < 0 ? next() : prev();
+      drag.lastX = e.clientX;
+      dragged = true;
+    }
+  });
+  const endDrag = (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    // A short flick that never reached a full step still counts as one.
+    const dx = e.clientX - drag.lastX;
+    if (!dragged && Math.abs(dx) > 40) { dx < 0 ? next() : prev(); dragged = true; }
+    if (drag.moved > 6) dragged = true;
+    drag = null;
+    stage.classList.remove("dragging");
+  };
+  stage.addEventListener("pointerup", endDrag);
+  stage.addEventListener("pointercancel", endDrag);
+  // Stop the end of a drag from also counting as a click on the card under the pointer.
   stage.addEventListener("click", (e) => {
-    if (!swiped) return;
-    swiped = false;
+    if (!dragged) return;
+    dragged = false;
     e.preventDefault();
     e.stopPropagation();
   }, true);

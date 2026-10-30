@@ -65,8 +65,49 @@ export function highlight(text, q) {
 // ------------------------------------------------------------------ item facts
 export const product = (id) => DATA.products.find((p) => p.id === id) || { id, name: id, tagline: "" };
 export const productName = (id) => product(id).name;
-export const statusKey = (it) => (it.x ? "can" : it.k === "post" ? "post" : STATUS_KEY[it.s] || "dev");
-export const needsAction = (it) => Boolean(ACTION_LABEL[it.ai?.action]);
+// Microsoft often leaves finished features on "Rolling out" for months. Past this many months
+// after the GA target, treat the rollout as done (shown as "Likely rolled out").
+export const ROLLOUT_GRACE_MONTHS = 2;
+// "Needs action" covers flagged features landing within this many months (current month included).
+export const ACTION_LEAD_MONTHS = 3;
+
+/** Microsoft says "Rolling out", but the GA target is long past (or, undated, it has been quiet). */
+export function rolloutLikelyDone(it) {
+  if (it.k !== "feature" || it.s !== "Rolling out") return false;
+  const ga = monthKey(it.ga);
+  return ga === null ? daysAgo(it.la) > 60 : ga < nowMonthKey() - ROLLOUT_GRACE_MONTHS;
+}
+export const statusKey = (it) => (it.x ? "can" : it.k === "post" ? "post" : rolloutLikelyDone(it) ? "live" : STATUS_KEY[it.s] || "dev");
+export const rollingNow = (it) => statusKey(it) === "roll";
+
+/**
+ * The AI says this feature needs an admin or a heads-up for users. Blog posts never count, and
+ * neither does the keyword fallback used before an item has an AI label: it is too blunt.
+ */
+export const flagged = (it) => it.k === "feature" && !it.x && Boolean(ACTION_LABEL[it.ai?.action]) && it.ai?.model !== "rules";
+
+function launchedWithin(it, days) {
+  const e = lastEvent(it);
+  return it.s === "Launched" && e?.type === "status" && e.to === "Launched" && daysAgo(e.date) <= days;
+}
+
+/**
+ * A flagged feature that is landing: rolling out now, due within ACTION_LEAD_MONTHS, or launched
+ * in the last 30 days. Admins act just before something arrives, not when it is first announced.
+ */
+export function needsAction(it) {
+  if (!flagged(it)) return false;
+  if (rollingNow(it) || launchedWithin(it, 30)) return true;
+  const ga = monthKey(it.ga);
+  return it.s === "In development" && ga !== null && ga >= nowMonthKey() && ga < nowMonthKey() + ACTION_LEAD_MONTHS;
+}
+
+/** When a needs-action item lands, for sorting (soonest first) and display. */
+export function actionTiming(it) {
+  if (rollingNow(it)) return { rank: 0, label: "Rolling out now" };
+  if (it.s === "Launched") return { rank: 1, label: `Launched ${relDate(lastEvent(it).date)}` };
+  return { rank: 2 + (monthKey(it.ga) ?? 99), label: `Due ${cleanMonth(it.ga)}` };
+}
 export const live = () => DATA.items.filter((i) => !i.x);
 export function lastEvent(it) {
   const evs = it.ev.filter((e) => e.type !== "details");
@@ -79,8 +120,8 @@ export function stats(id = "") {
   return {
     total: items.length,
     week: items.filter((i) => daysAgo(i.la) <= 7).length,
-    rolling: items.filter((i) => i.s === "Rolling out").length,
-    action: items.filter((i) => daysAgo(i.la) <= 30 && needsAction(i)).length,
+    rolling: items.filter(rollingNow).length,
+    action: items.filter(needsAction).length,
   };
 }
 
@@ -113,6 +154,7 @@ export function statusPill(it) {
   const sk = statusKey(it);
   if (it.x) return `<span class="pill s-gone">Removed</span>`;
   if (it.k === "post") return `<span class="pill s-post">Blog post</span>`;
+  if (rolloutLikelyDone(it)) return `<span class="pill s-live" title="Microsoft still lists this as Rolling out, but its GA target (${esc(cleanMonth(it.ga) || "none")}) passed more than ${ROLLOUT_GRACE_MONTHS} months ago.">Likely rolled out</span>`;
   return `<span class="pill ${STATUS[sk].cls}">${sk === "roll" ? '<span class="pulse"></span>' : ""}${esc(it.s)}</span>`;
 }
 
@@ -121,7 +163,7 @@ export function pills(it, { product: withProduct = true } = {}) {
   if (withProduct) out.push(`<span class="pill prod" style="--c:${PRODUCT_COLOR[it.p]}">${esc(productName(it.p))}</span>`);
   out.push(statusPill(it));
   if (daysAgo(it.fs) <= 7 && daysAgo(it.c) <= 10) out.push(`<span class="pill new">New</span>`);
-  if (needsAction(it)) out.push(`<span class="pill act">${ACTION_LABEL[it.ai.action]}</span>`);
+  if (flagged(it)) out.push(`<span class="pill act">${ACTION_LABEL[it.ai.action]}</span>`);
   if (it.ai?.impact === "high") out.push(`<span class="pill imp">High impact</span>`);
   return out.join("");
 }
@@ -153,7 +195,7 @@ export function row(it, { mode = "", i = 0 } = {}) {
   const sk = statusKey(it);
   const summary = mode === "action" && it.ai?.action_note ? it.ai.action_note : it.ai?.summary || it.d;
   const lead = mode === "change" ? `<span class="row-change ${sk === "roll" ? "is-roll" : sk === "live" ? "is-live" : ""}">${esc(changeLabel(it))}</span>` : "";
-  const date = it.k === "post" ? relDate(it.c) : mode === "change" || mode === "action" ? relDate(it.la) : it.ga ? `GA ${cleanMonth(it.ga)}` : relDate(it.la);
+  const date = it.k === "post" ? relDate(it.c) : mode === "action" ? actionTiming(it).label : mode === "change" ? relDate(it.la) : it.ga ? `GA ${cleanMonth(it.ga)}` : relDate(it.la);
   return `<article class="row reveal" role="button" tabindex="0" data-id="${esc(it.id)}" style="--d:${Math.min(i, 10) * 35}ms" aria-label="${esc(it.t)}">
     <span class="row-dot ${STATUS[sk].cls}" aria-hidden="true"></span>
     <div class="row-main">
@@ -221,7 +263,8 @@ export function openDrawer(id) {
       <h2 id="drawerTitle">${esc(it.t)}</h2>
     </div>
     ${ai.summary && ai.model !== "rules" ? `<p class="d-sum">${esc(ai.summary)}</p>` : ""}
-    ${ai.action_note ? `<div class="d-action"><span aria-hidden="true">⚠️</span><div><b>${ACTION_LABEL[ai.action] || "Action"}</b>${esc(ai.action_note)}</div></div>` : ""}
+    ${ai.action_note && flagged(it) ? `<div class="d-action"><span aria-hidden="true">⚠️</span><div><b>${ACTION_LABEL[ai.action]}</b>${esc(ai.action_note)}</div></div>` : ""}
+    ${ai.action_note && !flagged(it) ? `<div class="d-action is-suggest"><span aria-hidden="true">💡</span><div><b>Suggested next step</b>${esc(ai.action_note)}</div></div>` : ""}
     <div class="d-buttons">
       <a class="btn primary" href="${esc(it.u)}" target="_blank" rel="noopener">Read on Microsoft <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
       ${it.mu && it.mu !== it.u ? `<a class="btn" href="${esc(it.mu)}" target="_blank" rel="noopener">More info</a>` : ""}

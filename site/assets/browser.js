@@ -3,7 +3,7 @@
 
 import {
   $, $$, DATA, MONTHS, PRODUCT_COLOR, STATUS, card, daysAgo, esc, fmtDate, hashParams, highlight,
-  monthKey, needsAction, nowMonthKey, observeReveals, productName, reduceMotion, statusKey, today,
+  monthKey, needsAction, nowMonthKey, observeReveals, productName, reduceMotion, rolloutLikelyDone, statusKey, today,
   updateHash, weekStart,
 } from "./core.js";
 
@@ -206,7 +206,7 @@ export function mountBrowser(root, { product: fixedProduct = "" } = {}) {
         return `<section class="tl-month ${cls} reveal">
           <h3>${label}${k === nowKey ? " <small>this month</small>" : ""} <small>${list.length} features</small></h3>
           <div class="tl-mix" aria-hidden="true">${mix.map(([p, n]) => `<span style="--c:${PRODUCT_COLOR[p]};flex-grow:${n}"></span>`).join("")}</div>
-          <div class="tl-items">${list.map((it) => `<button class="tl-chip" type="button" data-id="${esc(it.id)}" style="--c:${PRODUCT_COLOR[it.p]}" title="${esc(productName(it.p))} · ${esc(it.s)}"><span class="dot"></span><span class="ttl">${highlight(it.t, q())}</span><span class="st pill ${STATUS[statusKey(it)].cls}">${esc(it.s)}</span></button>`).join("")}</div>
+          <div class="tl-items">${list.map((it) => `<button class="tl-chip" type="button" data-id="${esc(it.id)}" style="--c:${PRODUCT_COLOR[it.p]}" title="${esc(productName(it.p))} · ${esc(it.s)}"><span class="dot"></span><span class="ttl">${highlight(it.t, q())}</span><span class="st pill ${STATUS[statusKey(it)].cls}">${esc(rolloutLikelyDone(it) ? "Likely rolled out" : it.s)}</span></button>`).join("")}</div>
         </section>`;
       }).join("")}
     </div>`;

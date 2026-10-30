@@ -1,7 +1,7 @@
 import os
 import re
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from unittest import mock
 
 from tracker import digest, store, summarize
@@ -218,6 +218,77 @@ class AiResilienceTests(unittest.TestCase):
         self.assertEqual(Flaky.calls, 4)  # 20 items in batches of 5: all four attempted
         self.assertEqual(counts["ai"], 10)
         self.assertEqual(counts["errors"], 2)
+
+
+class AttentionTests(unittest.TestCase):
+    """The email's "Needs attention" box lists flagged features once, as they start to land."""
+
+    def _flag(self, s, action="admin"):
+        for item in s["items"].values():
+            item["ai"] = {"action": action, "action_note": "Do it.", "summary": "S", "audience": [], "impact": "medium", "model": "gemini"}
+
+    def _ids(self, s, start):
+        return [(a["item"]["id"], a["when"]) for a in digest._attention(s, start, start + timedelta(days=7))]
+
+    def test_due_item_listed_in_the_week_its_month_enters_the_window(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="November CY2026", created="2026-01-01T00:00:00"), CONFIG)],
+                    kinds_fetched={"feature"}, today="2026-01-01")
+        self._flag(s)
+        # Email sent Oct 19: the next 30 days now cover more than half of November.
+        self.assertEqual(self._ids(s, date(2026, 10, 12)), [("rm-1", "Due November 2026")])
+        # Following weeks: nothing new happened, so it is not repeated.
+        self.assertEqual(self._ids(s, date(2026, 10, 19)), [])
+        # The week before, November was still too far out.
+        self.assertEqual(self._ids(s, date(2026, 10, 5)), [])
+
+    def test_rolling_out_and_launch_are_listed_that_week(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="October CY2026"), CONFIG)], kinds_fetched={"feature"}, today="2026-09-01")
+        self._flag(s, "prepare")
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="October CY2026", status="Rolling out"), CONFIG)], kinds_fetched={"feature"}, today="2026-10-21")
+        self.assertEqual(self._ids(s, date(2026, 10, 19)), [("rm-1", "Rolling out now")])
+        self.assertEqual(self._ids(s, date(2026, 10, 26)), [])
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="October CY2026", status="Launched"), CONFIG)], kinds_fetched={"feature"}, today="2026-11-03")
+        self.assertEqual(self._ids(s, date(2026, 11, 2)), [("rm-1", "Launched this week")])
+
+    def test_stale_rollouts_and_unflagged_items_are_ignored(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="March CY2025"), CONFIG)], kinds_fetched={"feature"}, today="2026-09-01")
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="March CY2025", status="Rolling out"), CONFIG)], kinds_fetched={"feature"}, today="2026-10-21")
+        self._flag(s)
+        self.assertEqual(self._ids(s, date(2026, 10, 19)), [])  # GA target long past: rollout treated as done
+        self._flag(s, "awareness")
+        self.assertEqual(digest._attention(s, date(2026, 1, 1), date(2027, 1, 1)), [])
+
+    def test_keyword_fallback_labels_do_not_count(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="November CY2026", created="2026-01-01T00:00:00"), CONFIG)],
+                    kinds_fetched={"feature"}, today="2026-01-01")
+        self._flag(s)
+        s["items"]["rm-1"]["ai"]["model"] = "rules"
+        self.assertEqual(self._ids(s, date(2026, 10, 12)), [])
+
+    def test_posts_never_become_action_items(self):
+        self.assertEqual(summarize._clean({"action": "admin", "action_note": "Read it."}, "post")["action"], "awareness")
+        self.assertEqual(summarize._clean({"action": "admin", "action_note": "Read it."}, "post")["action_note"], "Read it.")
+        self.assertEqual(summarize._clean({"action": "awareness", "action_note": "Stray"}, "feature")["action_note"], "")
+
+    def test_items_labelled_by_an_older_prompt_are_relabelled(self):
+        s = {"items": {}}
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1), CONFIG)], kinds_fetched={"feature"}, today="2026-10-29")
+        item = s["items"]["rm-1"]
+        item["ai"] = {"action": "prepare", "model": "gemini", "hash": item["text_hash"]}  # no "v": prompt version 1
+
+        class Fake:
+            model = "fake"
+
+            def complete(self, prompt):
+                return [{"id": "rm-1", "summary": "S", "audience": [], "action": "awareness", "action_note": "", "impact": "low"}]
+
+        with mock.patch.object(summarize, "get_provider", return_value=Fake()):
+            summarize.summarize(s, CONFIG)
+        self.assertEqual((item["ai"]["action"], item["ai"]["v"]), ("awareness", summarize.PROMPT_VERSION))
 
 
 class DigestTests(unittest.TestCase):

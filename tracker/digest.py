@@ -90,11 +90,7 @@ def build(store: dict, config: dict, start: date, end: date) -> dict:
     for entries in sections.values():
         entries.sort(key=lambda e: (impact_rank.get((e["item"].get("ai") or {}).get("impact"), 1), e["item"]["product"], e["item"]["title"].lower()))
 
-    actions = [
-        e for key in ("launched", "new", "timeline")
-        for e in sections[key]
-        if (e["item"].get("ai") or {}).get("action") in ("admin", "prepare")
-    ]
+    actions = _attention(store, start, end)
     horizon = _horizon(store, end)
     total = sum(len(v) for v in sections.values())
     return {
@@ -146,6 +142,62 @@ def _horizon(store: dict, end: date) -> list[dict]:
         if items:
             groups.append({"label": label.replace(" CY", " "), "items": items})
     return groups
+
+
+ROLLOUT_GRACE_MONTHS = 2  # keep in sync with site/assets/core.js
+_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def _month_key(label: str | None) -> int | None:
+    """"October CY2026" -> a sortable month number."""
+    parts = (label or "").split()
+    if len(parts) == 2 and parts[0] in _MONTHS and parts[1].startswith("CY") and parts[1][2:].isdigit():
+        return int(parts[1][2:]) * 12 + _MONTHS.index(parts[0])
+    return None
+
+
+def _key(d: date) -> int:
+    return d.year * 12 + d.month - 1
+
+
+def _flagged(item: dict) -> bool:
+    """A Roadmap feature the AI labelled as needing an admin or a heads-up.
+
+    Blog posts never count, and neither does the keyword fallback (ai.model == "rules").
+    """
+    ai = item.get("ai") or {}
+    return (item.get("kind") == "feature" and not item.get("removed")
+            and ai.get("action") in ("admin", "prepare") and ai.get("model") != "rules")
+
+
+def _attention(store: dict, start: date, end: date) -> list[dict]:
+    """Flagged features that started landing this week.
+
+    An item is listed in the week it starts rolling out, launches, or its GA month comes into
+    the next-30-days window (or it is announced already inside it), so admins hear about it
+    just before it arrives, once, rather than every week.
+    """
+    window_now = {_key(m) for m in _horizon_months(end)}
+    window_before = {_key(m) for m in _horizon_months(start)}
+    s_iso, e_iso = start.isoformat(), end.isoformat()
+    out = []
+    for item in store.get("items", {}).values():
+        if not _flagged(item):
+            continue
+        week = [e for e in item.get("events", []) if s_iso <= e["date"] < e_iso and e["type"] != "details"]
+        ga = _month_key(item.get("ga_date"))
+        status = item.get("status")
+        when = None
+        if status == "Rolling out" and (ga is None or ga >= _key(end) - ROLLOUT_GRACE_MONTHS) and week:
+            when, rank = "Rolling out now", 0
+        elif status == "Launched" and any(e["type"] == "status" and e.get("to") == "Launched" for e in week):
+            when, rank = "Launched this week", 1
+        elif status == "In development" and ga in window_now and (ga not in window_before or week):
+            when, rank = f"Due {_MONTHS[ga % 12]} {ga // 12}", 2 + ga
+        if when:
+            out.append({"item": item, "when": when, "rank": rank})
+    out.sort(key=lambda a: (a["rank"], a["item"]["title"].lower()))
+    return out
 
 
 # ---------------------------------------------------------------- formatting helpers
@@ -200,7 +252,7 @@ def _item_html(entry: dict, names: dict) -> str:
     if item["kind"] == "feature" and item.get("status"):
         bg, fg = STATUS_COLORS.get(item["status"], ("#eee", "#333"))
         pills.append(_pill(item["status"], bg, fg))
-    if ai.get("action") in ("admin", "prepare"):
+    if _flagged(item):
         pills.append(_pill(ACTIONS[ai["action"]], "#fde8e8", "#a61b1b"))
     if ai.get("impact") == "high":
         pills.append(_pill("High impact", "#f3e8ff", "#6b21a8"))
@@ -221,7 +273,11 @@ def _item_html(entry: dict, names: dict) -> str:
 
     summary = ai.get("summary") or item.get("description", "")[:280]
     action_html = ""
-    if ai.get("action_note"):
+    if ai.get("action_note") and item["kind"] == "post":
+        action_html = (f'<tr><td style="{_FONT}padding:8px 12px;background:#f4f2fa;border-left:3px solid #8b84a6;'
+                       f'font-size:13px;color:#4a4462;line-height:19px;"><b>Suggested next step:</b> {escape(ai["action_note"])}</td></tr>'
+                       '<tr><td style="height:8px;line-height:8px;font-size:0;">&nbsp;</td></tr>')
+    elif ai.get("action_note"):
         action_html = (f'<tr><td style="{_FONT}padding:8px 12px;background:#fff5f5;border-left:3px solid #d93636;'
                        f'font-size:13px;color:#7a1c1c;line-height:19px;"><b>What to do:</b> {escape(ai["action_note"])}</td></tr>'
                        '<tr><td style="height:8px;line-height:8px;font-size:0;">&nbsp;</td></tr>')
@@ -265,13 +321,15 @@ def render_html(digest: dict, *, web: bool = False) -> str:
         rows = "".join(
             f'<tr><td style="{_FONT}padding:5px 0;font-size:14px;line-height:20px;color:#3b3650;">'
             f'<span style="color:#d93636;">&#9679;</span>&nbsp; <a href="{escape(e["item"]["url"])}" style="color:#1b1530;font-weight:600;text-decoration:none;">{escape(e["item"]["title"])}</a>'
-            f' <span style="color:#6b7280;">— {escape(e["item"]["ai"].get("action_note") or ACTIONS[e["item"]["ai"]["action"]])}</span></td></tr>'
+            f' <span style="display:inline-block;padding:0 7px;border-radius:9px;background:#fde8e8;color:#a61b1b;font-size:11px;font-weight:700;line-height:17px;white-space:nowrap;">{escape(e["when"])}</span>'
+            f'<br><span style="color:#6b7280;padding-left:18px;display:inline-block;">{escape(e["item"]["ai"].get("action_note") or ACTIONS[e["item"]["ai"]["action"]])}</span></td></tr>'
             for e in digest["actions"]
         )
         body.append(f"""
 <tr><td style="padding:0 0 22px 0;">
  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff7f5;border:1px solid #f6d5cf;border-radius:10px;">
-  <tr><td style="{_FONT}padding:14px 18px 4px 18px;font-size:15px;font-weight:800;color:#a61b1b;">&#9888;&#65039; Needs attention this week</td></tr>
+  <tr><td style="{_FONT}padding:14px 18px 0 18px;font-size:15px;font-weight:800;color:#a61b1b;">&#9888;&#65039; Needs attention this week</td></tr>
+  <tr><td style="{_FONT}padding:2px 18px 4px 18px;font-size:12px;line-height:17px;color:#8a5a55;">Changes that need an admin or a heads-up for users, listed as they start to land.</td></tr>
   <tr><td style="padding:2px 18px 12px 18px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table></td></tr>
  </table>
 </td></tr>""")
@@ -366,7 +424,7 @@ def render_text(digest: dict) -> str:
         lines += ["NEEDS ATTENTION", "-" * 15]
         for e in digest["actions"]:
             ai = e["item"]["ai"]
-            lines.append(f"* {e['item']['title']} — {ai.get('action_note') or ACTIONS[ai['action']]}")
+            lines.append(f"* {e['item']['title']} [{e['when']}] — {ai.get('action_note') or ACTIONS[ai['action']]}")
         lines.append("")
     for key, heading, _ in SECTIONS:
         entries = digest["sections"][key]

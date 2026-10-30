@@ -2,7 +2,7 @@
 
 import { ART } from "./art.js";
 import {
-  $, DATA, MONTHS, PRODUCT_HEX, daysAgo, esc, initPage, live, loadData, monthKey, needsAction,
+  $, DATA, MONTHS, PRODUCT_HEX, actionTiming, daysAgo, esc, initPage, live, loadData, monthKey, needsAction, rollingNow, statusKey,
   nowMonthKey, observeReveals, openItemFromHash, row, stats, updatedText,
 } from "./core.js";
 
@@ -17,8 +17,8 @@ function sections(items) {
   return [
     {
       id: "action", icon: "⚠️", title: "Needs action",
-      blurb: "Changes in the last 30 days that need an admin or a heads-up for users.",
-      items: items.filter((i) => daysAgo(i.la) <= 30 && needsAction(i)).sort(byActivity),
+      blurb: "Admin work or a heads-up for users, for features rolling out now, due in the next 3 months, or launched in the last 30 days.",
+      items: items.filter(needsAction).sort((a, b) => actionTiming(a).rank - actionTiming(b).rank || a.t.localeCompare(b.t)),
       mode: "action", tone: "alert",
     },
     {
@@ -29,8 +29,8 @@ function sections(items) {
     },
     {
       id: "rolling", icon: "🚀", title: "Rolling out now",
-      blurb: "Arriving in tenants over the coming weeks.",
-      items: features.filter((i) => i.s === "Rolling out").sort(byActivity),
+      blurb: "Arriving in tenants now. Items more than 2 months past their GA target count as rolled out.",
+      items: features.filter(rollingNow).sort(byActivity),
     },
     {
       id: "soon", icon: "🗓️", title: "Coming soon",
@@ -41,7 +41,7 @@ function sections(items) {
     {
       id: "launched", icon: "✅", title: "Recently launched",
       blurb: "Generally available, with activity in the last 45 days.",
-      items: features.filter((i) => i.s === "Launched" && daysAgo(i.la) <= 45).sort(byActivity),
+      items: features.filter((i) => statusKey(i) === "live" && daysAgo(i.la) <= 45).sort(byActivity),
     },
     {
       id: "posts", icon: "📰", title: "From Microsoft's blogs",
