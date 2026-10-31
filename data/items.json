@@ -2,16 +2,17 @@
  "items": {
   "post-042c621a182d": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Train site owners and teams on creating and invoking shared AI skills within SharePoint.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "07d5a4c96f59",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Every team has repeatable work they want done the right way, not just once, but every time. Copilot can learn the way your team already works, follow the processes you trust, and help people repeat high-quality outcomes without starting from scratch every time."
+    "model": "gemini-flash-latest",
+    "summary": "SharePoint site owners can build and save custom AI skills containing reusable instructions for Copilot. This standardizes team processes, cuts repetitive prompting, and allows anyone with site access to invoke shared skills from chat."
    },
    "categories": [],
    "created": "2026-07-28",
@@ -25,7 +26,7 @@
    "first_seen": "2026-10-29",
    "id": "post-042c621a182d",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-28",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -38,13 +39,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "Makers & developers"
+     "Makers & developers",
+     "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "1abc1efab8c0",
     "impact": "medium",
-    "model": "rules",
-    "summary": "MCP extends Dynamics 365 Sales agents with external data, tools, and actions, helping connect sales processes across business systems."
+    "model": "gemini-flash-latest",
+    "summary": "Model Context Protocol (MCP) support allows Dynamics 365 Sales agents to connect with external tools, data, and actions. This helps teams integrate sales automation with third-party business systems."
    },
    "categories": [],
    "created": "2026-07-21",
@@ -58,7 +60,7 @@
    "first_seen": "2026-10-29",
    "id": "post-13903156e865",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-21",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -93,7 +95,7 @@
    "first_seen": "2026-10-29",
    "id": "post-18d2ccfc1867",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-25",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -126,7 +128,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2160ad9a9fff",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-01",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -159,7 +161,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2323f4474670",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-21",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -192,7 +194,7 @@
    "first_seen": "2026-10-29",
    "id": "post-23b6448a2a83",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-10",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -226,7 +228,7 @@
    "first_seen": "2026-10-29",
    "id": "post-3114f128a9ed",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -261,7 +263,7 @@
    "first_seen": "2026-10-29",
    "id": "post-36d008087851",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-25",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -296,7 +298,7 @@
    "first_seen": "2026-10-29",
    "id": "post-37a63d2d4aa4",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-15",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -306,16 +308,18 @@
   },
   "post-382e207e575d": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Show creators how to generate live dashboards from SharePoint lists and spreadsheet files.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "a13244a76095",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint can now generate interactive HTML dashboards directly from SharePoint lists, Excel, and CSV files. Because dashboards stay connected and refresh with underlying data, workers avoid manually exporting and rebuilding stale reports."
    },
    "categories": [],
    "created": "2026-08-06",
@@ -329,7 +333,7 @@
    "first_seen": "2026-10-29",
    "id": "post-382e207e575d",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-06",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -363,7 +367,7 @@
    "first_seen": "2026-10-29",
    "id": "post-3b66ec46524b",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-22",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -396,7 +400,7 @@
    "first_seen": "2026-10-29",
    "id": "post-43df15fa33f4",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -429,7 +433,7 @@
    "first_seen": "2026-10-29",
    "id": "post-4798bece366c",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-23",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -462,7 +466,7 @@
    "first_seen": "2026-10-29",
    "id": "post-492dfcdce8e7",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -472,16 +476,17 @@
   },
   "post-4d7ce08d9c2e": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify licensed users that Copilot is active in SharePoint and can automatically draft Office files from site content.",
     "audience": [
+     "End users",
      "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "ffde75f85be1",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot in SharePoint helps you do more with your content — ask questions, run workflows, and create sites, pages, interactive reports, and Office files using natural language."
+    "impact": "high",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint now creates Word, Excel, and PowerPoint files directly from site content using natural language prompts, and is enabled by default for licensed users. This eliminates manual copy-pasting when generating reports and presentations."
    },
    "categories": [],
    "created": "2026-07-16",
@@ -495,7 +500,7 @@
    "first_seen": "2026-10-29",
    "id": "post-4d7ce08d9c2e",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-16",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -528,7 +533,7 @@
    "first_seen": "2026-10-29",
    "id": "post-4ea819380f5b",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-10",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -562,7 +567,7 @@
    "first_seen": "2026-10-29",
    "id": "post-4eae81567e5c",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -596,7 +601,7 @@
    "first_seen": "2026-10-29",
    "id": "post-51d39dd74fac",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-31",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -609,13 +614,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "IT admins",
+     "Security & compliance",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "767375e99c65",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "By Sujay Kumar Jauhar, Spriha Chandrayan, Natasha Gaitonde, Zhen Lei, Reed Pankhurst, Anush Sankaran, Amrit Shandilya, Ryen W. White Organizations put their most important content in OneDrive and SharePoint, trusting us to deliver AI experiences they can depend on."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft detailed its approach to measuring agentic AI quality and reliability across OneDrive and SharePoint content. This provides visibility into how AI retrieval, accuracy, and document reasoning are evaluated."
    },
    "categories": [],
    "created": "2026-07-21",
@@ -629,7 +636,7 @@
    "first_seen": "2026-10-29",
    "id": "post-57ecbc5ace4f",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-21",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -662,7 +669,7 @@
    "first_seen": "2026-10-29",
    "id": "post-626a2a436777",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-26",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -696,7 +703,7 @@
    "first_seen": "2026-10-29",
    "id": "post-67722ad4002b",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-15",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -743,16 +750,16 @@
   },
   "post-8d334ff70e25": {
    "ai": {
-    "action": "awareness",
+    "action": "none",
     "action_note": "",
     "audience": [
-     "End users"
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "eec6d4a3d4b4",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "In yesterday’s earnings call, we shared that Microsoft 365 Copilot has surpassed 30 million paid seats, with net seat adds more than doubling quarter over quarter."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft 365 Copilot has surpassed 30 million paid seats, with net seat additions more than doubling quarter over quarter."
    },
    "categories": [
     "AI"
@@ -768,7 +775,7 @@
    "first_seen": "2026-10-29",
    "id": "post-8d334ff70e25",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-30",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -801,7 +808,7 @@
    "first_seen": "2026-10-29",
    "id": "post-8d4a5bf8d2b9",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-28",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -837,7 +844,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a179a9653651",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-10",
    "product": "studio",
    "source": "Microsoft 365 / Copilot blog",
@@ -874,7 +881,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a26fa705b971",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -910,7 +917,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a27861e281d3",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-25",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -981,7 +988,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a54c359924ff",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-09",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -1050,7 +1057,7 @@
    "first_seen": "2026-10-29",
    "id": "post-c75a43ae6d3d",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-25",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1084,7 +1091,7 @@
    "first_seen": "2026-10-29",
    "id": "post-c8238975c850",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-01",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -1119,7 +1126,7 @@
    "first_seen": "2026-10-29",
    "id": "post-dcd601368fe0",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-30",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -1156,7 +1163,7 @@
    "first_seen": "2026-10-29",
    "id": "post-e42016017989",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-03",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1189,7 +1196,7 @@
    "first_seen": "2026-10-29",
    "id": "post-eec3e8075041",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-07",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1223,7 +1230,7 @@
    "first_seen": "2026-10-29",
    "id": "post-fbcf160ba8cb",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-27",
    "product": "sharepoint",
    "source": "SharePoint blog (Tech Community)",
@@ -1257,7 +1264,7 @@
    "first_seen": "2026-10-29",
    "id": "post-fe3141148cc5",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1295,7 +1302,7 @@
    "first_seen": "2026-10-29",
    "id": "post-ff3efcc7b41e",
    "kind": "post",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-10",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1334,7 +1341,7 @@
    "ga_date": "May CY2025",
    "id": "rm-325948",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-05-16",
    "more_info_url": null,
    "platforms": [
@@ -1388,7 +1395,7 @@
    "ga_date": "December CY2025",
    "id": "rm-380839",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-30",
    "more_info_url": null,
    "platforms": [
@@ -1441,7 +1448,7 @@
    "ga_date": "August CY2025",
    "id": "rm-380841",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-08-15",
    "more_info_url": null,
    "platforms": [
@@ -1494,7 +1501,7 @@
    "ga_date": "August CY2025",
    "id": "rm-380842",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-28",
    "more_info_url": null,
    "platforms": [
@@ -1547,7 +1554,7 @@
    "ga_date": "July CY2025",
    "id": "rm-380848",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-24",
    "more_info_url": null,
    "platforms": [
@@ -1602,7 +1609,7 @@
    "ga_date": "November CY2025",
    "id": "rm-396562",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-02",
    "more_info_url": null,
    "platforms": [
@@ -1656,7 +1663,7 @@
    "ga_date": "August CY2024",
    "id": "rm-399921",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -1710,7 +1717,7 @@
    "ga_date": "March CY2025",
    "id": "rm-405753",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-03-04",
    "more_info_url": null,
    "platforms": [
@@ -1763,7 +1770,7 @@
    "ga_date": "April CY2025",
    "id": "rm-411302",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-21",
    "more_info_url": null,
    "platforms": [
@@ -1819,7 +1826,7 @@
    "ga_date": "February CY2026",
    "id": "rm-413718",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-11",
    "more_info_url": null,
    "platforms": [
@@ -1874,7 +1881,7 @@
    "ga_date": "November CY2025",
    "id": "rm-413720",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-06",
    "more_info_url": null,
    "platforms": [
@@ -1931,7 +1938,7 @@
    "ga_date": "November CY2025",
    "id": "rm-417481",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -1982,7 +1989,7 @@
    "ga_date": "March CY2026",
    "id": "rm-422308",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-02",
    "more_info_url": null,
    "platforms": [
@@ -2034,7 +2041,7 @@
    "ga_date": "October CY2026",
    "id": "rm-422323",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -2087,7 +2094,7 @@
    "ga_date": "October CY2026",
    "id": "rm-422324",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -2138,7 +2145,7 @@
    "ga_date": "December CY2025",
    "id": "rm-429645",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -2191,7 +2198,7 @@
    "ga_date": "April CY2025",
    "id": "rm-469501",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2024-11-20",
    "more_info_url": null,
    "platforms": [
@@ -2245,7 +2252,7 @@
    "ga_date": "April CY2025",
    "id": "rm-469502",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2024-11-20",
    "more_info_url": null,
    "platforms": [
@@ -2299,7 +2306,7 @@
    "ga_date": "November CY2025",
    "id": "rm-469503",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-05",
    "more_info_url": null,
    "platforms": [
@@ -2352,7 +2359,7 @@
    "ga_date": "June CY2025",
    "id": "rm-470986",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-03-04",
    "more_info_url": null,
    "platforms": [
@@ -2407,7 +2414,7 @@
    "ga_date": "February CY2025",
    "id": "rm-471004",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-01-10",
    "more_info_url": null,
    "platforms": [
@@ -2460,7 +2467,7 @@
    "ga_date": "January CY2025",
    "id": "rm-471447",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2024-12-11",
    "more_info_url": null,
    "platforms": [
@@ -2516,7 +2523,7 @@
    "ga_date": "February CY2027",
    "id": "rm-472030",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -2568,7 +2575,7 @@
    "ga_date": "December CY2025",
    "id": "rm-473447",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-27",
    "more_info_url": null,
    "platforms": [
@@ -2619,7 +2626,7 @@
    "ga_date": "May CY2025",
    "id": "rm-474445",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-01-10",
    "more_info_url": null,
    "platforms": [
@@ -2670,7 +2677,7 @@
    "ga_date": "May CY2025",
    "id": "rm-474448",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -2722,7 +2729,7 @@
    "ga_date": "June CY2025",
    "id": "rm-476496",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-02-06",
    "more_info_url": null,
    "platforms": [
@@ -2776,7 +2783,7 @@
    "ga_date": "May CY2025",
    "id": "rm-478645",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-06-05",
    "more_info_url": null,
    "platforms": [
@@ -2827,7 +2834,7 @@
    "ga_date": "October CY2025",
    "id": "rm-478647",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-29",
    "more_info_url": null,
    "platforms": [
@@ -2877,7 +2884,7 @@
    "ga_date": "August CY2026",
    "id": "rm-480725",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -2929,7 +2936,7 @@
    "ga_date": "March CY2026",
    "id": "rm-480726",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -2982,7 +2989,7 @@
    "ga_date": "October CY2025",
    "id": "rm-480728",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-09",
    "more_info_url": null,
    "platforms": [
@@ -3037,7 +3044,7 @@
    "ga_date": "December CY2025",
    "id": "rm-480729",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-29",
    "more_info_url": null,
    "platforms": [
@@ -3095,7 +3102,7 @@
    "ga_date": "January CY2026",
    "id": "rm-480730",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-04",
    "more_info_url": null,
    "platforms": [
@@ -3146,7 +3153,7 @@
    "ga_date": "October CY2025",
    "id": "rm-481135",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-13",
    "more_info_url": null,
    "platforms": [
@@ -3197,7 +3204,7 @@
    "ga_date": "September CY2025",
    "id": "rm-481138",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-02",
    "more_info_url": null,
    "platforms": [
@@ -3252,7 +3259,7 @@
    "ga_date": "July CY2025",
    "id": "rm-481283",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-25",
    "more_info_url": null,
    "platforms": [
@@ -3307,7 +3314,7 @@
    "ga_date": "May CY2025",
    "id": "rm-481352",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-05-01",
    "more_info_url": null,
    "platforms": [
@@ -3363,7 +3370,7 @@
    "ga_date": "May CY2026",
    "id": "rm-481518",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-12",
    "more_info_url": null,
    "platforms": [
@@ -3417,7 +3424,7 @@
    "ga_date": "January CY2026",
    "id": "rm-481559",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-24",
    "more_info_url": null,
    "platforms": [
@@ -3468,7 +3475,7 @@
    "ga_date": "September CY2025",
    "id": "rm-481823",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-01",
    "more_info_url": null,
    "platforms": [
@@ -3521,7 +3528,7 @@
    "ga_date": "May CY2026",
    "id": "rm-481825",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-21",
    "more_info_url": null,
    "platforms": [
@@ -3574,7 +3581,7 @@
    "ga_date": "April CY2026",
    "id": "rm-482198",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-06",
    "more_info_url": null,
    "platforms": [
@@ -3627,7 +3634,7 @@
    "ga_date": "September CY2025",
    "id": "rm-482601",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-22",
    "more_info_url": null,
    "platforms": [
@@ -3680,7 +3687,7 @@
    "ga_date": "June CY2025",
    "id": "rm-483519",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -3733,7 +3740,7 @@
    "ga_date": "April CY2025",
    "id": "rm-483882",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-30",
    "more_info_url": null,
    "platforms": [
@@ -3786,7 +3793,7 @@
    "ga_date": "May CY2025",
    "id": "rm-483949",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-18",
    "more_info_url": null,
    "platforms": [
@@ -3839,7 +3846,7 @@
    "ga_date": "May CY2025",
    "id": "rm-483954",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-05-29",
    "more_info_url": null,
    "platforms": [
@@ -3893,7 +3900,7 @@
    "ga_date": "June CY2025",
    "id": "rm-484123",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-06-05",
    "more_info_url": null,
    "platforms": [
@@ -3946,7 +3953,7 @@
    "ga_date": "May CY2025",
    "id": "rm-485720",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-14",
    "more_info_url": null,
    "platforms": [
@@ -3998,7 +4005,7 @@
    "ga_date": "May CY2025",
    "id": "rm-485722",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-05",
    "more_info_url": null,
    "platforms": [
@@ -4051,7 +4058,7 @@
    "ga_date": "May CY2025",
    "id": "rm-485724",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-11",
    "more_info_url": null,
    "platforms": [
@@ -4104,7 +4111,7 @@
    "ga_date": "May CY2025",
    "id": "rm-485727",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-05-02",
    "more_info_url": null,
    "platforms": [
@@ -4162,7 +4169,7 @@
    "ga_date": "July CY2025",
    "id": "rm-485729",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-05",
    "more_info_url": null,
    "platforms": [
@@ -4215,7 +4222,7 @@
    "ga_date": "August CY2025",
    "id": "rm-485730",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-05",
    "more_info_url": null,
    "platforms": [
@@ -4271,7 +4278,7 @@
    "ga_date": "September CY2025",
    "id": "rm-485733",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-14",
    "more_info_url": null,
    "platforms": [
@@ -4328,7 +4335,7 @@
    "ga_date": "June CY2026",
    "id": "rm-486695",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-07",
    "more_info_url": null,
    "platforms": [
@@ -4384,7 +4391,7 @@
    "ga_date": "November CY2025",
    "id": "rm-487836",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -4440,7 +4447,7 @@
    "ga_date": "September CY2025",
    "id": "rm-487848",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-23",
    "more_info_url": null,
    "platforms": [
@@ -4492,7 +4499,7 @@
    "ga_date": "July CY2025",
    "id": "rm-487849",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-08",
    "more_info_url": null,
    "platforms": [
@@ -4545,7 +4552,7 @@
    "ga_date": "June CY2025",
    "id": "rm-487850",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-08",
    "more_info_url": null,
    "platforms": [
@@ -4598,7 +4605,7 @@
    "ga_date": "August CY2025",
    "id": "rm-487851",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-08",
    "more_info_url": null,
    "platforms": [
@@ -4652,7 +4659,7 @@
    "ga_date": "October CY2026",
    "id": "rm-487852",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-18",
    "more_info_url": null,
    "platforms": [
@@ -4707,7 +4714,7 @@
    "ga_date": "August CY2025",
    "id": "rm-487855",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-16",
    "more_info_url": null,
    "platforms": [
@@ -4761,7 +4768,7 @@
    "ga_date": "September CY2025",
    "id": "rm-488297",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -4814,7 +4821,7 @@
    "ga_date": "June CY2025",
    "id": "rm-489217",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-06",
    "more_info_url": null,
    "platforms": [
@@ -4867,7 +4874,7 @@
    "ga_date": "July CY2025",
    "id": "rm-489220",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-04-25",
    "more_info_url": null,
    "platforms": [
@@ -4920,7 +4927,7 @@
    "ga_date": "October CY2026",
    "id": "rm-489822",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-27",
    "more_info_url": null,
    "platforms": [
@@ -4973,7 +4980,7 @@
    "ga_date": "September CY2026",
    "id": "rm-489825",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-07",
    "more_info_url": null,
    "platforms": [
@@ -5031,7 +5038,7 @@
    "ga_date": "June CY2026",
    "id": "rm-489826",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -5088,7 +5095,7 @@
    "ga_date": "September CY2025",
    "id": "rm-490051",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-03",
    "more_info_url": null,
    "platforms": [
@@ -5143,7 +5150,7 @@
    "ga_date": "February CY2026",
    "id": "rm-490052",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -5198,7 +5205,7 @@
    "ga_date": "June CY2026",
    "id": "rm-490154",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -5251,7 +5258,7 @@
    "ga_date": "August CY2025",
    "id": "rm-490212",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-08",
    "more_info_url": null,
    "platforms": [
@@ -5306,7 +5313,7 @@
    "ga_date": "April CY2027",
    "id": "rm-490738",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-28",
    "more_info_url": null,
    "platforms": [],
@@ -5358,7 +5365,7 @@
    "ga_date": "October CY2025",
    "id": "rm-491022",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-06",
    "more_info_url": null,
    "platforms": [
@@ -5412,7 +5419,7 @@
    "ga_date": "October CY2025",
    "id": "rm-492615",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-30",
    "more_info_url": null,
    "platforms": [
@@ -5466,7 +5473,7 @@
    "ga_date": "May CY2025",
    "id": "rm-492616",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-16",
    "more_info_url": null,
    "platforms": [
@@ -5517,7 +5524,7 @@
    "ga_date": "July CY2025",
    "id": "rm-492984",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-05-07",
    "more_info_url": null,
    "platforms": [
@@ -5569,7 +5576,7 @@
    "ga_date": "January CY2026",
    "id": "rm-493287",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-13",
    "more_info_url": null,
    "platforms": [
@@ -5621,7 +5628,7 @@
    "ga_date": "March CY2026",
    "id": "rm-494515",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-15",
    "more_info_url": null,
    "platforms": [
@@ -5675,7 +5682,7 @@
    "ga_date": "July CY2026",
    "id": "rm-494809",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-10",
    "more_info_url": null,
    "platforms": [
@@ -5733,7 +5740,7 @@
    "ga_date": "July CY2025",
    "id": "rm-494830",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-05",
    "more_info_url": null,
    "platforms": [
@@ -5791,7 +5798,7 @@
    "ga_date": "March CY2026",
    "id": "rm-495463",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-30",
    "more_info_url": null,
    "platforms": [
@@ -5844,7 +5851,7 @@
    "ga_date": "October CY2025",
    "id": "rm-495464",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-06",
    "more_info_url": null,
    "platforms": [
@@ -5898,7 +5905,7 @@
    "ga_date": "July CY2025",
    "id": "rm-495828",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-06-30",
    "more_info_url": null,
    "platforms": [
@@ -5953,7 +5960,7 @@
    "ga_date": "February CY2026",
    "id": "rm-496364",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-16",
    "more_info_url": null,
    "platforms": [
@@ -6006,7 +6013,7 @@
    "ga_date": "November CY2025",
    "id": "rm-496654",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-09",
    "more_info_url": null,
    "platforms": [
@@ -6061,7 +6068,7 @@
    "ga_date": "March CY2026",
    "id": "rm-496655",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-27",
    "more_info_url": null,
    "platforms": [
@@ -6113,7 +6120,7 @@
    "ga_date": "July CY2025",
    "id": "rm-497132",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-09",
    "more_info_url": null,
    "platforms": [
@@ -6166,7 +6173,7 @@
    "ga_date": "February CY2026",
    "id": "rm-497135",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-19",
    "more_info_url": null,
    "platforms": [
@@ -6219,7 +6226,7 @@
    "ga_date": "October CY2025",
    "id": "rm-497161",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -6272,7 +6279,7 @@
    "ga_date": "September CY2025",
    "id": "rm-497297",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-06-30",
    "more_info_url": null,
    "platforms": [
@@ -6325,7 +6332,7 @@
    "ga_date": "September CY2025",
    "id": "rm-497298",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-13",
    "more_info_url": null,
    "platforms": [
@@ -6378,7 +6385,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497833",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-17",
    "more_info_url": null,
    "platforms": [
@@ -6430,7 +6437,7 @@
    "ga_date": "May CY2027",
    "id": "rm-497844",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-28",
    "more_info_url": null,
    "platforms": [
@@ -6483,7 +6490,7 @@
    "ga_date": "February CY2026",
    "id": "rm-497848",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-24",
    "more_info_url": null,
    "platforms": [
@@ -6536,7 +6543,7 @@
    "ga_date": "November CY2025",
    "id": "rm-497849",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-07",
    "more_info_url": null,
    "platforms": [
@@ -6586,7 +6593,7 @@
    "ga_date": "May CY2026",
    "id": "rm-497909",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-19",
    "more_info_url": null,
    "platforms": [
@@ -6645,7 +6652,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497913",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -6698,7 +6705,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497914",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-10",
    "more_info_url": null,
    "platforms": [
@@ -6751,7 +6758,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497936",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-08",
    "more_info_url": null,
    "platforms": [
@@ -6805,7 +6812,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497937",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-21",
    "more_info_url": null,
    "platforms": [
@@ -6858,7 +6865,7 @@
    "ga_date": "September CY2025",
    "id": "rm-497939",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-08-04",
    "more_info_url": null,
    "platforms": [
@@ -6911,7 +6918,7 @@
    "ga_date": "August CY2025",
    "id": "rm-497940",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-08",
    "more_info_url": null,
    "platforms": [
@@ -6964,7 +6971,7 @@
    "ga_date": "September CY2025",
    "id": "rm-497941",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-21",
    "more_info_url": null,
    "platforms": [
@@ -7018,7 +7025,7 @@
    "ga_date": "July CY2026",
    "id": "rm-497999",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-11",
    "more_info_url": null,
    "platforms": [
@@ -7072,7 +7079,7 @@
    "ga_date": "August CY2025",
    "id": "rm-498320",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -7129,7 +7136,7 @@
    "ga_date": "March CY2026",
    "id": "rm-498548",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -7182,7 +7189,7 @@
    "ga_date": "August CY2026",
    "id": "rm-498640",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -7237,7 +7244,7 @@
    "ga_date": "August CY2025",
    "id": "rm-498898",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-08-18",
    "more_info_url": null,
    "platforms": [
@@ -7291,7 +7298,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498909",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7344,7 +7351,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498910",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7398,7 +7405,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498911",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7451,7 +7458,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498912",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7506,7 +7513,7 @@
    "ga_date": "October CY2025",
    "id": "rm-498914",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-27",
    "more_info_url": null,
    "platforms": [
@@ -7564,7 +7571,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498918",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7620,7 +7627,7 @@
    "ga_date": "September CY2025",
    "id": "rm-498919",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-07-25",
    "more_info_url": null,
    "platforms": [
@@ -7676,7 +7683,7 @@
    "ga_date": "September CY2025",
    "id": "rm-499153",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-09",
    "more_info_url": null,
    "platforms": [
@@ -7734,7 +7741,7 @@
    "ga_date": "November CY2025",
    "id": "rm-499421",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-14",
    "more_info_url": null,
    "platforms": [
@@ -7790,7 +7797,7 @@
    "ga_date": "October CY2025",
    "id": "rm-499422",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -7821,11 +7828,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
-    "hash": "7e0fc7dce2a6",
+    "date": "2026-10-31",
+    "hash": "33d5eff2ad80",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Get relevant answers and insights about your open cloud documents in Copilot Chat in Edge."
+    "model": "gemini-flash-latest",
+    "summary": "Users can now ground Microsoft 365 Copilot Chat in open browser tabs and YouTube videos directly from the Edge side pane. This helps workers quickly get answers and insights from active web content."
    },
    "apps": [
     "Microsoft Edge"
@@ -7834,25 +7841,35 @@
     "Worldwide (Standard Multi-Tenant)"
    ],
    "created": "2025-08-01",
-   "description": "Get relevant answers and insights about your open cloud documents in Copilot Chat in Edge.",
+   "description": "Get relevant answers and insights about your open browser tabs and YouTube videos directly from the Edge side pane",
    "events": [
     {
      "date": "2025-08-01",
      "type": "new"
+    },
+    {
+     "date": "2026-10-31",
+     "from": "In development",
+     "to": "Launched",
+     "type": "status"
+    },
+    {
+     "date": "2026-10-31",
+     "type": "details"
     }
    ],
    "first_seen": "2026-10-29",
    "ga_date": "October CY2026",
    "id": "rm-499423",
    "kind": "feature",
-   "last_seen": "2026-10-30",
-   "modified": "2026-09-25",
+   "last_seen": "2026-10-31",
+   "modified": "2026-10-30",
    "more_info_url": null,
    "platforms": [
     "Web"
    ],
    "preview_date": null,
-   "product": "sharepoint",
+   "product": "chat",
    "release_phases": [
     "General Availability"
    ],
@@ -7862,9 +7879,9 @@
     "Microsoft Copilot (Microsoft 365)"
    ],
    "source": "Microsoft 365 Roadmap",
-   "status": "In development",
-   "text_hash": "7e0fc7dce2a6",
-   "title": "Ground Microsoft 365 Copilot Chat in Edge for Business in your open OneDrive and SharePoint documents",
+   "status": "Launched",
+   "text_hash": "33d5eff2ad80",
+   "title": "Ground Microsoft 365 Copilot Chat in Edge for Business",
    "url": "https://www.microsoft.com/microsoft-365/roadmap?featureid=499423"
   },
   "rm-499424": {
@@ -7898,7 +7915,7 @@
    "ga_date": "February CY2026",
    "id": "rm-499424",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-16",
    "more_info_url": null,
    "platforms": [
@@ -7951,7 +7968,7 @@
    "ga_date": "November CY2025",
    "id": "rm-499425",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -8004,7 +8021,7 @@
    "ga_date": "November CY2025",
    "id": "rm-499428",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-08",
    "more_info_url": null,
    "platforms": [
@@ -8061,7 +8078,7 @@
    "ga_date": "February CY2026",
    "id": "rm-499654",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-31",
    "more_info_url": null,
    "platforms": [
@@ -8116,7 +8133,7 @@
    "ga_date": "March CY2026",
    "id": "rm-499655",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-07",
    "more_info_url": null,
    "platforms": [
@@ -8170,7 +8187,7 @@
    "ga_date": "November CY2026",
    "id": "rm-499898",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": "https://learn.microsoft.com/en-us/viva/engage/community-agent",
    "platforms": [
@@ -8221,7 +8238,7 @@
    "ga_date": "October CY2025",
    "id": "rm-500631",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -8271,7 +8288,7 @@
    "ga_date": "September CY2025",
    "id": "rm-500632",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -8321,7 +8338,7 @@
    "ga_date": "October CY2025",
    "id": "rm-500633",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -8373,7 +8390,7 @@
    "ga_date": "September CY2025",
    "id": "rm-500701",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-04",
    "more_info_url": null,
    "platforms": [
@@ -8425,7 +8442,7 @@
    "ga_date": "April CY2026",
    "id": "rm-500865",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -8478,7 +8495,7 @@
    "ga_date": "November CY2026",
    "id": "rm-500872",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-15",
    "more_info_url": null,
    "platforms": [
@@ -8532,7 +8549,7 @@
    "ga_date": "February CY2026",
    "id": "rm-501107",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-24",
    "more_info_url": null,
    "platforms": [
@@ -8586,7 +8603,7 @@
    "ga_date": "August CY2026",
    "id": "rm-501111",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-14",
    "more_info_url": null,
    "platforms": [
@@ -8637,7 +8654,7 @@
    "ga_date": "November CY2025",
    "id": "rm-501112",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -8689,7 +8706,7 @@
    "ga_date": "April CY2026",
    "id": "rm-501120",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "more_info_url": null,
    "platforms": [
@@ -8742,7 +8759,7 @@
    "ga_date": "October CY2025",
    "id": "rm-501124",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-19",
    "more_info_url": null,
    "platforms": [
@@ -8794,7 +8811,7 @@
    "ga_date": "February CY2027",
    "id": "rm-501201",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-18",
    "more_info_url": null,
    "platforms": [
@@ -8850,7 +8867,7 @@
    "ga_date": "October CY2025",
    "id": "rm-501277",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-23",
    "more_info_url": null,
    "platforms": [
@@ -8901,7 +8918,7 @@
    "ga_date": "November CY2025",
    "id": "rm-501292",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -8952,7 +8969,7 @@
    "ga_date": "October CY2025",
    "id": "rm-501427",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-09",
    "more_info_url": null,
    "platforms": [
@@ -9003,7 +9020,7 @@
    "ga_date": "June CY2026",
    "id": "rm-501448",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-02",
    "more_info_url": null,
    "platforms": [
@@ -9060,7 +9077,7 @@
    "ga_date": "September CY2026",
    "id": "rm-501451",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-25",
    "more_info_url": null,
    "platforms": [
@@ -9113,7 +9130,7 @@
    "ga_date": "December CY2025",
    "id": "rm-501452",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-27",
    "more_info_url": null,
    "platforms": [
@@ -9165,7 +9182,7 @@
    "ga_date": "October CY2025",
    "id": "rm-501455",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-04",
    "more_info_url": null,
    "platforms": [
@@ -9217,7 +9234,7 @@
    "ga_date": "December CY2025",
    "id": "rm-501540",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-29",
    "more_info_url": null,
    "platforms": [
@@ -9273,7 +9290,7 @@
    "ga_date": "March CY2026",
    "id": "rm-501581",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-15",
    "more_info_url": null,
    "platforms": [
@@ -9326,7 +9343,7 @@
    "ga_date": "February CY2026",
    "id": "rm-501584",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-06",
    "more_info_url": null,
    "platforms": [
@@ -9378,7 +9395,7 @@
    "ga_date": "February CY2026",
    "id": "rm-501585",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-02",
    "more_info_url": null,
    "platforms": [
@@ -9429,7 +9446,7 @@
    "ga_date": "October CY2025",
    "id": "rm-501785",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-19",
    "more_info_url": null,
    "platforms": [
@@ -9481,7 +9498,7 @@
    "ga_date": "September CY2025",
    "id": "rm-502526",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-24",
    "more_info_url": null,
    "platforms": [
@@ -9539,7 +9556,7 @@
    "ga_date": "June CY2026",
    "id": "rm-502529",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-02",
    "more_info_url": null,
    "platforms": [
@@ -9591,7 +9608,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502530",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-08",
    "more_info_url": null,
    "platforms": [
@@ -9641,7 +9658,7 @@
    "ga_date": "September CY2026",
    "id": "rm-502532",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-06",
    "more_info_url": null,
    "platforms": [
@@ -9692,7 +9709,7 @@
    "ga_date": "September CY2026",
    "id": "rm-502533",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -9743,7 +9760,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502534",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -9794,7 +9811,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502537",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-01",
    "more_info_url": null,
    "platforms": [
@@ -9845,7 +9862,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502538",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-16",
    "more_info_url": null,
    "platforms": [
@@ -9899,7 +9916,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502540",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-27",
    "more_info_url": null,
    "platforms": [
@@ -9950,7 +9967,7 @@
    "ga_date": "September CY2026",
    "id": "rm-502541",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-07",
    "more_info_url": null,
    "platforms": [
@@ -10001,7 +10018,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502542",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-09-12",
    "more_info_url": null,
    "platforms": [
@@ -10051,7 +10068,7 @@
    "ga_date": "March CY2026",
    "id": "rm-502543",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-15",
    "more_info_url": null,
    "platforms": [
@@ -10102,7 +10119,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502546",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-04",
    "more_info_url": null,
    "platforms": [
@@ -10153,7 +10170,7 @@
    "ga_date": "December CY2025",
    "id": "rm-502547",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-27",
    "more_info_url": null,
    "platforms": [
@@ -10205,7 +10222,7 @@
    "ga_date": "October CY2025",
    "id": "rm-502844",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-10",
    "more_info_url": null,
    "platforms": [
@@ -10261,7 +10278,7 @@
    "ga_date": "November CY2025",
    "id": "rm-502854",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-24",
    "more_info_url": null,
    "platforms": [
@@ -10316,7 +10333,7 @@
    "ga_date": "November CY2025",
    "id": "rm-502855",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-21",
    "more_info_url": null,
    "platforms": [
@@ -10370,7 +10387,7 @@
    "ga_date": "January CY2026",
    "id": "rm-502858",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -10421,7 +10438,7 @@
    "ga_date": "November CY2025",
    "id": "rm-502864",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-17",
    "more_info_url": null,
    "platforms": [
@@ -10477,7 +10494,7 @@
    "ga_date": "October CY2025",
    "id": "rm-502867",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-09",
    "more_info_url": null,
    "platforms": [
@@ -10532,7 +10549,7 @@
    "ga_date": "April CY2026",
    "id": "rm-502875",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-08",
    "more_info_url": null,
    "platforms": [
@@ -10588,7 +10605,7 @@
    "ga_date": "October CY2025",
    "id": "rm-502878",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -10644,7 +10661,7 @@
    "ga_date": "November CY2025",
    "id": "rm-503105",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-13",
    "more_info_url": null,
    "platforms": [
@@ -10697,7 +10714,7 @@
    "ga_date": "September CY2026",
    "id": "rm-503144",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -10749,7 +10766,7 @@
    "ga_date": "July CY2026",
    "id": "rm-503570",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-20",
    "more_info_url": null,
    "platforms": [
@@ -10800,7 +10817,7 @@
    "ga_date": "May CY2026",
    "id": "rm-503571",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -10852,7 +10869,7 @@
    "ga_date": "April CY2026",
    "id": "rm-503587",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-13",
    "more_info_url": null,
    "platforms": [
@@ -10904,7 +10921,7 @@
    "ga_date": "March CY2026",
    "id": "rm-503590",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-23",
    "more_info_url": null,
    "platforms": [
@@ -10954,7 +10971,7 @@
    "ga_date": "December CY2025",
    "id": "rm-503767",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-16",
    "more_info_url": null,
    "platforms": [
@@ -11004,7 +11021,7 @@
    "ga_date": "December CY2026",
    "id": "rm-503771",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-05",
    "more_info_url": null,
    "platforms": [
@@ -11054,7 +11071,7 @@
    "ga_date": "August CY2025",
    "id": "rm-503772",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-21",
    "more_info_url": null,
    "platforms": [
@@ -11104,7 +11121,7 @@
    "ga_date": "December CY2025",
    "id": "rm-503955",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -11160,7 +11177,7 @@
    "ga_date": "December CY2025",
    "id": "rm-505436",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-14",
    "more_info_url": null,
    "platforms": [
@@ -11213,7 +11230,7 @@
    "ga_date": "January CY2026",
    "id": "rm-505437",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-10",
    "more_info_url": null,
    "platforms": [
@@ -11266,7 +11283,7 @@
    "ga_date": "December CY2025",
    "id": "rm-505438",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -11318,7 +11335,7 @@
    "ga_date": "October CY2026",
    "id": "rm-505441",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-09",
    "more_info_url": null,
    "platforms": [
@@ -11371,7 +11388,7 @@
    "ga_date": "August CY2026",
    "id": "rm-505442",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-01",
    "more_info_url": null,
    "platforms": [
@@ -11424,7 +11441,7 @@
    "ga_date": "February CY2027",
    "id": "rm-506749",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-05",
    "more_info_url": null,
    "platforms": [
@@ -11476,7 +11493,7 @@
    "ga_date": "December CY2025",
    "id": "rm-506751",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-27",
    "more_info_url": null,
    "platforms": [
@@ -11533,7 +11550,7 @@
    "ga_date": "December CY2025",
    "id": "rm-506752",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -11647,7 +11664,7 @@
    "ga_date": "January CY2026",
    "id": "rm-506755",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-05",
    "more_info_url": null,
    "platforms": [
@@ -11698,7 +11715,7 @@
    "ga_date": "January CY2026",
    "id": "rm-506756",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-05",
    "more_info_url": null,
    "platforms": [
@@ -11748,7 +11765,7 @@
    "ga_date": "November CY2025",
    "id": "rm-506847",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -11798,7 +11815,7 @@
    "ga_date": "December CY2025",
    "id": "rm-506848",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-18",
    "more_info_url": null,
    "platforms": [
@@ -11849,7 +11866,7 @@
    "ga_date": "December CY2026",
    "id": "rm-508526",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-06",
    "more_info_url": null,
    "platforms": [
@@ -11899,7 +11916,7 @@
    "ga_date": "February CY2026",
    "id": "rm-508527",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-15",
    "more_info_url": null,
    "platforms": [
@@ -11949,7 +11966,7 @@
    "ga_date": "February CY2026",
    "id": "rm-508529",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -12004,7 +12021,7 @@
    "ga_date": "December CY2025",
    "id": "rm-508530",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-23",
    "more_info_url": null,
    "platforms": [
@@ -12057,7 +12074,7 @@
    "ga_date": "December CY2025",
    "id": "rm-509107",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -12108,7 +12125,7 @@
    "ga_date": "December CY2025",
    "id": "rm-509108",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -12163,7 +12180,7 @@
    "ga_date": "May CY2026",
    "id": "rm-509109",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-26",
    "more_info_url": null,
    "platforms": [
@@ -12217,7 +12234,7 @@
    "ga_date": "November CY2025",
    "id": "rm-509112",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-31",
    "more_info_url": null,
    "platforms": [
@@ -12270,7 +12287,7 @@
    "ga_date": "November CY2025",
    "id": "rm-510099",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-16",
    "more_info_url": null,
    "platforms": [
@@ -12325,7 +12342,7 @@
    "ga_date": "June CY2026",
    "id": "rm-511813",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-29",
    "more_info_url": null,
    "platforms": [
@@ -12379,7 +12396,7 @@
    "ga_date": "March CY2026",
    "id": "rm-511820",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-05",
    "more_info_url": null,
    "platforms": [
@@ -12437,7 +12454,7 @@
    "ga_date": "June CY2026",
    "id": "rm-512428",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-13",
    "more_info_url": null,
    "platforms": [
@@ -12490,7 +12507,7 @@
    "ga_date": "March CY2026",
    "id": "rm-512429",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-21",
    "more_info_url": null,
    "platforms": [
@@ -12546,7 +12563,7 @@
    "ga_date": "February CY2026",
    "id": "rm-512430",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-03",
    "more_info_url": null,
    "platforms": [
@@ -12601,7 +12618,7 @@
    "ga_date": "November CY2025",
    "id": "rm-513273",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-27",
    "more_info_url": null,
    "platforms": [
@@ -12654,7 +12671,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513279",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -12705,7 +12722,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513281",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -12756,7 +12773,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513282",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-05",
    "more_info_url": null,
    "platforms": [
@@ -12807,7 +12824,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513283",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-24",
    "more_info_url": null,
    "platforms": [
@@ -12858,7 +12875,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513284",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-24",
    "more_info_url": null,
    "platforms": [
@@ -12909,7 +12926,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513285",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -12960,7 +12977,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513286",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-04",
    "more_info_url": null,
    "platforms": [
@@ -13012,7 +13029,7 @@
    "ga_date": "November CY2025",
    "id": "rm-513421",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-06",
    "more_info_url": null,
    "platforms": [
@@ -13065,7 +13082,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513422",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -13118,7 +13135,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513430",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -13172,7 +13189,7 @@
    "ga_date": "December CY2025",
    "id": "rm-513431",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -13225,7 +13242,7 @@
    "ga_date": "November CY2025",
    "id": "rm-513432",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-05",
    "more_info_url": null,
    "platforms": [
@@ -13279,7 +13296,7 @@
    "ga_date": "May CY2026",
    "id": "rm-515144",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-13",
    "more_info_url": null,
    "platforms": [
@@ -13303,16 +13320,16 @@
   },
   "rm-515145": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Brief leaders and managers on using the new agent to analyze organizational data.",
     "audience": [
-     "End users"
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "15e0111660b9",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Workforce Insights (WFI) Agent in Microsoft 365 Copilot is an agent designed to help leaders, managers, and their delegates quickly understand their organization by turning complex workforce data into clear, actionable insights."
+    "model": "gemini-flash-latest",
+    "summary": "The Workforce Insights Agent helps leaders and managers analyze team structures, skills inventories, and flexible work patterns directly in Copilot or Teams to turn workforce data into actionable insights."
    },
    "apps": [],
    "clouds": [
@@ -13330,7 +13347,7 @@
    "ga_date": "November CY2026",
    "id": "rm-515145",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-07",
    "more_info_url": null,
    "platforms": [
@@ -13387,7 +13404,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515157",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-23",
    "more_info_url": null,
    "platforms": [
@@ -13438,7 +13455,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515158",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -13489,7 +13506,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515159",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -13540,7 +13557,7 @@
    "ga_date": "April CY2026",
    "id": "rm-515160",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-27",
    "more_info_url": null,
    "platforms": [
@@ -13592,7 +13609,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515161",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-23",
    "more_info_url": null,
    "platforms": [
@@ -13643,7 +13660,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515162",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -13694,7 +13711,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515163",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -13745,7 +13762,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515164",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-24",
    "more_info_url": null,
    "platforms": [
@@ -13796,7 +13813,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515165",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -13847,7 +13864,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515166",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -13898,7 +13915,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515167",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-24",
    "more_info_url": null,
    "platforms": [
@@ -13949,7 +13966,7 @@
    "ga_date": "January CY2026",
    "id": "rm-515168",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-24",
    "more_info_url": null,
    "platforms": [
@@ -14000,7 +14017,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515175",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -14051,7 +14068,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515176",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-10-23",
    "more_info_url": null,
    "platforms": [
@@ -14102,7 +14119,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515177",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -14153,7 +14170,7 @@
    "ga_date": "December CY2025",
    "id": "rm-515178",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -14207,7 +14224,7 @@
    "ga_date": "March CY2026",
    "id": "rm-515945",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-14",
    "more_info_url": null,
    "platforms": [
@@ -14260,7 +14277,7 @@
    "ga_date": "April CY2026",
    "id": "rm-516037",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -14313,7 +14330,7 @@
    "ga_date": "April CY2026",
    "id": "rm-516038",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -14366,7 +14383,7 @@
    "ga_date": "April CY2026",
    "id": "rm-516039",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -14419,7 +14436,7 @@
    "ga_date": "May CY2026",
    "id": "rm-516040",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-30",
    "more_info_url": null,
    "platforms": [
@@ -14472,7 +14489,7 @@
    "ga_date": "February CY2026",
    "id": "rm-516042",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -14524,7 +14541,7 @@
    "ga_date": "November CY2025",
    "id": "rm-516044",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-16",
    "more_info_url": null,
    "platforms": [
@@ -14577,7 +14594,7 @@
    "ga_date": "November CY2025",
    "id": "rm-516565",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-17",
    "more_info_url": null,
    "platforms": [
@@ -14630,7 +14647,7 @@
    "ga_date": "November CY2025",
    "id": "rm-516566",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-17",
    "more_info_url": null,
    "platforms": [
@@ -14683,7 +14700,7 @@
    "ga_date": "November CY2025",
    "id": "rm-516567",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-17",
    "more_info_url": null,
    "platforms": [
@@ -14737,7 +14754,7 @@
    "ga_date": "December CY2025",
    "id": "rm-516569",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-11",
    "more_info_url": null,
    "platforms": [
@@ -14793,7 +14810,7 @@
    "ga_date": "April CY2026",
    "id": "rm-516575",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -14848,7 +14865,7 @@
    "ga_date": "June CY2026",
    "id": "rm-516576",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-29",
    "more_info_url": null,
    "platforms": [
@@ -14902,8 +14919,8 @@
    "ga_date": "September CY2026",
    "id": "rm-516577",
    "kind": "feature",
-   "last_seen": "2026-10-30",
-   "modified": "2026-09-25",
+   "last_seen": "2026-10-31",
+   "modified": "2026-10-30",
    "more_info_url": null,
    "platforms": [
     "Desktop"
@@ -14953,7 +14970,7 @@
    "ga_date": "December CY2025",
    "id": "rm-518222",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-18",
    "more_info_url": null,
    "platforms": [
@@ -15006,7 +15023,7 @@
    "ga_date": "December CY2025",
    "id": "rm-518290",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-06",
    "more_info_url": null,
    "platforms": [
@@ -15056,7 +15073,7 @@
    "ga_date": "November CY2025",
    "id": "rm-518641",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-20",
    "more_info_url": null,
    "platforms": [
@@ -15107,7 +15124,7 @@
    "ga_date": "November CY2025",
    "id": "rm-519570",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-03",
    "more_info_url": null,
    "platforms": [
@@ -15161,7 +15178,7 @@
    "ga_date": "November CY2026",
    "id": "rm-519571",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-16",
    "more_info_url": null,
    "platforms": [
@@ -15220,7 +15237,7 @@
    "ga_date": "December CY2025",
    "id": "rm-520389",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-06",
    "more_info_url": null,
    "platforms": [
@@ -15279,7 +15296,7 @@
    "ga_date": "December CY2025",
    "id": "rm-520772",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-22",
    "more_info_url": null,
    "platforms": [
@@ -15330,7 +15347,7 @@
    "ga_date": "September CY2026",
    "id": "rm-522616",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-22",
    "more_info_url": null,
    "platforms": [
@@ -15380,7 +15397,7 @@
    "ga_date": "January CY2026",
    "id": "rm-523204",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-26",
    "more_info_url": null,
    "platforms": [
@@ -15437,7 +15454,7 @@
    "ga_date": "February CY2026",
    "id": "rm-523205",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-05",
    "more_info_url": null,
    "platforms": [
@@ -15490,7 +15507,7 @@
    "ga_date": "April CY2026",
    "id": "rm-523206",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-29",
    "more_info_url": null,
    "platforms": [
@@ -15545,7 +15562,7 @@
    "ga_date": "January CY2026",
    "id": "rm-523222",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-19",
    "more_info_url": null,
    "platforms": [
@@ -15597,7 +15614,7 @@
    "ga_date": "February CY2027",
    "id": "rm-523223",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -15653,7 +15670,7 @@
    "ga_date": "February CY2026",
    "id": "rm-525366",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-20",
    "more_info_url": null,
    "platforms": [
@@ -15707,7 +15724,7 @@
    "ga_date": "March CY2026",
    "id": "rm-526793",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-25",
    "more_info_url": null,
    "platforms": [
@@ -15761,7 +15778,7 @@
    "ga_date": "December CY2025",
    "id": "rm-527835",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-13",
    "more_info_url": null,
    "platforms": [
@@ -15812,7 +15829,7 @@
    "ga_date": "February CY2026",
    "id": "rm-527837",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-11-18",
    "more_info_url": null,
    "platforms": [
@@ -15869,7 +15886,7 @@
    "ga_date": "December CY2025",
    "id": "rm-527839",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-11",
    "more_info_url": null,
    "platforms": [
@@ -15925,7 +15942,7 @@
    "ga_date": "January CY2026",
    "id": "rm-527840",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-06",
    "more_info_url": null,
    "platforms": [
@@ -15979,7 +15996,7 @@
    "ga_date": "February CY2026",
    "id": "rm-529842",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-12-19",
    "more_info_url": null,
    "platforms": [
@@ -16032,7 +16049,7 @@
    "ga_date": "January CY2026",
    "id": "rm-529843",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -16088,7 +16105,7 @@
    "ga_date": "February CY2026",
    "id": "rm-529850",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "more_info_url": null,
    "platforms": [
@@ -16142,7 +16159,7 @@
    "ga_date": "June CY2026",
    "id": "rm-529858",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-27",
    "more_info_url": null,
    "platforms": [
@@ -16195,7 +16212,7 @@
    "ga_date": "February CY2026",
    "id": "rm-529859",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-12-05",
    "more_info_url": null,
    "platforms": [
@@ -16248,7 +16265,7 @@
    "ga_date": "December CY2025",
    "id": "rm-529864",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -16300,7 +16317,7 @@
    "ga_date": "March CY2026",
    "id": "rm-531758",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-27",
    "more_info_url": null,
    "platforms": [
@@ -16353,7 +16370,7 @@
    "ga_date": "January CY2026",
    "id": "rm-531910",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-24",
    "more_info_url": null,
    "platforms": [
@@ -16408,7 +16425,7 @@
    "ga_date": "January CY2026",
    "id": "rm-531912",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-09",
    "more_info_url": null,
    "platforms": [
@@ -16462,7 +16479,7 @@
    "ga_date": "December CY2025",
    "id": "rm-532735",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-13",
    "more_info_url": null,
    "platforms": [
@@ -16513,6 +16530,10 @@
     {
      "date": "2025-11-21",
      "type": "new"
+    },
+    {
+     "date": "2026-10-31",
+     "type": "removed"
     }
    ],
    "first_seen": "2026-10-29",
@@ -16531,6 +16552,7 @@
    "release_phases": [
     "General Availability"
    ],
+   "removed": true,
    "roadmap_id": 532736,
    "roadmap_tags": [
     "Microsoft Copilot (Microsoft 365)"
@@ -16574,7 +16596,7 @@
    "ga_date": "December CY2025",
    "id": "rm-533043",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -16631,7 +16653,7 @@
    "ga_date": "February CY2026",
    "id": "rm-534606",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-16",
    "more_info_url": null,
    "platforms": [
@@ -16688,7 +16710,7 @@
    "ga_date": "February CY2026",
    "id": "rm-535423",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-09",
    "more_info_url": null,
    "platforms": [
@@ -16745,7 +16767,7 @@
    "ga_date": "January CY2026",
    "id": "rm-536570",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-30",
    "more_info_url": null,
    "platforms": [
@@ -16802,7 +16824,7 @@
    "ga_date": "January CY2026",
    "id": "rm-536574",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-25",
    "more_info_url": null,
    "platforms": [
@@ -16857,7 +16879,7 @@
    "ga_date": "January CY2026",
    "id": "rm-536579",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-17",
    "more_info_url": null,
    "platforms": [
@@ -16911,7 +16933,7 @@
    "ga_date": "June CY2026",
    "id": "rm-537269",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -16965,7 +16987,7 @@
    "ga_date": "April CY2026",
    "id": "rm-537281",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-21",
    "more_info_url": null,
    "platforms": [
@@ -17019,7 +17041,7 @@
    "ga_date": "May CY2026",
    "id": "rm-537283",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-11",
    "more_info_url": null,
    "platforms": [
@@ -17072,7 +17094,7 @@
    "ga_date": "November CY2026",
    "id": "rm-537284",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-07",
    "more_info_url": null,
    "platforms": [
@@ -17125,7 +17147,7 @@
    "ga_date": "February CY2026",
    "id": "rm-537288",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-19",
    "more_info_url": null,
    "platforms": [
@@ -17184,7 +17206,7 @@
    "ga_date": "October CY2026",
    "id": "rm-542181",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -17240,7 +17262,7 @@
    "ga_date": "January CY2026",
    "id": "rm-542182",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-13",
    "more_info_url": null,
    "platforms": [
@@ -17295,7 +17317,7 @@
    "ga_date": "February CY2026",
    "id": "rm-543241",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2025-12-19",
    "more_info_url": null,
    "platforms": [
@@ -17350,7 +17372,7 @@
    "ga_date": "January CY2026",
    "id": "rm-543242",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -17406,7 +17428,7 @@
    "ga_date": "February CY2026",
    "id": "rm-543420",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-20",
    "more_info_url": null,
    "platforms": [
@@ -17463,7 +17485,7 @@
    "ga_date": "March CY2026",
    "id": "rm-543421",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-17",
    "more_info_url": null,
    "platforms": [
@@ -17520,7 +17542,7 @@
    "ga_date": "March CY2026",
    "id": "rm-543422",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -17577,7 +17599,7 @@
    "ga_date": "January CY2026",
    "id": "rm-543423",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-06",
    "more_info_url": null,
    "platforms": [
@@ -17629,7 +17651,7 @@
    "ga_date": "February CY2026",
    "id": "rm-545012",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-13",
    "more_info_url": null,
    "platforms": [
@@ -17682,7 +17704,7 @@
    "ga_date": "October CY2026",
    "id": "rm-545896",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -17735,7 +17757,7 @@
    "ga_date": "April CY2026",
    "id": "rm-546246",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -17789,7 +17811,7 @@
    "ga_date": "May CY2026",
    "id": "rm-547732",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -17846,7 +17868,7 @@
    "ga_date": "November CY2026",
    "id": "rm-547749",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-08",
    "more_info_url": null,
    "platforms": [
@@ -17900,7 +17922,7 @@
    "ga_date": "February CY2026",
    "id": "rm-547831",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-28",
    "more_info_url": null,
    "platforms": [
@@ -17959,7 +17981,7 @@
    "ga_date": "February CY2026",
    "id": "rm-548520",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-31",
    "more_info_url": null,
    "platforms": [
@@ -18010,7 +18032,7 @@
    "ga_date": "April CY2026",
    "id": "rm-548641",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -18063,7 +18085,7 @@
    "ga_date": "February CY2026",
    "id": "rm-548643",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -18117,7 +18139,7 @@
    "ga_date": "February CY2026",
    "id": "rm-548646",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -18171,7 +18193,7 @@
    "ga_date": "June CY2026",
    "id": "rm-550513",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-08",
    "more_info_url": null,
    "platforms": [
@@ -18223,7 +18245,7 @@
    "ga_date": "February CY2026",
    "id": "rm-550514",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-25",
    "more_info_url": null,
    "platforms": [
@@ -18275,7 +18297,7 @@
    "ga_date": "February CY2026",
    "id": "rm-551187",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-25",
    "more_info_url": null,
    "platforms": [
@@ -18328,7 +18350,7 @@
    "ga_date": "February CY2026",
    "id": "rm-551194",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-19",
    "more_info_url": null,
    "platforms": [
@@ -18382,7 +18404,7 @@
    "ga_date": "November CY2026",
    "id": "rm-551195",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-22",
    "more_info_url": null,
    "platforms": [
@@ -18438,7 +18460,7 @@
    "ga_date": "April CY2026",
    "id": "rm-551196",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-30",
    "more_info_url": null,
    "platforms": [
@@ -18490,7 +18512,7 @@
    "ga_date": "June CY2026",
    "id": "rm-552589",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-01-30",
    "more_info_url": null,
    "platforms": [
@@ -18542,7 +18564,7 @@
    "ga_date": "February CY2026",
    "id": "rm-552591",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -18593,7 +18615,7 @@
    "ga_date": "May CY2026",
    "id": "rm-552592",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": null,
    "platforms": [
@@ -18646,7 +18668,7 @@
    "ga_date": "May CY2026",
    "id": "rm-552595",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-06",
    "more_info_url": null,
    "platforms": [
@@ -18698,7 +18720,7 @@
    "ga_date": "February CY2026",
    "id": "rm-552596",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-22",
    "more_info_url": null,
    "platforms": [
@@ -18752,7 +18774,7 @@
    "ga_date": "May CY2026",
    "id": "rm-553136",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-13",
    "more_info_url": null,
    "platforms": [
@@ -18803,7 +18825,7 @@
    "ga_date": "December CY2026",
    "id": "rm-553213",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-04",
    "more_info_url": null,
    "platforms": [
@@ -18858,7 +18880,7 @@
    "ga_date": "April CY2026",
    "id": "rm-553215",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-04",
    "more_info_url": "https://m365.cloud.microsoft/launch/Clipchamp/ ",
    "platforms": [
@@ -18914,7 +18936,7 @@
    "ga_date": "June CY2026",
    "id": "rm-553219",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-24",
    "more_info_url": null,
    "platforms": [
@@ -18967,7 +18989,7 @@
    "ga_date": "June CY2026",
    "id": "rm-553595",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -19021,7 +19043,7 @@
    "ga_date": "March CY2026",
    "id": "rm-554928",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -19091,7 +19113,7 @@
    "ga_date": "October CY2026",
    "id": "rm-554934",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-29",
    "more_info_url": null,
    "platforms": [
@@ -19146,7 +19168,7 @@
    "ga_date": "February CY2026",
    "id": "rm-555240",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -19200,7 +19222,7 @@
    "ga_date": "August CY2026",
    "id": "rm-555852",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-05",
    "more_info_url": null,
    "platforms": [
@@ -19259,7 +19281,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555872",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19312,7 +19334,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555873",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19365,7 +19387,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555874",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19418,7 +19440,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555875",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19471,7 +19493,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555876",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19524,7 +19546,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555877",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -19577,7 +19599,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555878",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-05",
    "more_info_url": null,
    "platforms": [
@@ -19630,7 +19652,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555879",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-05",
    "more_info_url": null,
    "platforms": [
@@ -19683,7 +19705,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555880",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-05",
    "more_info_url": null,
    "platforms": [
@@ -19736,7 +19758,7 @@
    "ga_date": "July CY2026",
    "id": "rm-555881",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-22",
    "more_info_url": null,
    "platforms": [
@@ -19789,7 +19811,7 @@
    "ga_date": "July CY2026",
    "id": "rm-555882",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -19842,7 +19864,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555883",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-02",
    "more_info_url": null,
    "platforms": [
@@ -19895,7 +19917,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555884",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-02",
    "more_info_url": null,
    "platforms": [
@@ -19948,7 +19970,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555885",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20001,7 +20023,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555886",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "more_info_url": null,
    "platforms": [
@@ -20054,7 +20076,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555887",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20107,7 +20129,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555888",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-21",
    "more_info_url": null,
    "platforms": [
@@ -20160,7 +20182,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555889",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20213,7 +20235,7 @@
    "ga_date": "April CY2026",
    "id": "rm-555890",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-22",
    "more_info_url": null,
    "platforms": [
@@ -20266,7 +20288,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555891",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-22",
    "more_info_url": null,
    "platforms": [
@@ -20319,7 +20341,7 @@
    "ga_date": "March CY2026",
    "id": "rm-555892",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20372,7 +20394,7 @@
    "ga_date": "April CY2026",
    "id": "rm-555893",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20425,7 +20447,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555894",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-20",
    "more_info_url": null,
    "platforms": [
@@ -20478,7 +20500,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555895",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-22",
    "more_info_url": null,
    "platforms": [
@@ -20531,7 +20553,7 @@
    "ga_date": "April CY2026",
    "id": "rm-555896",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20584,7 +20606,7 @@
    "ga_date": "June CY2026",
    "id": "rm-555897",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-23",
    "more_info_url": null,
    "platforms": [
@@ -20637,7 +20659,7 @@
    "ga_date": "April CY2026",
    "id": "rm-555898",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -20692,7 +20714,7 @@
    "ga_date": "May CY2026",
    "id": "rm-557170",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "more_info_url": null,
    "platforms": [
@@ -20748,7 +20770,7 @@
    "ga_date": "May CY2026",
    "id": "rm-557173",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-29",
    "more_info_url": null,
    "platforms": [
@@ -20802,7 +20824,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557174",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-12",
    "more_info_url": null,
    "platforms": [
@@ -20856,7 +20878,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557175",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-19",
    "more_info_url": null,
    "platforms": [
@@ -20910,7 +20932,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557176",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-13",
    "more_info_url": null,
    "platforms": [
@@ -20965,7 +20987,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557177",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-07",
    "more_info_url": null,
    "platforms": [
@@ -21018,7 +21040,7 @@
    "ga_date": "May CY2026",
    "id": "rm-557180",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-01",
    "more_info_url": null,
    "platforms": [
@@ -21082,7 +21104,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557255",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-17",
    "more_info_url": null,
    "platforms": [
@@ -21143,7 +21165,7 @@
    "ga_date": "June CY2026",
    "id": "rm-557256",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-22",
    "more_info_url": null,
    "platforms": [
@@ -21197,7 +21219,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557276",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -21251,7 +21273,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557277",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -21302,7 +21324,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557348",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-23",
    "more_info_url": null,
    "platforms": [
@@ -21355,7 +21377,7 @@
    "ga_date": "April CY2026",
    "id": "rm-557371",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-27",
    "more_info_url": null,
    "platforms": [
@@ -21408,7 +21430,7 @@
    "ga_date": "May CY2026",
    "id": "rm-557560",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-08",
    "more_info_url": null,
    "platforms": [
@@ -21463,7 +21485,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557564",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-20",
    "more_info_url": null,
    "platforms": [
@@ -21518,7 +21540,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557673",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-02-25",
    "more_info_url": null,
    "platforms": [
@@ -21574,7 +21596,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557674",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-13",
    "more_info_url": null,
    "platforms": [
@@ -21627,7 +21649,7 @@
    "ga_date": "August CY2026",
    "id": "rm-557681",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-26",
    "more_info_url": null,
    "platforms": [
@@ -21678,7 +21700,7 @@
    "ga_date": "March CY2026",
    "id": "rm-557947",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-10",
    "more_info_url": null,
    "platforms": [
@@ -21731,7 +21753,7 @@
    "ga_date": "June CY2026",
    "id": "rm-557981",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-19",
    "more_info_url": null,
    "platforms": [
@@ -21784,7 +21806,7 @@
    "ga_date": "March CY2026",
    "id": "rm-558105",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-02",
    "more_info_url": null,
    "platforms": [
@@ -21837,7 +21859,7 @@
    "ga_date": "October CY2026",
    "id": "rm-558286",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -21895,7 +21917,7 @@
    "ga_date": "December CY2026",
    "id": "rm-558341",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-15",
    "more_info_url": null,
    "platforms": [
@@ -21953,7 +21975,7 @@
    "ga_date": "May CY2026",
    "id": "rm-558440",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-02",
    "more_info_url": null,
    "platforms": [
@@ -22006,7 +22028,7 @@
    "ga_date": "August CY2026",
    "id": "rm-558441",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-12",
    "more_info_url": null,
    "platforms": [
@@ -22061,7 +22083,7 @@
    "ga_date": "April CY2026",
    "id": "rm-558443",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -22114,7 +22136,7 @@
    "ga_date": "December CY2026",
    "id": "rm-558538",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-04",
    "more_info_url": null,
    "platforms": [
@@ -22168,7 +22190,7 @@
    "ga_date": "April CY2026",
    "id": "rm-558540",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-18",
    "more_info_url": null,
    "platforms": [
@@ -22224,7 +22246,7 @@
    "ga_date": "April CY2026",
    "id": "rm-558543",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-06",
    "more_info_url": null,
    "platforms": [
@@ -22283,7 +22305,7 @@
    "ga_date": "November CY2026",
    "id": "rm-558933",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -22339,7 +22361,7 @@
    "ga_date": "May CY2026",
    "id": "rm-558934",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-24",
    "more_info_url": null,
    "platforms": [
@@ -22398,7 +22420,7 @@
    "ga_date": "May CY2026",
    "id": "rm-558938",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-18",
    "more_info_url": null,
    "platforms": [
@@ -22455,7 +22477,7 @@
    "ga_date": "April CY2026",
    "id": "rm-558940",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-23",
    "more_info_url": null,
    "platforms": [
@@ -22509,7 +22531,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559017",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-21",
    "more_info_url": null,
    "platforms": [
@@ -22563,7 +22585,7 @@
    "ga_date": "July CY2026",
    "id": "rm-559018",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-18",
    "more_info_url": null,
    "platforms": [
@@ -22615,7 +22637,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559019",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -22667,7 +22689,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559020",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-29",
    "more_info_url": null,
    "platforms": [
@@ -22717,7 +22739,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559021",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-21",
    "more_info_url": null,
    "platforms": [
@@ -22770,7 +22792,7 @@
    "ga_date": "April CY2026",
    "id": "rm-559022",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-01",
    "more_info_url": null,
    "platforms": [
@@ -22823,7 +22845,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559029",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-12",
    "more_info_url": null,
    "platforms": [
@@ -22878,7 +22900,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559095",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-04",
    "more_info_url": null,
    "platforms": [
@@ -22930,7 +22952,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559110",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-15",
    "more_info_url": null,
    "platforms": [
@@ -22985,7 +23007,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559111",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-28",
    "more_info_url": null,
    "platforms": [
@@ -23048,7 +23070,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559310",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-03",
    "more_info_url": null,
    "platforms": [
@@ -23104,7 +23126,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559418",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-18",
    "more_info_url": null,
    "platforms": [
@@ -23162,7 +23184,7 @@
    "ga_date": "April CY2026",
    "id": "rm-559475",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-12",
    "more_info_url": null,
    "platforms": [
@@ -23216,7 +23238,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559477",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-03-27",
    "more_info_url": null,
    "platforms": [
@@ -23269,7 +23291,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559478",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-06",
    "more_info_url": null,
    "platforms": [
@@ -23322,7 +23344,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559479",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-10",
    "more_info_url": null,
    "platforms": [
@@ -23375,7 +23397,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559480",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-19",
    "more_info_url": null,
    "platforms": [
@@ -23430,7 +23452,7 @@
    "ga_date": "April CY2026",
    "id": "rm-559481",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-04",
    "more_info_url": null,
    "platforms": [
@@ -23485,7 +23507,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559606",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-26",
    "more_info_url": null,
    "platforms": [
@@ -23538,7 +23560,7 @@
    "ga_date": "October CY2026",
    "id": "rm-559613",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-01",
    "more_info_url": null,
    "platforms": [
@@ -23590,7 +23612,7 @@
    "ga_date": "May CY2026",
    "id": "rm-559800",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-17",
    "more_info_url": null,
    "platforms": [
@@ -23643,7 +23665,7 @@
    "ga_date": "July CY2026",
    "id": "rm-559989",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-04",
    "more_info_url": null,
    "platforms": [
@@ -23700,7 +23722,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559995",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-26",
    "more_info_url": null,
    "platforms": [
@@ -23753,7 +23775,7 @@
    "ga_date": "June CY2026",
    "id": "rm-559996",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-28",
    "more_info_url": null,
    "platforms": [
@@ -23804,7 +23826,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560076",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-21",
    "more_info_url": null,
    "platforms": [
@@ -23859,7 +23881,7 @@
    "ga_date": "October CY2026",
    "id": "rm-560318",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-21",
    "more_info_url": null,
    "platforms": [
@@ -23910,7 +23932,7 @@
    "ga_date": "December CY2026",
    "id": "rm-560337",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-10",
    "more_info_url": null,
    "platforms": [
@@ -23966,7 +23988,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560341",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-11",
    "more_info_url": null,
    "platforms": [
@@ -24020,7 +24042,7 @@
    "ga_date": "June CY2026",
    "id": "rm-560532",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-29",
    "more_info_url": null,
    "platforms": [
@@ -24074,7 +24096,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560536",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-01",
    "more_info_url": null,
    "platforms": [
@@ -24127,7 +24149,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560537",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-01",
    "more_info_url": null,
    "platforms": [
@@ -24180,7 +24202,7 @@
    "ga_date": "November CY2026",
    "id": "rm-560538",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-20",
    "more_info_url": null,
    "platforms": [
@@ -24232,7 +24254,7 @@
    "ga_date": "September CY2026",
    "id": "rm-560539",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-06",
    "more_info_url": null,
    "platforms": [
@@ -24286,7 +24308,7 @@
    "ga_date": "June CY2026",
    "id": "rm-560540",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-27",
    "more_info_url": null,
    "platforms": [
@@ -24337,7 +24359,7 @@
    "ga_date": "June CY2026",
    "id": "rm-560596",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-21",
    "more_info_url": null,
    "platforms": [
@@ -24390,7 +24412,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560694",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-01",
    "more_info_url": null,
    "platforms": [
@@ -24444,7 +24466,7 @@
    "ga_date": "November CY2026",
    "id": "rm-560700",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-24",
    "more_info_url": null,
    "platforms": [
@@ -24497,7 +24519,7 @@
    "ga_date": "August CY2026",
    "id": "rm-560705",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-16",
    "more_info_url": null,
    "platforms": [
@@ -24550,7 +24572,7 @@
    "ga_date": "June CY2026",
    "id": "rm-560706",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-11",
    "more_info_url": null,
    "platforms": [
@@ -24606,7 +24628,7 @@
    "ga_date": "May CY2026",
    "id": "rm-560796",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-23",
    "more_info_url": null,
    "platforms": [
@@ -24660,7 +24682,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561025",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-04-29",
    "more_info_url": null,
    "platforms": [
@@ -24715,7 +24737,7 @@
    "ga_date": "October CY2026",
    "id": "rm-561026",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -24768,7 +24790,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561037",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-10",
    "more_info_url": null,
    "platforms": [
@@ -24822,7 +24844,7 @@
    "ga_date": "January CY2027",
    "id": "rm-561040",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-02",
    "more_info_url": null,
    "platforms": [
@@ -24876,7 +24898,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561041",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-09",
    "more_info_url": null,
    "platforms": [
@@ -24931,7 +24953,7 @@
    "ga_date": "October CY2026",
    "id": "rm-561322",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -24984,7 +25006,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561323",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-05",
    "more_info_url": null,
    "platforms": [
@@ -25038,7 +25060,7 @@
    "ga_date": "September CY2026",
    "id": "rm-561325",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -25091,7 +25113,7 @@
    "ga_date": "August CY2026",
    "id": "rm-561326",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-15",
    "more_info_url": null,
    "platforms": [
@@ -25145,7 +25167,7 @@
    "ga_date": "September CY2026",
    "id": "rm-561485",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -25196,7 +25218,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561488",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-04",
    "more_info_url": null,
    "platforms": [
@@ -25251,7 +25273,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561855",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-13",
    "more_info_url": null,
    "platforms": [
@@ -25304,7 +25326,7 @@
    "ga_date": "June CY2026",
    "id": "rm-561920",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-15",
    "more_info_url": null,
    "platforms": [
@@ -25357,7 +25379,7 @@
    "ga_date": "August CY2026",
    "id": "rm-562017",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-21",
    "more_info_url": null,
    "platforms": [
@@ -25408,7 +25430,7 @@
    "ga_date": "June CY2026",
    "id": "rm-562018",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": null,
    "platforms": [
@@ -25461,7 +25483,7 @@
    "ga_date": "October CY2026",
    "id": "rm-562220",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -25513,7 +25535,7 @@
    "ga_date": "June CY2026",
    "id": "rm-562221",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-15",
    "more_info_url": null,
    "platforms": [
@@ -25565,7 +25587,7 @@
    "ga_date": "September CY2026",
    "id": "rm-562222",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-14",
    "more_info_url": null,
    "platforms": [
@@ -25619,7 +25641,7 @@
    "ga_date": "August CY2026",
    "id": "rm-562351",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-23",
    "more_info_url": null,
    "platforms": [
@@ -25649,11 +25671,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "0ee1cfaecb54",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Session and Response Sharing let Microsoft 365 Copilot users share Copilot chat content through a link. Session Sharing shares a full chat session, while Response Sharing shares a single Copilot response."
+    "model": "gemini-flash-latest",
+    "summary": "Users can now share full Copilot chat sessions or single responses via links that open in read-only mode for colleagues to continue in their own chats. This makes sharing AI insights and collaborating faster than copying and pasting."
    },
    "apps": [],
    "clouds": [
@@ -25671,7 +25693,7 @@
    "ga_date": "August CY2026",
    "id": "rm-562353",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -25725,7 +25747,7 @@
    "ga_date": "July CY2026",
    "id": "rm-562354",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-29",
    "more_info_url": null,
    "platforms": [
@@ -25779,7 +25801,7 @@
    "ga_date": "September CY2026",
    "id": "rm-562412",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -25809,11 +25831,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "8972436cb256",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot memory within Researcher brings forward relevant context from your past interactions—helping ground insights, personalize outputs, and reduce repetitive setup as you explore complex topics."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot memory in Researcher retains context from prior interactions to personalize outputs and reduce repetitive prompting during research."
    },
    "apps": [],
    "clouds": [
@@ -25831,7 +25853,7 @@
    "ga_date": "November CY2026",
    "id": "rm-562996",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-04",
    "more_info_url": null,
    "platforms": [
@@ -25885,7 +25907,7 @@
    "ga_date": "June CY2026",
    "id": "rm-564606",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-20",
    "more_info_url": null,
    "platforms": [
@@ -25939,7 +25961,7 @@
    "ga_date": "June CY2026",
    "id": "rm-564607",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-27",
    "more_info_url": null,
    "platforms": [
@@ -25994,7 +26016,7 @@
    "ga_date": "August CY2026",
    "id": "rm-564608",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-18",
    "more_info_url": null,
    "platforms": [
@@ -26045,7 +26067,7 @@
    "ga_date": "June CY2026",
    "id": "rm-564804",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-01",
    "more_info_url": null,
    "platforms": [
@@ -26098,7 +26120,7 @@
    "ga_date": "June CY2026",
    "id": "rm-564909",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-05-29",
    "more_info_url": null,
    "platforms": [
@@ -26149,7 +26171,7 @@
    "ga_date": "July CY2026",
    "id": "rm-564910",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-10",
    "more_info_url": null,
    "platforms": [
@@ -26207,7 +26229,7 @@
    "ga_date": "July CY2026",
    "id": "rm-565027",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-06-04",
    "more_info_url": null,
    "platforms": [
@@ -26260,7 +26282,7 @@
    "ga_date": "November CY2026",
    "id": "rm-565216",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-05",
    "more_info_url": null,
    "platforms": [
@@ -26315,7 +26337,7 @@
    "ga_date": "July CY2026",
    "id": "rm-565905",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-24",
    "more_info_url": null,
    "platforms": [
@@ -26369,7 +26391,7 @@
    "ga_date": "June CY2026",
    "id": "rm-566302",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-13",
    "more_info_url": null,
    "platforms": [
@@ -26398,11 +26420,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "d4fcdf4cfd41",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Save AI-filters generated by the Planner Agent for future use on your plans."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Users can save AI-generated filters created in Planner Agent chat for future use across their plans. This helps teams quickly reapply useful task views without having to recreate them."
    },
    "apps": [
     "Planner"
@@ -26422,7 +26444,7 @@
    "ga_date": "October CY2026",
    "id": "rm-566314",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -26478,7 +26500,7 @@
    "ga_date": "October CY2026",
    "id": "rm-566322",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-24",
    "more_info_url": null,
    "platforms": [
@@ -26532,7 +26554,7 @@
    "ga_date": "July CY2026",
    "id": "rm-566470",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-23",
    "more_info_url": null,
    "platforms": [
@@ -26588,7 +26610,7 @@
    "ga_date": "October CY2026",
    "id": "rm-566701",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -26644,7 +26666,7 @@
    "ga_date": "October CY2026",
    "id": "rm-566702",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-18",
    "more_info_url": null,
    "platforms": [
@@ -26698,7 +26720,7 @@
    "ga_date": "November CY2026",
    "id": "rm-566703",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -26728,11 +26750,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "aff9c5679b13",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot Notebooks in the Microsoft 365 Copilot app (Android) now lets users organize related chats, output creations, and references into a persistent AI workspace."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Notebooks in the Android app now lets users group chats, outputs, and references into a persistent workspace. This keeps context across sessions so mobile users do not have to restart their work each time."
    },
    "apps": [
     "Microsoft 365 app"
@@ -26752,7 +26774,7 @@
    "ga_date": "August CY2026",
    "id": "rm-566704",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-09",
    "more_info_url": null,
    "platforms": [
@@ -26779,13 +26801,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "Makers & developers"
+     "Makers & developers",
+     "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "2580665c1f78",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Unlock the full value of your structured data by bringing SharePoint lists directly into your Microsoft Copilot Studio agents."
+    "model": "gemini-flash-latest",
+    "summary": "Makers can now connect SharePoint lists directly into Copilot Studio agents as knowledge sources. This allows copilots to answer questions using live structured data like inventory or tasks without manual data exports or custom integrations."
    },
    "apps": [],
    "clouds": [
@@ -26803,7 +26826,7 @@
    "ga_date": "September CY2026",
    "id": "rm-566859",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-07",
    "more_info_url": null,
    "platforms": [
@@ -26829,16 +26852,16 @@
   "rm-566864": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and configure the EdgeEntraCopilotPageContext and Microsoft365CopilotChatIconEnabled policies to control user access.",
     "audience": [
      "End users",
      "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "40db03733d26",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Ask Copilot about an image in Edge enables users to instantly analyze images from the web by sending them directly to Copilot from the Edge context menu, making it easy to ask questions, gain insights, and understand visual content without leaving their browsing experience."
+    "model": "gemini-flash-latest",
+    "summary": "Users can send web images straight to Copilot from the Microsoft Edge context menu to analyze visual content and ask questions. This makes image research faster without leaving the browser, while administrators can manage access via policy."
    },
    "apps": [
     "Microsoft Edge"
@@ -26858,7 +26881,7 @@
    "ga_date": "January CY2027",
    "id": "rm-566864",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-28",
    "more_info_url": null,
    "platforms": [
@@ -26882,16 +26905,16 @@
   },
   "rm-566870": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform users about the new artifact creation suggestions available within Copilot Notebooks in OneNote.",
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "f53503464011",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot Notebooks in OneNote now suggests artifacts to create, such as Word documents, Excel workbooks, and PowerPoint presentations, based on Microsoft 365 knowledge and the content in your notebook. Select the suggestion and Copilot will generate the artifact."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Notebooks in OneNote will suggest and generate artifacts like Word documents, Excel workbooks, and PowerPoint presentations based on notebook notes and Microsoft 365 data. This speeds up drafting deliverables from existing notes."
    },
    "apps": [
     "OneNote"
@@ -26911,7 +26934,7 @@
    "ga_date": "August CY2026",
    "id": "rm-566870",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-11",
    "more_info_url": null,
    "platforms": [
@@ -26937,18 +26960,18 @@
   },
   "rm-566873": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Advise makers and developers to use approved identities instead of personal credentials when building sharable agents.",
     "audience": [
-     "IT admins",
      "Makers & developers",
-     "Security & compliance"
+     "Security & compliance",
+     "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "8bb194bb89d0",
     "impact": "medium",
-    "model": "rules",
-    "summary": "This feature helps organizations reduce security risk by preventing agents and flows from being shared when they rely on unsafe identities, such as maker credentials."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot Studio will detect credential oversharing and block sharing or publishing of agents and flows that rely on unsafe identities like maker credentials. This protects organizations against unintended access, identity leakage, and privilege escalation."
    },
    "apps": [],
    "clouds": [
@@ -26966,7 +26989,7 @@
    "ga_date": "September CY2026",
    "id": "rm-566873",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-01",
    "more_info_url": null,
    "platforms": [
@@ -26992,17 +27015,17 @@
   "rm-566997": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and configure authentication policies to block maker-provided credentials in Copilot Studio.",
     "audience": [
      "IT admins",
-     "Makers & developers",
-     "Security & compliance"
+     "Security & compliance",
+     "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "a567c3b7e8f7",
     "impact": "medium",
-    "model": "rules",
-    "summary": "By blocking the use of maker's credentials by AI agents, admins can increase the security and compliance of agents in their organizations: - Prevent unauthorized access to sensitive systems or data that the maker's credentials might have access to."
+    "model": "gemini-flash-latest",
+    "summary": "Administrators can block AI agents from using maker-provided credentials for authentication in Copilot Studio. This ensures agents do not access sensitive systems using maker permissions, strengthening identity governance and regulatory compliance."
    },
    "apps": [],
    "clouds": [
@@ -27020,7 +27043,7 @@
    "ga_date": "August CY2026",
    "id": "rm-566997",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-02",
    "more_info_url": null,
    "platforms": [
@@ -27050,11 +27073,11 @@
     "audience": [
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "11d52c49273d",
     "impact": "medium",
-    "model": "rules",
-    "summary": "The agent node lets you embed reasoning directly into your workflow."
+    "model": "gemini-flash-latest",
+    "summary": "Makers can now embed reasoning directly into workflows by invoking agents as workflow steps using the agent node. This automates nuanced decisions without custom development, reducing manual handoffs and operational overhead."
    },
    "apps": [],
    "clouds": [
@@ -27072,7 +27095,7 @@
    "ga_date": "September CY2026",
    "id": "rm-566998",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -27097,16 +27120,16 @@
   },
   "rm-566999": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Enable express mode on agent-triggered flows to minimize timeouts and flow failures.",
     "audience": [
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "bb7162cbc8aa",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Express mode ensures agents and apps receive timely and reliable responses by dramatically accelerating flow run times. This reduces flow failures, improves user experience, and eliminates costly interruptions caused by timeout issues."
+    "model": "gemini-flash-latest",
+    "summary": "Express mode speeds up run times for flows triggered by agents or apps, reducing timeouts and execution failures. This provides faster responses and ensures dependable backend automations during agent interactions."
    },
    "apps": [],
    "clouds": [
@@ -27124,7 +27147,7 @@
    "ga_date": "November CY2026",
    "id": "rm-566999",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-10",
    "more_info_url": null,
    "platforms": [
@@ -27152,13 +27175,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "eabcbbc9aba7",
     "impact": "medium",
-    "model": "rules",
-    "summary": "A multi‑channel outreach capability, spanning web chat, voice, SMS, and email, is critical for meeting customers in the channel they naturally prefer and increasing the likelihood of timely engagement."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot agents can now engage customers across web chat, voice, SMS, and email within a single conversation flow. This helps teams maintain continuous customer communication across preferred channels and speeds up lead qualification."
    },
    "apps": [],
    "clouds": [
@@ -27176,7 +27200,7 @@
    "ga_date": "August CY2026",
    "id": "rm-567001",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-08",
    "more_info_url": null,
    "platforms": [
@@ -27205,11 +27229,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "6f5c1c2d7666",
     "impact": "medium",
-    "model": "rules",
-    "summary": "This feature saves you time by automatically connecting your meetings to the correct CRM records."
+    "model": "gemini-flash-latest",
+    "summary": "AI will automatically link scheduled customer meetings to the relevant CRM records. This eliminates manual data entry and ensures sales professionals have quick access to deal insights before every call."
    },
    "apps": [],
    "clouds": [
@@ -27227,7 +27251,7 @@
    "ga_date": "September CY2026",
    "id": "rm-567004",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-08",
    "more_info_url": null,
    "platforms": [
@@ -27279,7 +27303,7 @@
    "ga_date": "July CY2026",
    "id": "rm-567005",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-11",
    "more_info_url": null,
    "platforms": [
@@ -27303,16 +27327,16 @@
   },
   "rm-567007": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform classic Outlook users about the new Copilot entry point location and interface.",
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "0589aebffbed",
     "impact": "medium",
-    "model": "rules",
-    "summary": "We've introduced a new experience for Copilot in the apps—a consistent entry point across apps that sits above your work and understands the context beneath it."
+    "model": "gemini-flash-latest",
+    "summary": "Classic Outlook is adding the unified Copilot entry point already used across Word, Excel, and other Outlook endpoints. This gives desktop Outlook users a consistent, contextual interface to access AI assistance."
    },
    "apps": [
     "Outlook"
@@ -27335,7 +27359,7 @@
    "ga_date": "November CY2026",
    "id": "rm-567007",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -27365,11 +27389,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "cbec8167b2de",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Surface new model-driven, dynamically placed Answer Cards across top 7 segments: weather, sports, finance, images, video, places and news for Entra & MSA users across all surfaces."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Copilot is introducing dynamic, model-driven Rich Answer Cards across key categories including weather, sports, finance, images, video, places, and news across all surfaces."
    },
    "apps": [],
    "clouds": [
@@ -27387,7 +27411,7 @@
    "ga_date": "September CY2026",
    "id": "rm-567008",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-10",
    "more_info_url": null,
    "platforms": [
@@ -27413,16 +27437,17 @@
   },
   "rm-567009": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform SharePoint users and makers about creating and managing workflows using natural language prompts.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "ca72d348cccb",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Describe a workflow intent such as \"when files are set to status = Complete, post a message in my Teams chat\" and Copilot in SharePoint will assemble the necessary triggers, conditions, and actions to setup your workflow."
+    "model": "gemini-flash-latest",
+    "summary": "Users can build SharePoint workflows by describing what they need in plain English, allowing Copilot to configure the triggers, conditions, and actions. This simplifies automating routine list and file tasks directly from the command bar."
    },
    "apps": [],
    "clouds": [
@@ -27442,7 +27467,7 @@
    "ga_date": "December CY2026",
    "id": "rm-567009",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-09",
    "more_info_url": null,
    "platforms": [
@@ -27466,17 +27491,17 @@
   },
   "rm-567120": {
    "ai": {
-    "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action": "awareness",
+    "action_note": "",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "1a55f306a933",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "We will be introducing a new Usage report covering Microsoft 365 Copilot. This report will include total enabled and active users, Copilot usage with a breakout per Microsoft 365 app, and user-level activity insights (anonymized by default). #copilotcontrolsystem"
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "A new Microsoft 365 Copilot usage report is launching for GCC High and DoD environments in the Microsoft 365 admin center. Administrators can view enabled and active users, per-app usage breakdowns, and anonymized user activity insights."
    },
    "apps": [],
    "clouds": [
@@ -27495,7 +27520,7 @@
    "ga_date": "July CY2026",
    "id": "rm-567120",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-21",
    "more_info_url": null,
    "platforms": [
@@ -27518,17 +27543,17 @@
   },
   "rm-567121": {
    "ai": {
-    "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action": "awareness",
+    "action_note": "",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "be55323d78ff",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "We will be introducing a new Usage report covering Copilot Chat. This report will include total active users, Copilot Chat usage with a breakout per Microsoft 365 app, and user-level activity insights (anonymized by default). #copilotcontrolsystem"
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Administrators in GCC, GCC High, and DoD environments can now access a new Copilot Chat usage report in the Microsoft 365 admin center. It provides metrics on active users, per-app usage breakdowns, and anonymized activity insights."
    },
    "apps": [],
    "clouds": [
@@ -27548,7 +27573,7 @@
    "ga_date": "July CY2026",
    "id": "rm-567121",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -27572,16 +27597,16 @@
   "rm-567302": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and customize the call recording and transcription notification text to align with organizational policies.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "Security & compliance"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "316addb1def9",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "This feature enables IT admins to customize a portion of the user notification messages for recording and transcription during Teams calls."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "IT administrators can now customize parts of the notification messages shown to users when recording and transcription start in calls. This allows organizations to tailor privacy and compliance messaging for meeting participants."
    },
    "apps": [
     "Microsoft Teams"
@@ -27604,7 +27629,7 @@
    "ga_date": "August CY2026",
    "id": "rm-567302",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-21",
    "more_info_url": null,
    "platforms": [
@@ -27631,16 +27656,16 @@
   },
   "rm-567315": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform users how to manage and execute Planner tasks within Microsoft Cowork.",
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "3416edf156f8",
     "impact": "medium",
-    "model": "rules",
-    "summary": "You’ll soon be able to bring your Microsoft Planner into Microsoft Cowork. In Cowork, you can view, create, and update your plans, buckets, goals, and tasks without switching apps."
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft Planner integration is coming to Microsoft Cowork, allowing users to view, create, and manage tasks in one spot. Cowork can also execute related tasks across Microsoft 365 and sync progress back to Planner with user approval."
    },
    "apps": [
     "Planner"
@@ -27660,7 +27685,7 @@
    "ga_date": "November CY2026",
    "id": "rm-567315",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-21",
    "more_info_url": null,
    "platforms": [
@@ -27692,11 +27717,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "d64f3caff2e4",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "After meeting recap is automatically generated in the translation language chosen during the meeting, users can continue to change the language of the meeting recap after its generated."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Users can now change the language of an automatically generated meeting recap at any point after the meeting ends. This makes it easier for multilingual team members to review discussions in their preferred language."
    },
    "apps": [
     "Microsoft Teams"
@@ -27718,7 +27743,7 @@
    "ga_date": "August CY2026",
    "id": "rm-567458",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-12",
    "more_info_url": null,
    "platforms": [
@@ -27745,16 +27770,17 @@
   },
   "rm-567668": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify users that they can create and reuse personal skills across SharePoint sites.",
     "audience": [
-     "End users"
+     "End users",
+     "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "7af5f62643b8",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Create your own personal skills in Copilot in SharePoint and use them anywhere you work. Personal skills travel with you across SharePoint sites and OneDrive—so a skill like document generation works everywhere without recreating it per site."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint now lets users create personal skills saved to OneDrive that work across all SharePoint sites. This eliminates the need to recreate identical document generation skills or prompts on individual sites."
    },
    "apps": [],
    "clouds": [
@@ -27772,7 +27798,7 @@
    "ga_date": "December CY2026",
    "id": "rm-567668",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-14",
    "more_info_url": null,
    "platforms": [
@@ -27797,17 +27823,17 @@
   "rm-567669": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and configure enterprise store plugins permitted for Copilot in SharePoint.",
     "audience": [
      "End users",
      "IT admins",
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "41791513e5b8",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Copilot in SharePoint now supports plugins from your enterprise store. A plugin can bundle skills, MCP servers, and other capabilities that extend what Copilot can do."
+    "model": "gemini-flash-latest",
+    "summary": "Copilot in SharePoint now supports enterprise store plugins bundling skills and tools governed by IT administrators. This enables organizations to deploy shared capabilities, such as accessibility tools, consistently across SharePoint and other agentic products."
    },
    "apps": [],
    "clouds": [
@@ -27825,7 +27851,7 @@
    "ga_date": "December CY2026",
    "id": "rm-567669",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-14",
    "more_info_url": null,
    "platforms": [
@@ -27849,18 +27875,17 @@
   },
   "rm-567670": {
    "ai": {
-    "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action": "awareness",
+    "action_note": "",
     "audience": [
-     "End users",
      "IT admins",
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "93ff691efa09",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Agents that are published to Agents 365 are already managed in the Microsoft 365 Admin Center. If the agent implements the Agent2Agent protocol, it can be used as a connected agent for the agents that users build in Agent Builder or Copilot Studio."
+    "model": "gemini-flash-latest",
+    "summary": "Agents published to Agents 365 that support the Agent2Agent protocol can now connect to agents built in Copilot Studio or Agent Builder. This lets developers link enterprise agents directly into Copilot Chat workflows."
    },
    "apps": [],
    "clouds": [
@@ -27878,7 +27903,7 @@
    "ga_date": "August CY2026",
    "id": "rm-567670",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -27904,16 +27929,16 @@
   },
   "rm-567671": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Inform team members about the new Planner Agent chat available within Basic Plans.",
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "49072f2ca133",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Introducing built-in Planner Agent chat with natural language Q&A, smart task discovery, and in-plan task management."
+    "model": "gemini-flash-latest",
+    "summary": "Basic Plans now include a built-in Planner Agent chat supporting natural-language questions, task discovery, and task management. This helps team members find details and manage their work directly within their plans."
    },
    "apps": [
     "Planner"
@@ -27933,7 +27958,7 @@
    "ga_date": "September CY2026",
    "id": "rm-567671",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-09",
    "more_info_url": null,
    "platforms": [
@@ -27962,13 +27987,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "c3d9b6e9cc1f",
     "impact": "medium",
-    "model": "rules",
-    "summary": "AI-powered Status Report in Planner Agent turns your plan data into a polished, stakeholder-ready update in minutes."
+    "model": "gemini-flash-latest",
+    "summary": "Planner Agent can now generate customized status reports directly from task data, covering progress, risks, and next steps. This saves project managers and teams time when drafting stakeholder updates."
    },
    "apps": [
     "Planner"
@@ -27988,7 +28014,7 @@
    "ga_date": "October CY2026",
    "id": "rm-567886",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-06",
    "more_info_url": null,
    "platforms": [
@@ -28014,16 +28040,17 @@
   },
   "rm-567891": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Notify users that they can query Power BI data directly within Microsoft 365 Copilot.",
     "audience": [
-     "End users"
+     "End users",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "8f506adf861e",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "This release enables M365 Copilot to reason over Power BI enterprise data and returns grounded answers directly from Power BI reports and semantic models. Users can ask natural‑language questions and receive accurate answers."
+    "impact": "high",
+    "model": "gemini-flash-latest",
+    "summary": "Microsoft 365 Copilot can now query and reason over Power BI reports and semantic models. This enables employees to ask natural-language questions and get grounded answers directly from enterprise business data."
    },
    "apps": [],
    "clouds": [
@@ -28044,7 +28071,7 @@
    "ga_date": "August CY2026",
    "id": "rm-567891",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -28075,13 +28102,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "Makers & developers"
+     "End users",
+     "Makers & developers",
+     "Security & compliance"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "11012ba516cf",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Previously, autonomous agents could only be used and managed by makers, limiting their reach to the people who needed them."
+    "model": "gemini-flash-latest",
+    "summary": "Makers can now share autonomous agents with end users under run-only permissions. This lets employees leverage agent automation without granting them edit rights or ownership, preserving governance."
    },
    "apps": [],
    "clouds": [
@@ -28099,7 +28128,7 @@
    "ga_date": "January CY2027",
    "id": "rm-567894",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-07-20",
    "more_info_url": null,
    "platforms": [
@@ -28128,11 +28157,11 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "7cb4f0b48d8e",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Multimodal capture enables users to transcribe audio, take images, and type notes in a single session. Copilot then creates a structured Copilot Page with insights and user-captured content, saved to a user-selected Copilot Notebook."
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Android users can transcribe audio, capture photos, and type notes in a single Copilot session to generate structured Copilot Pages saved to Notebooks. This helps mobile workers easily document in-person discussions and whiteboard sessions."
    },
    "apps": [
     "OneNote"
@@ -28152,7 +28181,7 @@
    "ga_date": "September CY2026",
    "id": "rm-567895",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-28",
    "more_info_url": null,
    "platforms": [
@@ -28177,17 +28206,16 @@
   },
   "rm-568762": {
    "ai": {
-    "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action": "awareness",
+    "action_note": "",
     "audience": [
-     "IT admins",
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "6cf919bb93a1",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Agent Readiness gives makers a real-time, always-visible health check for their Copilot Studio agents. A single \"Review\" indicator in the build experience surfaces anything blocking or at risk — from policy restrictions to missing evaluations — before it derails a publish."
+    "model": "gemini-flash-latest",
+    "summary": "A new Agent Readiness indicator in Copilot Studio alerts makers to blocking issues, policy restrictions, and risks before publishing. This prevents wasted time by graying out unsupported capabilities up front with clear explanations."
    },
    "apps": [],
    "clouds": [
@@ -28205,7 +28233,7 @@
    "ga_date": "September CY2026",
    "id": "rm-568762",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-01",
    "more_info_url": null,
    "platforms": [
@@ -28256,7 +28284,7 @@
    "ga_date": "September CY2026",
    "id": "rm-568788",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-20",
    "more_info_url": null,
    "platforms": [
@@ -28313,7 +28341,7 @@
    "ga_date": "October CY2026",
    "id": "rm-568790",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-20",
    "more_info_url": null,
    "platforms": [
@@ -28365,7 +28393,7 @@
    "ga_date": "September CY2026",
    "id": "rm-568929",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-10",
    "more_info_url": null,
    "platforms": [
@@ -28417,7 +28445,7 @@
    "ga_date": "September CY2026",
    "id": "rm-568930",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-07",
    "more_info_url": null,
    "platforms": [
@@ -28442,16 +28470,16 @@
   },
   "rm-568933": {
    "ai": {
-    "action": "awareness",
-    "action_note": "",
+    "action": "prepare",
+    "action_note": "Train queue agents on using Copilot Chat within the call recap tab.",
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-10-31",
     "hash": "76cd0e2f5916",
     "impact": "medium",
-    "model": "rules",
-    "summary": "After a recorded call is completed, use Copilot in the Queues app to quickly catch up on key details, uncover insights, and resolve customer issues faster without having to manually search through a transcript or listen back to a recording."
+    "model": "gemini-flash-latest",
+    "summary": "Users can now launch Copilot Chat from the Recap tab of recorded calls in the Queues app. This allows staff to quickly summarize discussions and query specific call details without reading full transcripts or re-listening to recordings."
    },
    "apps": [
     "Microsoft Teams"
@@ -28471,7 +28499,7 @@
    "ga_date": "September CY2026",
    "id": "rm-568933",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -28528,7 +28556,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569017",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -28584,7 +28612,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569018",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-23",
    "more_info_url": null,
    "platforms": [
@@ -28636,7 +28664,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569208",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-11",
    "more_info_url": null,
    "platforms": [
@@ -28690,7 +28718,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569210",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-23",
    "more_info_url": null,
    "platforms": [
@@ -28747,7 +28775,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569211",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-23",
    "more_info_url": null,
    "platforms": [
@@ -28805,7 +28833,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569212",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-18",
    "more_info_url": null,
    "platforms": [
@@ -28857,7 +28885,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569213",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-11",
    "more_info_url": null,
    "platforms": [
@@ -28912,7 +28940,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569214",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -28969,7 +28997,7 @@
    "ga_date": "December CY2026",
    "id": "rm-569215",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-17",
    "more_info_url": null,
    "platforms": [
@@ -29024,7 +29052,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569425",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -29076,7 +29104,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569428",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-20",
    "more_info_url": null,
    "platforms": [
@@ -29128,7 +29156,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569429",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -29179,7 +29207,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569474",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "more_info_url": null,
    "platforms": [
@@ -29229,7 +29257,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569475",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-28",
    "more_info_url": null,
    "platforms": [
@@ -29280,7 +29308,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569607",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-19",
    "more_info_url": null,
    "platforms": [
@@ -29332,7 +29360,7 @@
    "ga_date": "October CY2026",
    "id": "rm-569928",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-16",
    "more_info_url": null,
    "platforms": [
@@ -29385,7 +29413,7 @@
    "ga_date": "September CY2026",
    "id": "rm-569930",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": null,
    "platforms": [
@@ -29438,7 +29466,7 @@
    "ga_date": "September CY2026",
    "id": "rm-570155",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-08-31",
    "more_info_url": null,
    "platforms": [
@@ -29492,7 +29520,7 @@
    "ga_date": "October CY2026",
    "id": "rm-570277",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-11",
    "more_info_url": null,
    "platforms": [
@@ -29545,7 +29573,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570427",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -29601,7 +29629,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570430",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -29652,7 +29680,7 @@
    "ga_date": "October CY2026",
    "id": "rm-570432",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-30",
    "more_info_url": null,
    "platforms": [
@@ -29704,7 +29732,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570433",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-02",
    "more_info_url": null,
    "platforms": [
@@ -29757,7 +29785,7 @@
    "ga_date": "September CY2026",
    "id": "rm-570434",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -29808,7 +29836,7 @@
    "ga_date": "September CY2026",
    "id": "rm-570435",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-01",
    "more_info_url": null,
    "platforms": [
@@ -29858,7 +29886,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570469",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -29909,7 +29937,7 @@
    "ga_date": "October CY2026",
    "id": "rm-570647",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -29964,7 +29992,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570651",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -30020,7 +30048,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570652",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -30072,7 +30100,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570669",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": null,
    "platforms": [
@@ -30126,7 +30154,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570672",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -30180,7 +30208,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570673",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -30234,7 +30262,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570851",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -30289,7 +30317,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570852",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -30344,7 +30372,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570853",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -30398,7 +30426,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570854",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -30454,7 +30482,7 @@
    "ga_date": "November CY2026",
    "id": "rm-570868",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -30510,7 +30538,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570870",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -30564,7 +30592,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570871",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -30618,7 +30646,7 @@
    "ga_date": "January CY2027",
    "id": "rm-570963",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-28",
    "more_info_url": null,
    "platforms": [
@@ -30666,14 +30694,20 @@
     {
      "date": "2026-09-22",
      "type": "new"
+    },
+    {
+     "date": "2026-10-31",
+     "from": "In development",
+     "to": "Launched",
+     "type": "status"
     }
    ],
    "first_seen": "2026-10-29",
    "ga_date": "October CY2026",
    "id": "rm-570964",
    "kind": "feature",
-   "last_seen": "2026-10-30",
-   "modified": "2026-09-22",
+   "last_seen": "2026-10-31",
+   "modified": "2026-10-30",
    "more_info_url": null,
    "platforms": [
     "Desktop",
@@ -30689,7 +30723,7 @@
     "Microsoft Copilot (Microsoft 365)"
    ],
    "source": "Microsoft 365 Roadmap",
-   "status": "In development",
+   "status": "Launched",
    "text_hash": "00c93d362b90",
    "title": "Federated Copilot Connectors will support write, update and delete actions",
    "url": "https://www.microsoft.com/microsoft-365/roadmap?featureid=570964"
@@ -30727,7 +30761,7 @@
    "ga_date": "October CY2026",
    "id": "rm-570966",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "more_info_url": null,
    "platforms": [
@@ -30782,7 +30816,7 @@
    "ga_date": "September CY2026",
    "id": "rm-571194",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -30833,7 +30867,7 @@
    "ga_date": "September CY2026",
    "id": "rm-571195",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -30885,7 +30919,7 @@
    "ga_date": "September CY2026",
    "id": "rm-571196",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-15",
    "more_info_url": null,
    "platforms": [
@@ -30937,7 +30971,7 @@
    "ga_date": "October CY2026",
    "id": "rm-571305",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-19",
    "more_info_url": null,
    "platforms": [
@@ -30990,7 +31024,7 @@
    "ga_date": "October CY2026",
    "id": "rm-571308",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-28",
    "more_info_url": null,
    "platforms": [
@@ -31042,7 +31076,7 @@
    "ga_date": "November CY2026",
    "id": "rm-571394",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-02",
    "more_info_url": null,
    "platforms": [
@@ -31095,7 +31129,7 @@
    "ga_date": "October CY2026",
    "id": "rm-571400",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-02",
    "more_info_url": null,
    "platforms": [
@@ -31147,7 +31181,7 @@
    "ga_date": "November CY2026",
    "id": "rm-571637",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-18",
    "more_info_url": null,
    "platforms": [
@@ -31202,7 +31236,7 @@
    "ga_date": "October CY2026",
    "id": "rm-571880",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-29",
    "more_info_url": null,
    "platforms": [
@@ -31255,7 +31289,7 @@
    "ga_date": "October CY2026",
    "id": "rm-571884",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-20",
    "more_info_url": null,
    "platforms": [
@@ -31309,7 +31343,7 @@
    "ga_date": "December CY2026",
    "id": "rm-571886",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-09-23",
    "more_info_url": null,
    "platforms": [
@@ -31365,7 +31399,7 @@
    "ga_date": "October CY2026",
    "id": "rm-573220",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-09",
    "more_info_url": null,
    "platforms": [
@@ -31419,7 +31453,7 @@
    "ga_date": "November CY2026",
    "id": "rm-573294",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-22",
    "more_info_url": "https://learn.microsoft.com/en-us/power-apps/maker/data-platform/semantic-model-overview",
    "platforms": [
@@ -31475,7 +31509,7 @@
    "ga_date": "November CY2026",
    "id": "rm-573446",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "more_info_url": null,
    "platforms": [
@@ -31528,7 +31562,7 @@
    "ga_date": "January CY2027",
    "id": "rm-573696",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-15",
    "more_info_url": null,
    "platforms": [
@@ -31581,7 +31615,7 @@
    "ga_date": "January CY2027",
    "id": "rm-573700",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-21",
    "more_info_url": "aka.ms/SDA-Public-Docs",
    "platforms": [
@@ -31634,7 +31668,7 @@
    "ga_date": "October CY2026",
    "id": "rm-574105",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-12",
    "more_info_url": null,
    "platforms": [
@@ -31684,7 +31718,7 @@
    "ga_date": "November CY2026",
    "id": "rm-574106",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-08",
    "more_info_url": null,
    "platforms": [
@@ -31734,7 +31768,7 @@
    "ga_date": "October CY2026",
    "id": "rm-574111",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-14",
    "more_info_url": null,
    "platforms": [
@@ -31785,7 +31819,7 @@
    "ga_date": "November CY2026",
    "id": "rm-575289",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-22",
    "more_info_url": null,
    "platforms": [
@@ -31840,7 +31874,7 @@
    "ga_date": "January CY2027",
    "id": "rm-575298",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-13",
    "more_info_url": null,
    "platforms": [
@@ -31892,7 +31926,7 @@
    "ga_date": "January CY2027",
    "id": "rm-576272",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-28",
    "more_info_url": null,
    "platforms": [
@@ -31944,7 +31978,7 @@
    "ga_date": "December CY2026",
    "id": "rm-576708",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -31966,6 +32000,57 @@
    "text_hash": "c2846702e758",
    "title": "SharePoint Site Builder",
    "url": "https://www.microsoft.com/microsoft-365/roadmap?featureid=576708"
+  },
+  "rm-577392": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-10-31",
+    "hash": "975769fd60e2",
+    "impact": "low",
+    "model": "gemini-flash-latest",
+    "summary": "Educators can now use Teach in Microsoft 365 Copilot to create structured, multi-week unit plans with connected lessons and quizzes. This streamlines curriculum planning by keeping customized teaching components organized together."
+   },
+   "apps": [],
+   "clouds": [
+    "Worldwide (Standard Multi-Tenant)"
+   ],
+   "created": "2026-10-30",
+   "description": "Educators can use Teach in Microsoft 365 Copilot to create structured unit plans that span multiple lessons or weeks. They can customize the plan components to organize connected lesson plans and quizzes across a unit.\n\n#education",
+   "events": [
+    {
+     "date": "2026-10-30",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-10-31",
+   "ga_date": "October CY2026",
+   "id": "rm-577392",
+   "kind": "feature",
+   "last_seen": "2026-10-31",
+   "modified": "2026-10-30",
+   "more_info_url": null,
+   "platforms": [
+    "Desktop",
+    "Web"
+   ],
+   "preview_date": null,
+   "product": "m365",
+   "release_phases": [
+    "General Availability"
+   ],
+   "roadmap_id": 577392,
+   "roadmap_tags": [
+    "Microsoft Copilot (Microsoft 365)"
+   ],
+   "source": "Microsoft 365 Roadmap",
+   "status": "Rolling out",
+   "text_hash": "975769fd60e2",
+   "title": "[Education] Create multi-week unit plans with Teach",
+   "url": "https://www.microsoft.com/microsoft-365/roadmap?featureid=577392"
   },
   "rm-577743": {
    "ai": {
@@ -31996,7 +32081,7 @@
    "ga_date": "October CY2026",
    "id": "rm-577743",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-26",
    "more_info_url": null,
    "platforms": [
@@ -32055,7 +32140,7 @@
    "ga_date": "October CY2026",
    "id": "rm-577834",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-29",
    "more_info_url": null,
    "platforms": [
@@ -32108,7 +32193,7 @@
    "ga_date": "November CY2026",
    "id": "rm-577841",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -32160,7 +32245,7 @@
    "ga_date": "March CY2027",
    "id": "rm-577869",
    "kind": "feature",
-   "last_seen": "2026-10-30",
+   "last_seen": "2026-10-31",
    "modified": "2026-10-27",
    "more_info_url": null,
    "platforms": [
@@ -32186,11 +32271,11 @@
  },
  "meta": {
   "last_counts": {
-   "changed": 1,
+   "changed": 2,
    "new": 1,
    "removed": 1
   },
-  "updated_at": "2026-10-30T11:46:38+00:00",
+  "updated_at": "2026-10-31T11:17:04+00:00",
   "warnings": []
  },
  "schema": 1
