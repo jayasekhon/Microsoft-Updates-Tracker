@@ -161,7 +161,7 @@
    "first_seen": "2026-10-29",
    "id": "post-18d2ccfc1867",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-09-25",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -194,7 +194,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2160ad9a9fff",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-01",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -227,7 +227,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2323f4474670",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-21",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -567,7 +567,7 @@
    "first_seen": "2026-10-29",
    "id": "post-492dfcdce8e7",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-08",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -837,7 +837,7 @@
    "first_seen": "2026-10-29",
    "id": "post-67722ad4002b",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-15",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1008,7 +1008,7 @@
    "first_seen": "2026-10-29",
    "id": "post-8d4a5bf8d2b9",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-28",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1114,7 +1114,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a26fa705b971",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-09-15",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1264,6 +1264,39 @@
    "title": "Copilot Cowork is now generally available",
    "url": "https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
   },
+  "post-c6125422c007": {
+   "ai": {
+    "action": "awareness",
+    "action_note": "",
+    "audience": [
+     "End users"
+    ],
+    "date": "2026-11-04",
+    "hash": "3c5ac0f60f20",
+    "impact": "medium",
+    "model": "rules",
+    "summary": "Microsoft Ignite returns November 17–20, 2026, at Moscone Center in San Francisco and online. SharePoint and OneDrive are the knowledge platform for Copilot and agents."
+   },
+   "categories": [],
+   "created": "2026-11-04",
+   "description": "Microsoft Ignite returns November 17–20, 2026, at Moscone Center in San Francisco and online. SharePoint and OneDrive are the knowledge platform for Copilot and agents. This year at Ignite we're excited to show you how this foundational platform helps people securely create, share, and collaborate on content, and turn it into knowledge that people, Copilot, and agents can use in the flow of work.\n\nWhat: Learn more about Microsoft Ignite | Full session scheduler\n\nWhere: San Francisco, CA and digital pass (free) - https://register.ignite.microsoft.com/\n\nWhen: November 17-20, 2026\n\nEngage: Stay up to date with all the latest news for OneDrive and SharePoint\n\nMicrosoft Community LinkedIn\n\n@OneDrive on X\n\n@SharePoint on X\n\nWhether you are modernizing information architecture, preparing content for AI, helping people find what matters faster, or bringing OneDrive and SharePoint into the flow of work, the session lineup offers practical guidance and product insight. Start with these featured breakouts, check out the lightning talks and hands-on labs. Take a moment to explore what excites you most and add them to your Ignite schedule builder to get ready!\n\nStart with the featured breakouts",
+   "events": [
+    {
+     "date": "2026-11-04",
+     "type": "new"
+    }
+   ],
+   "first_seen": "2026-11-04",
+   "id": "post-c6125422c007",
+   "kind": "post",
+   "last_seen": "2026-11-04",
+   "modified": "2026-11-04",
+   "product": "sharepoint",
+   "source": "SharePoint blog (Tech Community)",
+   "text_hash": "3c5ac0f60f20",
+   "title": "SharePoint and OneDrive at Microsoft Ignite 2026: What to Expect",
+   "url": "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-and-onedrive-at-microsoft-ignite-2026-what-to-expect/ba-p/4570019"
+  },
   "post-c75a43ae6d3d": {
    "ai": {
     "action": "awareness",
@@ -1290,7 +1323,7 @@
    "first_seen": "2026-10-29",
    "id": "post-c75a43ae6d3d",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-09-25",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1463,7 +1496,7 @@
    "first_seen": "2026-10-29",
    "id": "post-eec3e8075041",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-07",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1531,7 +1564,7 @@
    "first_seen": "2026-10-29",
    "id": "post-fe3141148cc5",
    "kind": "post",
-   "last_seen": "2026-11-03",
+   "last_seen": "2026-11-04",
    "modified": "2026-10-27",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -32653,11 +32686,11 @@
  },
  "meta": {
   "last_counts": {
-   "changed": 3,
-   "new": 8,
+   "changed": 0,
+   "new": 1,
    "removed": 0
   },
-  "updated_at": "2026-11-04T13:11:38+00:00",
+  "updated_at": "2026-11-04T19:45:18+00:00",
   "warnings": []
  },
  "schema": 1
