@@ -171,14 +171,11 @@ def _flagged(item: dict) -> bool:
 
 
 def _attention(store: dict, start: date, end: date) -> list[dict]:
-    """Flagged features that started landing this week.
+    """Flagged features that arrived this week: started rolling out, or launched.
 
-    An item is listed in the week it starts rolling out, launches, or its GA month comes into
-    the next-30-days window (or it is announced already inside it), so admins hear about it
-    just before it arrives, once, rather than every week.
+    Each is listed once, in the week it arrives, rather than every week. Nothing still in
+    development is listed, however close its date: most readers aren't admins.
     """
-    window_now = {_key(m) for m in _horizon_months(end)}
-    window_before = {_key(m) for m in _horizon_months(start)}
     s_iso, e_iso = start.isoformat(), end.isoformat()
     out = []
     for item in store.get("items", {}).values():
@@ -192,8 +189,6 @@ def _attention(store: dict, start: date, end: date) -> list[dict]:
             when, rank = "Rolling out now", 0
         elif status == "Launched" and any(e["type"] == "status" and e.get("to") == "Launched" for e in week):
             when, rank = "Launched this week", 1
-        elif status == "In development" and ga in window_now and (ga not in window_before or week):
-            when, rank = f"Due {_MONTHS[ga % 12]} {ga // 12}", 2 + ga
         if when:
             out.append({"item": item, "when": when, "rank": rank})
     out.sort(key=lambda a: (a["rank"], a["item"]["title"].lower()))
@@ -329,7 +324,7 @@ def render_html(digest: dict, *, web: bool = False) -> str:
 <tr><td style="padding:0 0 22px 0;">
  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff7f5;border:1px solid #f6d5cf;border-radius:10px;">
   <tr><td style="{_FONT}padding:14px 18px 0 18px;font-size:15px;font-weight:800;color:#a61b1b;">&#9888;&#65039; Needs attention this week</td></tr>
-  <tr><td style="{_FONT}padding:2px 18px 4px 18px;font-size:12px;line-height:17px;color:#8a5a55;">Changes that need an admin or a heads-up for users, listed as they start to land.</td></tr>
+  <tr><td style="{_FONT}padding:2px 18px 4px 18px;font-size:12px;line-height:17px;color:#8a5a55;">Changes that need an admin or a heads-up for users, listed in the week they start rolling out or launch.</td></tr>
   <tr><td style="padding:2px 18px 12px 18px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table></td></tr>
  </table>
 </td></tr>""")

@@ -17,7 +17,7 @@ function sections(items) {
   return [
     {
       id: "action", icon: "⚠️", title: "Needs action",
-      blurb: "Admin work or a heads-up for users, for features rolling out now, due in the next 3 months, or launched in the last 30 days.",
+      blurb: "Admin work or a heads-up for users, for features rolling out now or launched in the last 30 days.",
       items: items.filter(needsAction).sort((a, b) => actionTiming(a).rank - actionTiming(b).rank || a.t.localeCompare(b.t)),
       mode: "action", tone: "alert",
     },

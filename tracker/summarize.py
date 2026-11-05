@@ -1,7 +1,8 @@
 """Plain-English summaries and impact tags for each item.
 
 Providers (set AI_PROVIDER):
-  gemini   Google Gemini API (free tier works). Needs GEMINI_API_KEY; model via GEMINI_MODEL.
+  gemini   Google Gemini API (free tier works). Needs GEMINI_API_KEY; model via GEMINI_MODEL, and
+           GEMINI_FALLBACK_MODEL for when it is busy.
   bedrock  AWS Bedrock Converse API. Needs BEDROCK_MODEL_ID plus standard AWS credentials
            (AWS_REGION, and keys or an OIDC role). Requires `pip install boto3`.
   none     No AI: a rule-based summary taken from Microsoft's own text.
@@ -123,14 +124,46 @@ def _extract_json_array(text: str) -> list:
     return json.loads(text[start : end + 1])
 
 
+class _ModelBusy(Exception):
+    """The model is overloaded, rate-limited or unavailable: worth trying another model."""
+
+
 class GeminiProvider:
+    """Gemini, with an automatic switch to a lighter model when the main one is busy.
+
+    The free tier is the first to be turned away when a model is in high demand (HTTP 503),
+    so on 503/429/500, or a model name Google has retired (404), the provider moves on to
+    GEMINI_FALLBACK_MODEL and stays with it for the rest of the run.
+    """
+
     def __init__(self) -> None:
         self.key = os.environ["GEMINI_API_KEY"]
-        self.model = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
+        primary = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
+        fallback = os.environ.get("GEMINI_FALLBACK_MODEL") or "gemini-flash-lite-latest"
+        self.models = [primary] + ([fallback] if fallback != primary else [])
+        self.current = 0
+        self.model = primary  # the model that produced the latest result
         self.pause = float(os.environ.get("AI_PAUSE_SECONDS") or 6)  # free tier is ~10 requests/min
 
     def complete(self, prompt: str) -> list:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent"
+        busy: Exception | None = None
+        for index in range(self.current, len(self.models)):
+            model = self.models[index]
+            last = index == len(self.models) - 1
+            try:
+                # Little patience with a busy main model when a fallback is waiting.
+                result = self._call(model, prompt, busy_retries=3 if last else 1)
+            except _ModelBusy as err:
+                busy = err
+                if not last:
+                    print(f"[ai] {model} is busy ({err}); switching to {self.models[index + 1]}", file=sys.stderr)
+                continue
+            self.current, self.model = index, model
+            return result
+        raise RuntimeError(f"Gemini: every model is busy: {busy}")
+
+    def _call(self, model: str, prompt: str, *, busy_retries: int) -> list:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
         payload = {
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
@@ -139,24 +172,30 @@ class GeminiProvider:
                 "responseSchema": _RESPONSE_SCHEMA,
             },
         }
-        for attempt in range(4):
+        attempt = 0
+        while True:
             try:
                 resp = http_post_json(url, payload, headers={"x-goog-api-key": self.key}, timeout=REQUEST_TIMEOUT)
                 time.sleep(self.pause)
                 parts = resp["candidates"][0]["content"]["parts"]
                 return _extract_json_array("".join(p.get("text", "") for p in parts))
             except urllib.error.HTTPError as err:
-                if err.code in (429, 500, 503) and attempt < 3:
-                    time.sleep(30 * (attempt + 1))
-                    continue
+                if err.code == 404:
+                    raise _ModelBusy("HTTP 404, model not found") from err
+                if err.code in (429, 500, 503):
+                    if attempt < busy_retries:
+                        attempt += 1
+                        time.sleep(20 * attempt)
+                        continue
+                    raise _ModelBusy(f"HTTP {err.code}") from err
                 body = err.read().decode(errors="replace")[:500]
                 raise RuntimeError(f"Gemini HTTP {err.code}: {body}") from err
             except (TimeoutError, urllib.error.URLError) as err:
                 if attempt < 1:
+                    attempt += 1
                     time.sleep(15)
                     continue
                 raise RuntimeError(f"Gemini request failed: {err}") from err
-        raise RuntimeError("Gemini: retries exhausted")
 
 
 class BedrockProvider:
@@ -233,7 +272,6 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
     counts = {"ai": 0, "rules": 0, "errors": 0}
     names = product_names(config)
     ai_budget = pending[:max_items] if provider else []
-    model = getattr(provider, "model", None)
     deadline = time.monotonic() + TIME_BUDGET
     failures_in_a_row = 0
 
@@ -259,7 +297,7 @@ def summarize(store: dict, config: dict, *, max_items: int | None = None) -> dic
         failures_in_a_row = 0
         for item in batch:
             if item["id"] in results:
-                item["ai"] = {**_clean(results[item["id"]], item["kind"]), "model": model, "v": PROMPT_VERSION,
+                item["ai"] = {**_clean(results[item["id"]], item["kind"]), "model": provider.model, "v": PROMPT_VERSION,
                               "hash": item["text_hash"], "date": today_iso()}
                 counts["ai"] += 1
 

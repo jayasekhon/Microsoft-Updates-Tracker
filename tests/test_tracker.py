@@ -1,6 +1,8 @@
+import io
 import os
 import re
 import unittest
+import urllib.error
 from datetime import date, timedelta
 from unittest import mock
 
@@ -198,6 +200,70 @@ class SummarizeTests(unittest.TestCase):
 
 
 class AiResilienceTests(unittest.TestCase):
+    def _gemini(self, responder):
+        """A GeminiProvider whose HTTP calls go to responder(model) instead of Google."""
+        calls = []
+
+        def fake_post(url, payload, headers=None, timeout=None):
+            model = url.split("/models/")[1].split(":")[0]
+            calls.append(model)
+            return responder(model)
+
+        env = {"GEMINI_API_KEY": "k", "GEMINI_MODEL": "", "GEMINI_FALLBACK_MODEL": "", "AI_PAUSE_SECONDS": "0"}
+        patches = [mock.patch.dict(os.environ, env), mock.patch.object(summarize, "http_post_json", fake_post),
+                   mock.patch.object(summarize.time, "sleep", lambda s: None)]
+        for p in patches:
+            p.start()
+            self.addCleanup(p.stop)
+        return summarize.GeminiProvider(), calls
+
+    @staticmethod
+    def _ok(text='[{"id": "rm-1"}]'):
+        return {"candidates": [{"content": {"parts": [{"text": text}]}}]}
+
+    @staticmethod
+    def _http(code):
+        return urllib.error.HTTPError("u", code, "x", {}, io.BytesIO(b"{}"))
+
+    def test_busy_model_falls_back_and_stays_on_the_fallback(self):
+        def responder(model):
+            if model == "gemini-flash-latest":
+                raise self._http(503)
+            return self._ok()
+
+        provider, calls = self._gemini(responder)
+        self.assertEqual(provider.complete("p"), [{"id": "rm-1"}])
+        self.assertEqual(provider.model, "gemini-flash-lite-latest")
+        self.assertEqual(calls, ["gemini-flash-latest", "gemini-flash-latest", "gemini-flash-lite-latest"])  # 1 retry, then switch
+        provider.complete("p")
+        self.assertEqual(calls[-1], "gemini-flash-lite-latest")
+        self.assertEqual(calls.count("gemini-flash-latest"), 2)  # not asked again this run
+
+    def test_retired_model_name_falls_back_immediately(self):
+        def responder(model):
+            if model == "gemini-flash-latest":
+                raise self._http(404)
+            return self._ok()
+
+        provider, calls = self._gemini(responder)
+        provider.complete("p")
+        self.assertEqual(calls, ["gemini-flash-latest", "gemini-flash-lite-latest"])
+
+    def test_bad_request_is_not_retried_on_another_model(self):
+        def responder(model):
+            raise self._http(400)
+
+        provider, calls = self._gemini(responder)
+        with self.assertRaises(RuntimeError):
+            provider.complete("p")
+        self.assertEqual(calls, ["gemini-flash-latest"])
+
+    def test_all_models_busy_raises(self):
+        provider, calls = self._gemini(lambda model: (_ for _ in ()).throw(self._http(503)))
+        with self.assertRaisesRegex(RuntimeError, "every model is busy"):
+            provider.complete("p")
+        self.assertEqual(calls.count("gemini-flash-lite-latest"), 4)  # the last model gets full patience
+
     def test_isolated_failures_do_not_stop_later_batches(self):
         s = {"items": {}}
         store.merge(s, [roadmap.normalize(raw_roadmap(rid=i), CONFIG) for i in range(1, 21)], kinds_fetched={"feature"}, today="2026-10-29")
@@ -230,17 +296,17 @@ class AttentionTests(unittest.TestCase):
     def _ids(self, s, start):
         return [(a["item"]["id"], a["when"]) for a in digest._attention(s, start, start + timedelta(days=7))]
 
-    def test_due_item_listed_in_the_week_its_month_enters_the_window(self):
+    def test_items_still_in_development_are_never_listed(self):
         s = {"items": {}}
         store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="November CY2026", created="2026-01-01T00:00:00"), CONFIG)],
                     kinds_fetched={"feature"}, today="2026-01-01")
         self._flag(s)
-        # Email sent Oct 19: the next 30 days now cover more than half of November.
-        self.assertEqual(self._ids(s, date(2026, 10, 12)), [("rm-1", "Due November 2026")])
-        # Following weeks: nothing new happened, so it is not repeated.
-        self.assertEqual(self._ids(s, date(2026, 10, 19)), [])
-        # The week before, November was still too far out.
-        self.assertEqual(self._ids(s, date(2026, 10, 5)), [])
+        for week in (date(2026, 10, 5), date(2026, 10, 12), date(2026, 10, 19), date(2026, 11, 2)):
+            self.assertEqual(self._ids(s, week), [])
+        # Even when it changes during the week (here: its GA date moves).
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="December CY2026", created="2026-01-01T00:00:00"), CONFIG)],
+                    kinds_fetched={"feature"}, today="2026-11-03")
+        self.assertEqual(self._ids(s, date(2026, 11, 2)), [])
 
     def test_rolling_out_and_launch_are_listed_that_week(self):
         s = {"items": {}}
@@ -263,11 +329,11 @@ class AttentionTests(unittest.TestCase):
 
     def test_keyword_fallback_labels_do_not_count(self):
         s = {"items": {}}
-        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="November CY2026", created="2026-01-01T00:00:00"), CONFIG)],
-                    kinds_fetched={"feature"}, today="2026-01-01")
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="October CY2026"), CONFIG)], kinds_fetched={"feature"}, today="2026-09-01")
+        store.merge(s, [roadmap.normalize(raw_roadmap(rid=1, ga="October CY2026", status="Rolling out"), CONFIG)], kinds_fetched={"feature"}, today="2026-10-21")
         self._flag(s)
         s["items"]["rm-1"]["ai"]["model"] = "rules"
-        self.assertEqual(self._ids(s, date(2026, 10, 12)), [])
+        self.assertEqual(self._ids(s, date(2026, 10, 19)), [])
 
     def test_posts_never_become_action_items(self):
         self.assertEqual(summarize._clean({"action": "admin", "action_note": "Read it."}, "post")["action"], "awareness")

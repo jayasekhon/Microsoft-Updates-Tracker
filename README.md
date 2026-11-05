@@ -25,7 +25,7 @@ Message Center is not used. It needs tenant admin credentials and holds tenant-i
 
 ## Rules worth knowing
 
-- **Needs action**: a Roadmap feature that the AI labels *Admin action* (an admin must configure, license or review something, or a default changes) or *Prepare users* (it changes how people already work, or switches on by default). It's listed while the feature is landing: rolling out, due within 3 months, or launched in the last 30 days. The weekly email lists it once, in the week it starts landing. Blog posts can suggest a next step but never count, and neither do keyword-fallback labels made before an item has an AI summary.
+- **Needs action**: a Roadmap feature that the AI labels *Admin action* (an admin must configure, license or review something, or a default changes) or *Prepare users* (it changes how people already work, or switches on by default). It's listed only once the feature has arrived: rolling out, or launched in the last 30 days. Nothing still in development counts. The weekly email lists it once, in the week it starts rolling out or launches. Blog posts can suggest a next step but never count, and neither do keyword-fallback labels made before an item has an AI summary.
 - **Rolling out**: Microsoft often leaves finished features as "Rolling out" for months. More than 2 months after the GA target month, an item is shown as *Likely rolled out*, alongside Launched.
 
 ## How it runs
@@ -59,6 +59,7 @@ Without a key, the tracker uses Microsoft's own wording and rule-based tags. To 
 
 - Secret `GEMINI_API_KEY`: get one at <https://aistudio.google.com/apikey>
 - *(optional)* Variable `GEMINI_MODEL`, default `gemini-flash-latest`
+- *(optional)* Variable `GEMINI_FALLBACK_MODEL`, default `gemini-flash-lite-latest`. It's used automatically when the main model is busy (Google turns the free tier away first when demand is high).
 
 Each item is summarised once. It's summarised again only if Microsoft changes its text. Each run summarises up to 200 items (`AI_MAX_ITEMS`), newest first, and stops after 20 minutes. The free tier is slow, so the first few days' runs work through the backlog.
 

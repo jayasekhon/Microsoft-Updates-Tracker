@@ -68,8 +68,6 @@ export const productName = (id) => product(id).name;
 // Microsoft often leaves finished features on "Rolling out" for months. Past this many months
 // after the GA target, treat the rollout as done (shown as "Likely rolled out").
 export const ROLLOUT_GRACE_MONTHS = 2;
-// "Needs action" covers flagged features landing within this many months (current month included).
-export const ACTION_LEAD_MONTHS = 3;
 
 /** Microsoft says "Rolling out", but the GA target is long past (or, undated, it has been quiet). */
 export function rolloutLikelyDone(it) {
@@ -92,21 +90,17 @@ function launchedWithin(it, days) {
 }
 
 /**
- * A flagged feature that is landing: rolling out now, due within ACTION_LEAD_MONTHS, or launched
- * in the last 30 days. Admins act just before something arrives, not when it is first announced.
+ * A flagged feature that has arrived: rolling out now or launched in the last 30 days. Most
+ * readers aren't admins, so nothing still in development counts, however close its date.
  */
 export function needsAction(it) {
-  if (!flagged(it)) return false;
-  if (rollingNow(it) || launchedWithin(it, 30)) return true;
-  const ga = monthKey(it.ga);
-  return it.s === "In development" && ga !== null && ga >= nowMonthKey() && ga < nowMonthKey() + ACTION_LEAD_MONTHS;
+  return flagged(it) && (rollingNow(it) || launchedWithin(it, 30));
 }
 
-/** When a needs-action item lands, for sorting (soonest first) and display. */
+/** How a needs-action item arrived, for sorting (rolling out first) and display. */
 export function actionTiming(it) {
   if (rollingNow(it)) return { rank: 0, label: "Rolling out now" };
-  if (it.s === "Launched") return { rank: 1, label: `Launched ${relDate(lastEvent(it).date)}` };
-  return { rank: 2 + (monthKey(it.ga) ?? 99), label: `Due ${cleanMonth(it.ga)}` };
+  return { rank: 1, label: `Launched ${relDate(lastEvent(it).date)}` };
 }
 export const live = () => DATA.items.filter((i) => !i.x);
 export function lastEvent(it) {
