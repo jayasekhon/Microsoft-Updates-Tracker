@@ -167,7 +167,7 @@
    "first_seen": "2026-10-29",
    "id": "post-18d2ccfc1867",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-09-25",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -201,7 +201,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2160ad9a9fff",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-01",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -236,7 +236,7 @@
    "first_seen": "2026-10-29",
    "id": "post-2323f4474670",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-21",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -588,7 +588,7 @@
    "first_seen": "2026-10-29",
    "id": "post-492dfcdce8e7",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-08",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -869,7 +869,7 @@
    "first_seen": "2026-10-29",
    "id": "post-67722ad4002b",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-15",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1045,7 +1045,7 @@
    "first_seen": "2026-10-29",
    "id": "post-8d4a5bf8d2b9",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-28",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1155,7 +1155,7 @@
    "first_seen": "2026-10-29",
    "id": "post-a26fa705b971",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-09-15",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -1556,7 +1556,7 @@
    "first_seen": "2026-10-29",
    "id": "post-eec3e8075041",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-07",
    "product": "studio",
    "source": "Copilot Studio blog",
@@ -1626,7 +1626,7 @@
    "first_seen": "2026-10-29",
    "id": "post-fe3141148cc5",
    "kind": "post",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-09",
    "modified": "2026-10-27",
    "product": "m365",
    "source": "Microsoft 365 / Copilot blog",
@@ -3106,15 +3106,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
-     "IT admins",
      "Makers & developers"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "1d23145020b7",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Tenant Graph grounding provides grounding for agents with relevant information from Microsoft Graph, including files stored in SharePoint. This capability is now available to developers building agents in Azure AI Foundry."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "Developers building agents in Azure AI Foundry can now ground their agents using files stored in SharePoint via Tenant Graph grounding. This allows custom agents to leverage relevant information from the Microsoft Graph.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -3266,13 +3265,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "IT admins",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "23bfd86e59a6",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "AI citations analytics will help you track the usage of SP documents, news and pages through copilot and AI agents. You will be able to see how often a page or a file is referenced in a copilot response."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "You can now track how often SharePoint documents, news, and pages are referenced in Copilot and AI agent responses. This helps you measure the impact and usage of your content.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -3316,13 +3317,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users"
+     "IT admins",
+     "Leaders"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "eaa271264396",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Explore how your employees used key SharePoint agent features over a given time period and understand the ROI. #copilotcontrolsystem"
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "SharePoint agent analytics will soon be available on Viva Insights. This lets you measure employee usage of key SharePoint agent features over time to understand your return on investment.",
+    "v": 2
    },
    "apps": [
     "Microsoft Viva"
@@ -3478,17 +3481,17 @@
   "rm-480730": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and configure Insider Risk Management policies to include the new generative AI risk detections.",
     "audience": [
-     "End users",
-     "IT admins",
-     "Security & compliance"
+     "Security & compliance",
+     "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "336abce40219",
     "impact": "medium",
-    "model": "rules",
-    "summary": "With this update, Insider Risk Management will help admins identify risky AI usage. We are adding new detections of intentional and unintentional insider risk activity on generative AI apps that can pose a risk to an organization."
+    "model": "gemini-flash-lite-latest",
+    "summary": "Insider Risk Management now detects risky AI usage across Microsoft Copilots and third-party generative AI apps. This helps security teams identify sensitive prompts and responses that could lead to data leaks.",
+    "v": 2
    },
    "apps": [
     "Microsoft Purview"
@@ -3868,11 +3871,12 @@
     "audience": [
      "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "e0b43c145959",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Use SharePoint agents in Teams Mobile group chats and meetings."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "You will be able to use SharePoint agents directly within Teams Mobile group chats and meetings. This makes it easier to access organizational knowledge while working on your mobile device.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -9513,14 +9517,14 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
-     "Makers & developers"
+     "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "0d4dce593dd2",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Popular graph connector prompts will now be available in the Prompt Gallery for use in Copilot Chat."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "Popular graph connector prompts are now integrated into the Prompt Gallery for Copilot Chat. Users can easily discover and use these prompts to improve their searches.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -12947,14 +12951,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
+     "Leaders",
      "IT admins"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "a7d92255e4ad",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "Explore how Copilot is making a difference in your organization through Viva Engage posts that users have shared. The Copilot Dashboard showcases real-world success stories, user-shared excitement about new Copilot features, and vibrant community discussions."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "The Copilot Dashboard now highlights qualitative adoption stories and community discussions shared via Viva Engage. This gives leaders a better view of how Copilot drives productivity.",
+    "v": 2
    },
    "apps": [
     "Microsoft Viva"
@@ -13596,14 +13601,15 @@
     "action": "awareness",
     "action_note": "",
     "audience": [
-     "End users",
-     "Makers & developers"
+     "Makers & developers",
+     "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "18f9fa0500ae",
     "impact": "medium",
-    "model": "rules",
-    "summary": "Customers can connect M365 Copilot with Adobe Experience Manager Assets to retrieve marketing and creative assets with Copilot Connector."
+    "model": "gemini-flash-lite-latest",
+    "summary": "Microsoft 365 Copilot now connects with Adobe Experience Manager Assets using a Copilot Connector. Users can retrieve marketing and creative assets directly through Copilot.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -17459,16 +17465,17 @@
   "rm-536570": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Configure custom notification strings and privacy links for recording and transcription as needed.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "Security & compliance"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "29c11221e31d",
-    "impact": "medium",
-    "model": "rules",
-    "summary": "IT admins can customize the message and privacy link used to notify implicitly or gain explicit consent from meeting participants for the use of recording, transcription during the meeting."
+    "impact": "low",
+    "model": "gemini-flash-lite-latest",
+    "summary": "IT administrators can now customize notification messages and privacy links for meeting recording and transcription. This helps ensure clear communication and compliance during meetings.",
+    "v": 2
    },
    "apps": [
     "Microsoft Teams"
@@ -18804,16 +18811,17 @@
   "rm-548643": {
    "ai": {
     "action": "admin",
-    "action_note": "Review the admin controls and decide how to configure this for your organisation.",
+    "action_note": "Review and enable AI-powered skill inferencing for E3 and E5 users in the admin center if desired.",
     "audience": [
-     "End users",
-     "IT admins"
+     "IT admins",
+     "End users"
     ],
-    "date": "2026-10-29",
+    "date": "2026-11-09",
     "hash": "a1186880191a",
     "impact": "medium",
-    "model": "rules",
-    "summary": "People Skills is expanding AI powered skill inferencing to include Microsoft 365 E3 and E5 licensed users. Previously, AI powered skill inferencing was available only to Microsoft 365 Copilot and Microsoft Viva licensed users."
+    "model": "gemini-flash-lite-latest",
+    "summary": "AI-powered skill inferencing now extends to Microsoft 365 E3 and E5 users, automatically updating profiles based on work activity. Admins can enable this feature in the Microsoft 365 admin center.",
+    "v": 2
    },
    "apps": [],
    "clouds": [
@@ -33605,9 +33613,9 @@
   "last_counts": {
    "changed": 0,
    "new": 0,
-   "removed": 1
+   "removed": 0
   },
-  "updated_at": "2026-11-09T14:10:44+00:00",
+  "updated_at": "2026-11-09T16:50:41+00:00",
   "warnings": []
  },
  "schema": 1

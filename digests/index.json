@@ -1,5 +1,19 @@
 [
  {
+  "end": "2026-11-08",
+  "label": "Nov 2 – Nov 8, 2026",
+  "sent_at": "2026-11-09T16:50:50+00:00",
+  "start": "2026-11-02",
+  "stats": {
+   "actions": 3,
+   "available": 17,
+   "new": 4,
+   "timeline": 8
+  },
+  "subject": "Copilot & SharePoint AI updates · Nov 2 – Nov 8, 2026 · 17 now available, 4 new, 3 need action",
+  "total": 41
+ },
+ {
   "end": "2026-11-01",
   "label": "Oct 26 – Nov 1, 2026",
   "start": "2026-10-26",
